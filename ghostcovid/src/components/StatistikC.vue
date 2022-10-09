@@ -81,13 +81,15 @@ export default {
 .body {
   margin-top: 100px;
   margin-bottom: 60px;
+  font-family: 'Alegreya SC', serif;
 }
 .row {
   width: 80%;
   height: 30%;
   padding-top: 1%;
   text-align: left;
-  font-size: 100%;
+  font-size: 110%;
+  font-family: 'Alegreya SC', serif;
 }
 img {
   height: 100%;

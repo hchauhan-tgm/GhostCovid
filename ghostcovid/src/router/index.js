@@ -23,37 +23,73 @@ const routes = [
     path: "/erfahrungen",
     name: "Erfahrungen",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Erfahrungen.vue"),
+      import("../views/Erfahrungen.vue"),
   },
   {
     path: "/statistik",
     name: "Statistik",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Statistik.vue"),
+      import("../views/Statistik.vue"),
   },
   {
     path: "/impressum",
     name: "Impressum",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Impressum.vue"),
+      import("../views/Impressum.vue"),
   },
   {
     path: "/profil",
     name: "Profil",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Profil.vue"),
+      import("../views/Profil.vue"),
   },
   {
     path: "/login",
     name: "Login",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Login.vue"),
+      import("../views/Login.vue"),
   },
   {
     path: "/registrieren",
     name: "Registrieren",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Registrieren.vue"),
+      import("../views/Registrieren.vue"),
+  },
+  {
+    path: "/podcast",
+    name: "Podcast",
+    component: () =>
+      import("../views/Podcast.vue"),
+  },
+  {
+    path: "/videos",
+    name: "Videos",
+    component: () =>
+      import("../views/Videos.vue"),
+  },
+  {
+    path: "/forum",
+    name: "Forum",
+    component: () =>
+      import("../views/Forum.vue"),
+  },
+  {
+    path: "/entspannung",
+    name: "Entspannung",
+    component: () =>
+      import("../views/Entspannung.vue"),
+  },
+  {
+    path: "/kreativ",
+    name: "Kreativ",
+    component: () =>
+      import("../views/Kreativ.vue"),
+  },
+  {
+    path: "/motivation",
+    name: "Motivation",
+    component: () =>
+      import("../views/Motivation.vue"),
   },
   
 ];

@@ -7,14 +7,14 @@
         ... Mit Ärzten, die sie nicht ernst nehmen, Kollegen und Nachbarn, die sie belächeln und tuscheln, 
         Arbeitgebern, die Druck machen. Dass eine Corona-Infektion langfristige Folgen haben kann, habe 
         sich offenbar immer noch nicht herumgesprochen ... "Und dann zweifelst Du an Dir selbst." ...
-        <p style="font-style: italic; font-size: 90%">Frankfurter Neue Presse</p>
+        <p style="font-style: italic; font-size: 100%">Frankfurter Neue Presse</p>
       </div>
       <div class="col s1"></div>
     </div>
     <div class="row">
-      <div class="col s6"><a class="waves-effect waves-light btn-large button">Podcast</a></div>
-      <div class="col s6"><a class="waves-effect waves-light btn-large button">Videos</a></div>
-      <div class="col s6"><a class="waves-effect waves-light btn-large button" style="margin-left: 50%;">Forum</a></div>
+      <div class="col s6"><router-link to="/podcast"><a class="waves-effect waves-light btn-large button">Podcast</a></router-link></div>
+      <div class="col s6"><router-link to="/videos"><a class="waves-effect waves-light btn-large button">Videos</a></router-link></div>
+      <div class="col s6"><router-link to="/forum"><a class="waves-effect waves-light btn-large button" style="margin-left: 50%;">Forum</a></router-link></div>
     </div>
   </div>
 </template>
@@ -37,6 +37,8 @@ export default {
 .row {
   width: 80%;
   padding-top: 1%;
+  font-size: 110%;
+  font-family: 'Alegreya SC', serif;
 }
 h1 {
   margin: 40px 0 0;

@@ -4,7 +4,9 @@ import router from "./router";
 import store from "./store";
 import header from './components/Header.vue'
 import footer from './components/Footer.vue'
+import Lightbox from 'vue-easy-lightbox'
 
+Vue.use(Lightbox)
 Vue.component('Header', header)
 Vue.component('Footer', footer)
 

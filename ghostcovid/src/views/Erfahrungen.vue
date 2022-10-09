@@ -1,5 +1,5 @@
 <template>
-    <div class="home">
+    <div class="erfahrungen">
       <Header />
       <ErfahrungenC msg="Erfahrungen" />
       <Footer />

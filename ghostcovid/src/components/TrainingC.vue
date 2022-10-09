@@ -7,15 +7,15 @@
         ... Denn bei vielen Betroffenen hat die Virusinfektion die kleinsten Gefäße verändert, 
         sodass die Zellen auch im Gehirn nicht mehr ausreichend mit Sauerstoff versorgt werden. 
         Bei Long-Covid spricht man von einem Brain-Fog, einem Nebel im Gehirn. ...
-        <p style="font-style: italic; font-size: 90%">Norddeutscher Rundfunk (NDR)</p>
+        <p style="font-style: italic; font-size: 100%">Norddeutscher Rundfunk (NDR)</p>
       </div>
       <div class="col s1"></div>
     </div>
     <div class="row">
-      <div class="col s6"><a class="waves-effect waves-light btn-large button">Spiele</a></div>
-      <div class="col s6"><a class="waves-effect waves-light btn-large button">Entspannung</a></div>
-      <div class="col s6"><a class="waves-effect waves-light btn-large button">Kreativität</a></div>
-      <div class="col s6"><a class="waves-effect waves-light btn-large button">Motivation</a></div>
+      <div class="col s6"><router-link to="/podcast"><a class="waves-effect waves-light btn-large button">Spiele</a></router-link></div>
+      <div class="col s6"><router-link to="/entspannung"><a class="waves-effect waves-light btn-large button">Entspannung</a></router-link></div>
+      <div class="col s6"><router-link to="/kreativ"><a class="waves-effect waves-light btn-large button">Kreativität</a></router-link></div>
+      <div class="col s6"><router-link to="/motivation"><a class="waves-effect waves-light btn-large button">Motivation</a></router-link></div>
     </div>
   </div>
 </template>
@@ -38,6 +38,8 @@ export default {
 .row {
   width: 80%;
   padding-top: 1%;
+  font-size: 110%;
+  font-family: 'Alegreya SC', serif;
 }
 h1 {
   margin: 40px 0 0;
