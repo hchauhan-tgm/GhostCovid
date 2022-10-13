@@ -1,7 +1,14 @@
 <template>
   <div class="hello body">
     <h1>{{ msg }}</h1>
-    <router-link to="/login" class="text">Login</router-link>
+    <p>Hallo Vorname</p>
+
+
+    <router-link to="/login" class="text">
+    <button class="btn waves-effect waves-light" type="submit" name="action">ausloggen
+      <i class="material-icons right">exit_to_app</i>
+    </button>
+    </router-link>
   </div>
 </template>
 
@@ -19,6 +26,19 @@ export default {
 .body {
   margin-top: 100px;
   margin-bottom: 60px;
+}
+.btn{
+  color: #fff;
+  background-color: #a35152;
+  width: 50%;
+  font-family: 'Alegreya SC', serif; 
+  text-transform: small-caps;
+  margin: 0.5%;
+}
+p {
+  font-family: 'Alegreya SC', serif;
+  font-variant: small-caps;
+  font-size: 250%;
 }
 h1 {
   margin: 40px 0 0;

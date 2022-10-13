@@ -12,7 +12,7 @@
       <div class="col s1"></div>
     </div>
     <div class="row">
-      <div class="col s6"><router-link to="/podcast"><a class="waves-effect waves-light btn-large button">Spiele</a></router-link></div>
+      <div class="col s6"><router-link to="/spiele"><a class="waves-effect waves-light btn-large button">Spiele</a></router-link></div>
       <div class="col s6"><router-link to="/entspannung"><a class="waves-effect waves-light btn-large button">Entspannung</a></router-link></div>
       <div class="col s6"><router-link to="/kreativ"><a class="waves-effect waves-light btn-large button">Kreativität</a></router-link></div>
       <div class="col s6"><router-link to="/motivation"><a class="waves-effect waves-light btn-large button">Motivation</a></router-link></div>

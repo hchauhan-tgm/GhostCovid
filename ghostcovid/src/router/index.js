@@ -91,6 +91,12 @@ const routes = [
     component: () =>
       import("../views/Motivation.vue"),
   },
+  {
+    path: "/spiele",
+    name: "Spiele",
+    component: () =>
+      import("../views/Spiele.vue"),
+  },
   
 ];
 
