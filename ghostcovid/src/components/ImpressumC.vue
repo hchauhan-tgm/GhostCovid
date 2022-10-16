@@ -60,21 +60,21 @@ export default {
 .body {
   margin-top: 100px;
   margin-bottom: 60px;
-  font-family: 'Alegreya SC', serif;
+  font-family: 'Candara', serif;
 }
 .row {
   text-align:center; 
-  font-family: 'Alegreya SC', serif;
+  font-family: 'Candara', serif;
 }
 h1 {
   margin: 40px 0 0;
-  font-family: 'Alegreya SC', serif;
+  font-family: 'Candara', serif;
   font-variant: small-caps;
 }
 h2 {
   margin: 20px;
   font-size: 200%;
-  font-family: 'Alegreya SC', serif;
+  font-family: 'Candara', serif;
   font-variant: small-caps;
 }
 ul {

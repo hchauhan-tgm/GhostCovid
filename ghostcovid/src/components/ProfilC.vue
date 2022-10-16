@@ -31,18 +31,18 @@ export default {
   color: #fff;
   background-color: #a35152;
   width: 50%;
-  font-family: 'Alegreya SC', serif; 
+  font-family: 'Candara', serif; 
   text-transform: small-caps;
   margin: 0.5%;
 }
 p {
-  font-family: 'Alegreya SC', serif;
+  font-family: 'Candara', serif;
   font-variant: small-caps;
   font-size: 250%;
 }
 h1 {
   margin: 40px 0 0;
-  font-family: 'Alegreya SC', serif;
+  font-family: 'Candara', serif;
   font-variant: small-caps;
 }
 ul {

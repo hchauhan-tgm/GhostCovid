@@ -4,9 +4,9 @@
     <div class="row">
       <div class="col s1"></div>
       <div class="col s10">
-        ... Mit Ärzten, die sie nicht ernst nehmen, Kollegen und Nachbarn, die sie belächeln und tuscheln, 
+        ... Mit Ärzten, die sie nicht ernst nehmen, Kollegen und Nachbarn, die Sie belächeln und tuscheln, 
         Arbeitgebern, die Druck machen. Dass eine Corona-Infektion langfristige Folgen haben kann, habe 
-        sich offenbar immer noch nicht herumgesprochen ... "Und dann zweifelst Du an Dir selbst." ...
+        sich offenbar immer noch nicht herumgesprochen...
         <p style="font-style: italic; font-size: 100%">Frankfurter Neue Presse</p>
       </div>
       <div class="col s1"></div>
@@ -38,11 +38,11 @@ export default {
   width: 80%;
   padding-top: 1%;
   font-size: 110%;
-  font-family: 'Alegreya SC', serif;
+  font-family: 'Candara', serif;
 }
 h1 {
   margin: 40px 0 0;
-  font-family: 'Alegreya SC', serif;
+  font-family: 'Candara', serif;
   font-variant: small-caps;   
 }
 ul {
@@ -65,13 +65,15 @@ a {
   text-align: center;
   font-size: 250%;
   color: #000;
-  font-family: 'Alegreya SC', serif; 
+  font-family: 'Candara', serif; 
   text-transform: capitalize;
   font-variant: small-caps; 
   background-image: url("../assets/erfahrungenw.png");
   background-size: 100%;
+  border-radius: 25px;
 }
 .button:hover{
   font-size: 300%;
+  box-shadow: 0 0 20px 5px #a35152;
 }
 </style>

@@ -23,11 +23,11 @@ export default {
   width: 80%;
   padding-top: 1%;
   font-size: 110%;
-  font-family: 'Alegreya SC', serif;
+  font-family: 'Candara', serif;
 }
 h1 {
   margin: 40px 0 0;
-  font-family: 'Alegreya SC', serif;
+  font-family: 'Candara', serif;
   font-variant: small-caps;   
 }
 ul {
@@ -50,7 +50,7 @@ a {
   text-align: center;
   font-size: 250%;
   color: #000;
-  font-family: 'Alegreya SC', serif; 
+  font-family: 'Candara', serif; 
   text-transform: capitalize;
   font-variant: small-caps; 
   background-image: url("../assets/erfahrungenw.png");

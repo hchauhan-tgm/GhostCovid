@@ -21,7 +21,7 @@ export default {
     padding: 0.25%;
     width: 100%;
     font-size: 100%;
-    font-family: 'Alegreya SC', serif;
+    font-family: 'Candara', serif;
     font-variant: small-caps;
     z-index: 99;
 }

@@ -1,6 +1,6 @@
 <template>
     <div class="nav">
-        <img class="logo" alt="GhostCovid logo" src="../assets/GhostCovidLogo.png" />
+        <a href="/"><img class="logo" alt="GhostCovid logo" src="../assets/GhostCovidLogo.png" /></a>
         <div class="nav2">
             <a href="/" class="text">Home</a>
             <router-link to="/training" class="text">Training</router-link>
@@ -39,7 +39,7 @@ export default {
 
 .text{
     font-size: 175%;
-    font-family: 'Alegreya SC', serif;
+    font-family: 'Candara', serif;
     font-variant: small-caps;
     padding-right: 3%;
 }

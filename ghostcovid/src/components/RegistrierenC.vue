@@ -100,12 +100,12 @@ export default {
 }
 .box {
   margin-top: 2%;
-  font-family: 'Alegreya SC', serif; 
+  font-family: 'Candara', serif; 
   text-transform: capitalize;
 }
 h1 {
   margin: 40px 0 0;
-  font-family: 'Alegreya SC', serif;
+  font-family: 'Candara', serif;
   font-variant: small-caps;
 }
 ul {
@@ -123,7 +123,7 @@ a {
   color: #fff;
   background-color: #a35152;
   width: 75%;
-  font-family: 'Alegreya SC', serif; 
+  font-family: 'Candara', serif; 
   text-transform: small-caps;
 }
 

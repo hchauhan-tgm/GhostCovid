@@ -24,7 +24,7 @@ export default {
   width: 95%;
   padding-top: 1%;
   font-size: 110%;
-  font-family: 'Alegreya SC', serif;
+  font-family: 'Candara', serif;
 }
 img {
   width: 10%;
@@ -33,7 +33,7 @@ img {
 }
 h1 {
   margin: 40px 0 0;
-  font-family: 'Alegreya SC', serif;
+  font-family: 'Candara', serif;
   font-variant: small-caps;   
 }
 ul {

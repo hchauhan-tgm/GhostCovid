@@ -39,11 +39,11 @@ export default {
   width: 80%;
   padding-top: 1%;
   font-size: 110%;
-  font-family: 'Alegreya SC', serif;
+  font-family: 'Candara', serif;
 }
 h1 {
   margin: 40px 0 0;
-  font-family: 'Alegreya SC', serif;
+  font-family: 'Candara', serif;
   font-variant: small-caps;  
 }
 ul {
@@ -66,13 +66,15 @@ a {
   text-align: center;
   font-size: 250%;
   color: #000;
-  font-family: 'Alegreya SC', serif; 
+  font-family: 'Candara', serif; 
   text-transform: capitalize;
   font-variant: small-caps;
   background-image: url("../assets/spielew.png");
   background-size: 100%;
+  border-radius: 25px;
 }
 .button:hover{
   font-size: 300%;
+  box-shadow: 0 0 20px 5px #a35152;
 }
 </style>

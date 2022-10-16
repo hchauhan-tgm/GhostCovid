@@ -81,7 +81,7 @@ export default {
 .body {
   margin-top: 100px;
   margin-bottom: 60px;
-  font-family: 'Alegreya SC', serif;
+  font-family: 'Candara', serif;
 }
 .row {
   width: 80%;
@@ -89,22 +89,23 @@ export default {
   padding-top: 1%;
   text-align: left;
   font-size: 110%;
-  font-family: 'Alegreya SC', serif;
+  font-family: 'Candara', serif;
 }
 img {
   height: 100%;
   width: 100%;
+  border: 10px solid #c3c3fa;
 }
 .btn{
   color: #fff;
   background-color: #a35152;
   width: 25%;
-  font-family: 'Alegreya SC', serif; 
+  font-family: 'Candara', serif; 
   text-transform: small-caps;
 }
 h1 {
   margin: 40px 0 0;
-  font-family: 'Alegreya SC', serif;
+  font-family: 'Candara', serif;
   font-variant: small-caps;
 }
 ul {

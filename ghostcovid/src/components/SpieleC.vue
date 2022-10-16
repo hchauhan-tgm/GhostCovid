@@ -6,8 +6,8 @@
         x
       </div>
       <div class="col s6" style="margin-top: 1%;">
-        <p style="text-align:left;font-size: 150%; font-family: 'Alegreya SC', serif;">Memory</p>
-        <p style="text-align:left;font-size: 110%; font-family: 'Alegreya SC', serif;">Finde zwei gleiche Symbole, je schneller, desto besser</p>
+        <p style="text-align:left;font-size: 150%; font-family: 'Candara', serif;">Memory</p>
+        <p style="text-align:left;font-size: 110%; font-family: 'Candara', serif;">Finde zwei gleiche Symbole, je schneller, desto besser</p>
         <router-link to="/spiele"><button class="waves-effect waves-light btn">spielen</button></router-link>
       </div>
     </div>
@@ -16,8 +16,8 @@
         x
       </div>
       <div class="col s6" style="margin-top: 1%;">
-        <p style="text-align:left;font-size: 150%; font-family: 'Alegreya SC', serif;">Schiebepuzzle</p>
-        <p style="text-align:left;font-size: 110%; font-family: 'Alegreya SC', serif;">erklärung</p>
+        <p style="text-align:left;font-size: 150%; font-family: 'Candara', serif;">Schiebepuzzle</p>
+        <p style="text-align:left;font-size: 110%; font-family: 'Candara', serif;">erklärung</p>
         <router-link to="/spiele"><button class="waves-effect waves-light btn">spielen</button></router-link>
       </div>
     </div>
@@ -26,8 +26,8 @@
         x
       </div>
       <div class="col s6" style="margin-top: 1%;">
-        <p style="text-align:left;font-size: 150%; font-family: 'Alegreya SC', serif;">Merks dir</p>
-        <p style="text-align:left;font-size: 110%; font-family: 'Alegreya SC', serif;">erklärung</p>
+        <p style="text-align:left;font-size: 150%; font-family: 'Candara', serif;">Merks dir</p>
+        <p style="text-align:left;font-size: 110%; font-family: 'Candara', serif;">erklärung</p>
         <router-link to="/spiele"><button class="waves-effect waves-light btn">spielen</button></router-link>
       </div>
     </div>
@@ -36,8 +36,8 @@
         x
       </div>
       <div class="col s6" style="margin-top: 1%;">
-        <p style="text-align:left;font-size: 150%; font-family: 'Alegreya SC', serif;">Farbendurcheinander</p>
-        <p style="text-align:left;font-size: 110%; font-family: 'Alegreya SC', serif;">erklärung</p>
+        <p style="text-align:left;font-size: 150%; font-family: 'Candara', serif;">Farbendurcheinander</p>
+        <p style="text-align:left;font-size: 110%; font-family: 'Candara', serif;">erklärung</p>
         <router-link to="/spiele"><button class="waves-effect waves-light btn">spielen</button></router-link>
       </div>
     </div>
@@ -65,7 +65,7 @@ export default {
   padding-top: 1%;
   text-align: left;
   font-size: 110%;
-  font-family: 'Alegreya SC', serif;
+  font-family: 'Candara', serif;
 }
 img {
   height: 100%;
@@ -75,12 +75,12 @@ img {
   color: #fff;
   background-color: #a35152;
   width: 50%;
-  font-family: 'Alegreya SC', serif; 
+  font-family: 'Candara', serif; 
   text-transform: small-caps;
 }
 h1 {
   margin: 40px 0 0;
-  font-family: 'Alegreya SC', serif;
+  font-family: 'Candara', serif;
   font-variant: small-caps;   
 }
 ul {
