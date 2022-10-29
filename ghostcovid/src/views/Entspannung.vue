@@ -1,30 +1,30 @@
 <template>
     <div class="entspannung">
       <Header />
-      <EntspannungC msg="Entspannung" />
+      <Titel msg="Entspannung" />
 
-      <div class="row" style="width: 95%; font-size: 110%;">
+      <div class="row entspbox">
         <div class="col s3">
-          <p style="font-size: 110%; font-family: 'Candara', serif;">
+          <p class="anweisungentsp">
             Wählen Sie eine Entspannungsübung und klicken Sie auf diese für weitere Informationen.
           </p>
-          <p style="border: 10px solid #c3c3fa; padding-top:2%">
-          <img @click="showPic(1)" src="../assets/entspannungsU/steh.jpg" style="width: 20%; margin: 0.7%;"/>
-          <img @click="showPic(2)" src="../assets/entspannungsU/stehr.jpg" style="width: 20%; margin: 0.7%;"/>
-          <img @click="showPic(3)" src="../assets/entspannungsU/kerze.jpg" style="width: 20%; margin: 0.7%;"/>
-          <img @click="showPic(4)" src="../assets/entspannungsU/kerzer.jpg" style="width: 20%; margin: 0.7%;"/>
-          <img @click="showPic(5)" src="../assets/entspannungsU/statue.jpg" style="width: 20%; margin: 0.7%;"/>
-          <img @click="showPic(6)" src="../assets/entspannungsU/statuer.jpg" style="width: 20%; margin: 0.7%;"/>
-          <img @click="showPic(7)" src="../assets/entspannungsU/strecker.jpg" style="width: 20%; margin: 0.7%;"/>
-          <img @click="showPic(8)" src="../assets/entspannungsU/sitz.jpg" style="width: 20%; margin: 0.7%;"/>
+          <p class="picbox">
+          <img @click="showPic(1)" src="../assets/entspannungsU/steh.jpg" class="minipic"/>
+          <img @click="showPic(2)" src="../assets/entspannungsU/stehr.jpg" class="minipic"/>
+          <img @click="showPic(3)" src="../assets/entspannungsU/kerze.jpg" class="minipic"/>
+          <img @click="showPic(4)" src="../assets/entspannungsU/kerzer.jpg" class="minipic"/>
+          <img @click="showPic(5)" src="../assets/entspannungsU/statue.jpg" class="minipic"/>
+          <img @click="showPic(6)" src="../assets/entspannungsU/statuer.jpg" class="minipic"/>
+          <img @click="showPic(7)" src="../assets/entspannungsU/strecker.jpg" class="minipic"/>
+          <img @click="showPic(8)" src="../assets/entspannungsU/sitz.jpg" class="minipic"/>
           </p>
         </div>
         <div class="col s6">
-          <img class="src" :src="apic" style="width: 80%; text-align:left; margin: 0.7%; border: 10px solid #c3c3fa"/>
+          <img class="src bigpic" :src="apic"/>
         </div>
         <div class="col s3">
-          <p style="text-align:left;font-size: 150%; font-family: 'Candara', serif;">{{aname}}</p>
-          <p style="text-align:left;font-size: 110%; font-family: 'Candara', serif;">{{atext}}</p>
+          <h2 class="erklaerungentsp">{{aname}}</h2>
+          <p class="anweisungentsp erklaerungentsp">{{atext}}</p>
         </div>
       </div>
 
@@ -34,13 +34,9 @@
 </template>
 
 <script>
-// @ is an alias to /src
-import EntspannungC from "@/components/EntspannungC.vue";
-
 export default {
   name: "Entspannung",
   components: {
-    EntspannungC,
   },
   data(){
     return{

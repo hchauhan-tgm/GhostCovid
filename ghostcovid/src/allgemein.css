@@ -1,0 +1,496 @@
+/* ALLGEMEIN */
+body {
+    background-color: #e1ddfa;
+    font-family: 'Candara', serif;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+h2 {
+    margin-top: 10px;
+    font-size: 200%;
+    font-family: 'Candara', serif;
+    font-variant: small-caps;
+}
+a {
+    color: #a35152;
+}
+.btn:hover{
+    box-shadow: 0 0 15px 0 #000;
+    background-color:#a35152;
+}
+
+/* TITEL */
+h1 {
+    font-family: 'Candara', serif;
+    font-variant: small-caps;
+    margin-bottom: 3%;  
+}
+
+/* ZITAT */
+h3 {
+    font-size:125%;
+    font-family: 'Candara', serif;
+    margin-left: 15%;  
+    margin-right: 15%;
+    margin-top: -25px;
+}
+
+h4 {
+    font-size:90%;
+    font-family: 'Candara', serif;
+    margin-left: 40%;  
+    margin-right: 40%;
+    margin-top: -5px;
+    font-style: italic;
+}
+
+/* HEADER */
+.nav{
+    background-color: #c3c3fa;
+    position: fixed;
+    text-align: left;
+    padding: 0.5%;
+    width: 100%;
+    margin-top: -103px;
+    z-index: 99
+    
+}
+.nav2{
+    background-color: #c3c3fa;
+    text-align: right;
+    width: 100%;
+}
+.text{
+    font-size: 175%;
+    font-family: 'Candara', serif;
+    font-variant: small-caps;
+    padding-right: 3%;
+    color:#000;
+    vertical-align: middle; 
+}
+.text:hover {
+    font-style: bold;
+}
+.logo{
+    width: 150px;
+    position: fixed;
+    z-index: 100;
+}
+.profilicon {
+    vertical-align: middle;
+}
+
+/* FOOTER */
+.foo{
+    background-color: #c3c3fa;
+    color: #000;
+    bottom: 0px;
+    position: fixed;
+    text-align: center;
+    padding: 0.25%;
+    width: 100%;
+    font-size: 100%;
+    font-family: 'Candara', serif;
+    font-variant: small-caps;
+    z-index: 99;
+}
+
+/* HOME */
+.welcome {
+    width: 90%;
+    font-size: 110%;
+    font-family: 'Candara', serif;
+}
+.content {
+    text-align: left;
+    height: 450px;
+    margin-top: -25px;
+}
+.buttonhom{
+    width: 100%;
+    height: 20%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    text-align: left;
+    font-size: 175%;
+    color: #fff;
+    font-family: 'Candara', serif; 
+    text-transform: capitalize;
+    background-color:#a35152;
+}
+.buttonhom:hover{
+    font-size: 225%;
+}
+.lets {
+    font-size:200%;
+    font-family: 'Candara', serif;
+    margin-left: 33px;
+    color:#a35152
+}
+.hometext {
+    font-size:120%;
+    margin-left: 33px;
+    margin-right: 33px
+}
+
+/* TRAINING & ERFAHRUNGEN */
+.auswahlbtn {
+    width: 80%;
+    padding-top: 1%;
+    font-size: 110%;
+    font-family: 'Candara', serif;
+}
+.buttontra{
+    margin: 1%;
+    width: 100%;
+    height: 20%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    text-align: center;
+    font-size: 250%;
+    color: #000;
+    font-family: 'Candara', serif; 
+    text-transform: capitalize;
+    font-variant: small-caps;
+    background-image: url("assets/spielew.png");
+    background-size: 100%;
+    
+}
+.buttontra:hover{
+    font-size: 300%;
+}
+.buttonerf{
+    margin: 1%;
+    width: 100%;
+    height: 20%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    text-align: center;
+    font-size: 250%;
+    color: #000;
+    font-family: 'Candara', serif; 
+    text-transform: capitalize;
+    font-variant: small-caps; 
+    background-image: url("assets/erfahrungenw.png");
+    background-size: 100%;
+}
+.buttonerf:hover{
+    font-size: 300%;
+}
+.buttonmitte {
+    margin-left: 50%;
+}
+
+/* INFORMATIONEN */
+.infos {
+    width: 80%;
+    padding-top: 1%;
+    text-align: left;
+    font-size: 110%;
+    font-family: 'Candara', serif;
+}
+.infogr {
+    height: 100%;
+    width: 100%;
+    border: 10px solid #c3c3fa;
+}
+.buttoninf{
+    color: #fff;
+    background-color: #a35152;
+    width: 25%;
+    font-family: 'Candara', serif; 
+    text-transform: small-caps;
+}
+.infotext {
+    margin-top: 1%;
+}
+
+/* LOGIN & REGISTRIEREN */
+.logbox {
+    margin-top: 5%;
+    font-family: 'Candara', serif; 
+    text-transform: capitalize;
+}
+.buttonlog{
+    color: #fff;
+    background-color: #a35152;
+    width: 90%;
+    font-family: 'Candara', serif; 
+    text-transform: small-caps;
+}
+.regbox {
+    margin-top: 2%;
+    font-family: 'Candara', serif; 
+    text-transform: capitalize;
+}
+.buttonreg{
+    color: #fff;
+    background-color: #a35152;
+    width: 75%;
+    font-family: 'Candara', serif; 
+    text-transform: small-caps;
+    margin-bottom: 10%;
+}
+
+.input-field label {
+    color: #000;
+    font-size: 110%;
+}
+
+/* ENTSPANNUNGEN */
+.minipic {
+    width: 20%; 
+    margin: 0.7%;
+}
+.bigpic {
+    width: 80%; 
+    text-align:left; 
+    margin: 0.7%; 
+    border: 10px solid #c3c3fa;
+}
+.entspbox {
+    width: 95%; 
+    font-size: 110%;
+    font-family: 'Candara', serif;
+}
+.picbox {
+    border: 10px solid #c3c3fa; 
+    padding-top:2%
+}
+.anweisungentsp {
+    font-size: 110%;
+}
+.erklaerungentsp {
+    text-align: left;
+}
+
+/* IMPRESSUM */
+.teambox {
+    text-align:center; 
+    font-family: 'Candara', serif;
+}
+.persname {
+    font-size:130%; 
+    margin-bottom:-5%; 
+    font-variant: small-caps;
+}
+.kopf {
+    border-radius:50%; 
+    width:100%
+}
+.teamr {
+    text-align:right; 
+    margin-top:1%
+}
+.teaml {
+    text-align:left; 
+    margin-top:1%
+}
+
+/* PROFIL */
+.profbutton{
+    color: #fff;
+    background-color: #a35152;
+    width: 50%;
+    font-family: 'Candara', serif; 
+    text-transform: small-caps;
+    margin: 0.5%;
+}
+
+/* SPIELE */
+.spielbox {
+    width: 80%;
+    height: 30%;
+    padding-top: 1%;
+    text-align: left;
+    font-size: 110%;
+    font-family: 'Candara', serif;
+}
+.spielpic {
+    height: 100%;
+    width: 100%;
+    border: 10px solid #c3c3fa;
+}
+.spielenbutton{
+    color: #fff;
+    background-color: #a35152;
+    width: 50%;
+    font-family: 'Candara', serif; 
+    text-transform: small-caps;
+}
+.spieltitel {
+    text-align: left;
+}
+.spielerkl {
+    text-align: left;
+    font-size: 110%;
+}
+
+
+/* SCHIEBEPUZZLE */
+.game {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    margin-top: -100px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 120px 120px 120px 120px;
+    grid-template-rows: 120px 120px 120px 120px;
+    border: 5px solid #a35152;
+}
+
+.grid button {
+    background-color: #dfdfdf;
+    height: 120px;
+    width: 120px;
+    color: #000;
+    font-size: 50px;
+    font-weight: bold;
+    border: 3px solid #a35152;
+    outline: none;
+    cursor: pointer;
+}
+span {
+    flex: 1;
+    text-align: left;
+    font-size: 25px;
+    color: #000;
+    font-weight: bold;
+    margin: auto 0;
+}
+.button1{
+    display:inline-block;
+    height: 100px;
+    width: 200px;
+    margin:1px;
+    text-decoration:none;
+    font-family:Arial;
+    font-size:40px;
+    border-radius:13px;
+    background-color:#A394D3;
+    color:black;
+    font-weight:bold;
+    padding:18px 15px;
+    margin-bottom: 10px;
+    position: fixed; 
+      bottom: 0; 
+      left: 10;
+}
+.button1:hover{
+    background-color:white;
+    color: black;
+    border-radius: 13px;
+}
+.endgame {
+    width: 90%;
+    height: 70%;
+    margin-left: 5%;
+    margin-top: -575px;
+    color: white;
+    position: absolute;
+    text-align: center;
+    background-color: rgba(255,0,4,0.56);
+    font-size: 10em;
+    vertical-align: middle;
+    visibility: hidden;
+}
+.textgew {
+    display:inline-block;
+    font-family:Arial;
+    font-weight:bold;
+    position: absolute;  
+    visibility: hidden;
+    z-index: 9999999999;
+    font-size: 800%;
+    color: white;
+    top: 10%;
+    left: 38%;
+    text-shadow: 0 0 10px black;
+}
+.textgra {
+    display:inline-block;
+    font-family:Arial;
+    font-weight:bold;
+    position: absolute;  
+    visibility: hidden;
+    z-index: 9999999999;
+    font-size: 400%;
+    color: white;
+    top: 40%;
+    left: 28%;
+    text-shadow: 0 0 10px black;
+}
+.button3{
+    display:inline-block;
+    height: 100px;
+    width: 200px;
+    margin:1px;
+    text-decoration:none;
+    font-family:Arial;
+    font-size:40px;
+    border-radius:13px;
+    background-color:white;
+    color:black;
+    font-weight:bold;
+    padding:18px 15px;
+    margin-bottom: 10px;
+    position: fixed; 
+      bottom: 20%; 
+      right: 51%;
+    visibility: hidden;
+    z-index: 9999999999;
+}
+.button3:hover{
+    background-color:green;
+    color: black;
+    border-radius: 13px;
+}
+
+.button4{
+    display:inline-block;
+    height: 100px;
+    width: 200px;
+    margin:1px;
+    text-decoration:none;
+    font-family:Arial;
+    font-size:40px;
+    border-radius:13px;
+    background-color:white;
+    color:black;
+    font-weight:bold;
+    padding:18px 15px;
+    margin-bottom: 10px;
+    position: fixed; 
+      bottom: 20%; 
+      left: 51%;
+    visibility: hidden;
+    z-index: 9999999999;
+}
+.button4:hover{
+    background-color:red;
+    color: black;
+    border-radius: 13px;
+}
+
+/* REST */
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: black;
+}
+  
+  #nav a {
+    font-weight: bold;
+    color: #a35152;
+  }
+  
+  #nav a.router-link-exact-active {
+    color: #a35152;
+  }

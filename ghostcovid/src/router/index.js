@@ -97,6 +97,12 @@ const routes = [
     component: () =>
       import("../views/Spiele.vue"),
   },
+  {
+    path: "/schiebepuzzle",
+    name: "Schiebepuzzle",
+    component: () =>
+      import("../views/Schiebepuzzle.vue"),
+  },
   
 ];
 
