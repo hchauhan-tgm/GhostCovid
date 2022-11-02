@@ -9,6 +9,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "*",
+    "materialize-social": "^1.0.3",
     "socket.io": "*"
   },
   "devDependencies": {

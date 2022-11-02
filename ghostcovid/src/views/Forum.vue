@@ -6,7 +6,7 @@
 		<!--https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc-->
 		<div class="forummsg">
 			<div class="header">
-				<p class="anzeige">Username: {{ username }} | Online: {{ users.length }}</p>
+				<p class="anzeige">Username: {{ username }} | Online: {{ users.length }} | {{ aktdate }}</p>
 			</div>
 			<ChatRoom v-bind:messages="messages" v-on:sendMessage="this.sendMessage" />
 		</div>
@@ -30,7 +30,8 @@ export default {
 			username: "",
 			socket: io("http://localhost:3000"),
 			messages: [],
-			users: []
+			users: [],
+			aktdate: (new Date()).toLocaleString()
 		}
 	},
   methods: {

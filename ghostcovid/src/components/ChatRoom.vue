@@ -1,19 +1,20 @@
 <template>
 	<div class="chat-window">
-		<form class="msginput-container" v-on:submit="sendMessage">
-			<div class="row" style="width:100%; text-align:left; margin-left: -10px">
-				<div class="col s10">
+		<div class="row" style="width:100%;">
+			<div class="col s4">
+				<form class="msginput-container" v-on:submit="sendMessage">
 					<textarea  id="icon_prefix2" type="text" class="validate msginput" v-model="msg"></textarea>
-				</div>
-				<div class="col s2">
 					<button class="sendbutton" v-on:click="sendMessage" v-bind:disabled="!msg">Veröffentlichen</button>
-				</div>
+				</form>
 			</div>
-		</form>
-		<div class="messages">
-			<div class="message" v-for="message in messages" v-bind:key="message._id">
-				<div class="msgusername">{{message.username}}</div><br>
-				<div class="message-text">{{message.msg}}</div>
+			<div class="col s8">
+				<div class="messages">
+					<div class="message" v-for="message in messages" v-bind:key="message._id">
+						<div class="msgusername">{{message.username}}</div>
+						<div class="msgdate">{{message.aktdate}}</div><br>
+						<div class="message-text">{{message.msg}}</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -23,7 +23,8 @@ io.on("connection", socket => {
 		let message = {
             index: index,
 			username: socket.username,
-			msg: msg
+			msg: msg,
+			aktdate: (new Date()).toLocaleString()
 		}
         messages.push(message);
         io.emit('msg',message);

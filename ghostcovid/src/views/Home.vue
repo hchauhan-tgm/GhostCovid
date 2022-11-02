@@ -2,7 +2,6 @@
     <div class="home">
       <Header />
       <Titel msg="Herzlich Willkommen" />
-
       <div class="row welcome">
         <div class="col s3">
           <div class="row welcome">
