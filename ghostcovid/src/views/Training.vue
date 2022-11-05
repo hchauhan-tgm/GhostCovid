@@ -1,17 +1,29 @@
 <template>
     <div class="training">
       <Header />
-      <Titel msg="Training" />
-      <Zitat msg="... Denn bei vielen Betroffenen hat die Virusinfektion die kleinsten Gefäße verändert,
-          sodass die Zellen auch im Gehirn nicht mehr ausreichend mit Sauerstoff versorgt werden. 
-          Bei Long-Covid spricht man von einem Brain-Fog, einem Nebel im Gehirn. ..." msg2="Norddeutscher Rundfunk (NDR)"/>
-      
-      <div class="row auswahlbtn">
-        <div class="col s6"><router-link to="/spiele"><a class="waves-effect waves-light btn-large buttontra btn">Spiele</a></router-link></div>
-        <div class="col s6"><router-link to="/entspannung"><a class="waves-effect waves-light btn-large buttontra btn">Entspannung</a></router-link></div>
-        <div class="col s6"><router-link to="/kreativ"><a class="waves-effect waves-light btn-large buttontra btn">Kreativität</a></router-link></div>
-        <div class="col s6"><router-link to="/motivation"><a class="waves-effect waves-light btn-large buttontra btn">Motivation</a></router-link></div>
-      </div>
+      <section id="obentr">
+        <Titel msg="Training" />
+        <Zitat msg="... Denn bei vielen Betroffenen hat die Virusinfektion die kleinsten Gefäße verändert,
+            sodass die Zellen auch im Gehirn nicht mehr ausreichend mit Sauerstoff versorgt werden. 
+            Bei Long-Covid spricht man von einem Brain-Fog, einem Nebel im Gehirn. ..." msg2="Norddeutscher Rundfunk (NDR)"/><br><br>
+        <router-link to="/spiele" class="trainingbutton">𝑺𝒑𝒊𝒆𝒍𝒆</router-link>
+        <router-link to="/entspannung" class="trainingbutton">𝑬𝒏𝒕𝒔𝒑𝒂𝒏𝒏𝒖𝒏𝒈</router-link>
+        <router-link to="/kreativ" class="trainingbutton">𝑲𝒓𝒆𝒂𝒕𝒊𝒗𝒊𝒕ä𝒕</router-link>
+        <router-link to="/motivation" class="trainingbutton">𝑴𝒐𝒕𝒊𝒗𝒂𝒕𝒊𝒐𝒏</router-link><br>
+      </section>
+      <section id="contenttr">
+
+      </section>
+
+
+      <!--<section id="contenthome">
+        <div class="row auswahlbtn">
+          <div class="col s6"><router-link to="/spiele"><a class="waves-effect waves-light btn-large buttontra btn">Spiele</a></router-link></div>
+          <div class="col s6"><router-link to="/entspannung"><a class="waves-effect waves-light btn-large buttontra btn">Entspannung</a></router-link></div>
+          <div class="col s6"><router-link to="/kreativ"><a class="waves-effect waves-light btn-large buttontra btn">Kreativität</a></router-link></div>
+          <div class="col s6"><router-link to="/motivation"><a class="waves-effect waves-light btn-large buttontra btn">Motivation</a></router-link></div>
+        </div>
+      </section>-->
 
       <Footer />
     </div>

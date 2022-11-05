@@ -1,8 +1,9 @@
 <template>
     <div id="app">
       <router-view />
-        <fab :position="top-left" :actions="fabActions"  @E-Mail="mailme" @Spotify="gotospotify" @Instagram="gotoinsta" ></fab>
+        <!--<fab :position="top-left" :actions="fabActions"  @E-Mail="mailme" @Spotify="gotospotify" @Instagram="gotoinsta"></fab>-->
 
+        <fab :position="position" :bg-color='bgColor' :actions="fabActions" @E-Mail="mailme" @Spotify="gotospotify" @Instagram="gotoinsta" :main-icon="maini"></fab>
         
     </div>
 </template>
@@ -21,8 +22,9 @@ export default {
   },
   data() {
     return {
-      bgColor: "#778899",
-      position: "top-right",
+      bgColor: "#000000",
+      position: "bottom",
+      maini: "attach_file",
       fabActions: [
         {
           name: "E-Mail",
@@ -48,7 +50,7 @@ export default {
     },
     gotoinsta() {
       window.location.href = "https://www.instagram.com";
-    }
+    },
   }
 };
 </script>

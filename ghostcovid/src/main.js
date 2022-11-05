@@ -7,11 +7,9 @@ import header from './components/Header.vue'
 import footer from './components/Footer.vue'
 import titel from './components/Titel.vue'
 import zitat from './components/Zitat.vue'
-import Lightbox from 'vue-easy-lightbox'
 
 Vue.config.productionTip = false;
 
-Vue.use(Lightbox)
 Vue.use(VueFab)
 Vue.component('Header', header)
 Vue.component('Footer', footer)
