@@ -6,34 +6,38 @@
       <div class="logbox">
         <div class="row">
           <div class="col s4"></div>
-            <div class="input-field col s4">
-              <i class="material-icons prefix">account_circle</i>
-              <input id="icon_prefix" type="text" class="validate">
-              <label for="icon_prefix">Benutzername</label>
+            <div class="col s4" style="background-color:#fff;border-radius:10px;padding-top:10px">
+              <div class="input-field">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="icon_prefix1" type="text" class="validate">
+                <label for="icon_prefix1">Benutzername</label>
+              </div>
             </div>
             <div class="col s4"></div>
         </div>
         <div class="row">
           <div class="col s4"></div>
-            <div class="input-field col s4">
-              <i class="material-icons prefix">https</i>
-              <input id="icon_prefix2" type="password" class="validate">
-              <label for="icon_prefix2">Passwort</label>
+            <div class="col s4" style="background-color:#fff;border-radius:10px;padding-top:10px">
+              <div class="input-field">
+                <i class="material-icons prefix">https</i>
+                <input id="icon_prefix2" type="password" class="validate">
+                <label for="icon_prefix2">Passwort</label>
+              </div>
             </div>
           <div class="col s4"></div>
         </div>
         <div class="row">
           <div class="col s4"></div>
             <div class="input-field col s2">
-              <router-link to="/registrieren" class="text">
-              <button class="waves-effect waves-light btn buttonlog">registrieren
+              <router-link to="/registrieren" >
+              <button class="waves-effect waves-light buttonlog">registrieren
                 <i class="material-icons right">border_color</i>
               </button>
               </router-link>
             </div>
             <div class="input-field col s2">
-              <router-link to="/" class="text">
-              <button class="btn waves-effect waves-light buttonlog" type="submit" name="action">einloggen
+              <router-link to="/">
+              <button class="waves-effect waves-light buttonlog" type="submit" name="action">einloggen
                 <i class="material-icons right">forward</i>
               </button>
               </router-link>

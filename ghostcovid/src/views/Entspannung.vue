@@ -4,11 +4,11 @@
       <Titel msg="Entspannung" />
 
       <div class="row entspbox">
-        <div class="col s3">
+        <div class="col s3 picbox">
           <p class="anweisungentsp">
             Wählen Sie eine Entspannungsübung und klicken Sie auf diese für weitere Informationen.
           </p>
-          <p class="picbox">
+          <p>
           <img @click="showPic(1)" src="../assets/entspannungsU/steh.jpg" class="minipic"/>
           <img @click="showPic(2)" src="../assets/entspannungsU/stehr.jpg" class="minipic"/>
           <img @click="showPic(3)" src="../assets/entspannungsU/kerze.jpg" class="minipic"/>
@@ -60,22 +60,22 @@ export default {
       if(nr==3) {
         this.apic = require('@/assets/entspannungsU/ke.jpg')
         this.aname = "Vrksasana"
-        this.atext = "Stellen Sie sich gerade hin und führen Sie eine Fußsohle zu ihrem Knie. Je höher Sie Ihre Fußsohle ansetzen, desto besser. Anschließend führen Sie Ihre Hände zusammen und strecken Ihre Armen in Richtung Himmel. Halten Sie diese Position 30 Sekunden lang. Gehen Sie zu Ihrer Ursprungsposition zurück, lockern Sie Ihre Gliedmaßen und wiederholen Sie die Übung 5 Mal, ehe Sie das Bein wehcseln."
+        this.atext = "Stellen Sie sich gerade hin und führen Sie eine Fußsohle zu ihrem Knie. Je höher Sie Ihre Fußsohle ansetzen, desto besser. Anschließend führen Sie Ihre Hände zusammen und strecken Ihre Armen in Richtung Himmel. Halten Sie diese Position 30 Sekunden lang. Lockern Sie Ihre Gliedmaßen und wiederholen Sie die Übung 5 Mal, ehe Sie das Bein wechseln."
       }
       if(nr==4) {
         this.apic = require('@/assets/entspannungsU/ker.jpg')
         this.aname = "Vrksasana"
-        this.atext = "Stellen Sie sich gerade hin und führen Sie eine Fußsohle zu ihrem Knie. Je höher Sie Ihre Fußsohle ansetzen, desto besser. Anschließend führen Sie Ihre Hände zusammen und strecken Ihre Armen in Richtung Himmel. Halten Sie diese Position 30 Sekunden lang. Gehen Sie zu Ihrer Ursprungsposition zurück, lockern Sie Ihre Gliedmaßen und wiederholen Sie die Übung 5 Mal, ehe Sie das Bein wehcseln."
+        this.atext = "Stellen Sie sich gerade hin und führen Sie eine Fußsohle zu ihrem Knie. Je höher Sie Ihre Fußsohle ansetzen, desto besser. Anschließend führen Sie Ihre Hände zusammen und strecken Ihre Armen in Richtung Himmel. Halten Sie diese Position 30 Sekunden lang. Lockern Sie Ihre Gliedmaßen und wiederholen Sie die Übung 5 Mal, ehe Sie das Bein wechseln."
       }
       if(nr==5) {
         this.apic = require('@/assets/entspannungsU/sta.jpg')
         this.aname = "Utthita Ashwa Sanchalanasana"
-        this.atext = "Machen Sie einen großen Schritt nach vorne mit dem rechten Fuß. Beugen Sie das vordere Knie, halten Sie Ihr Hinterbein gerade und die Ferse vom Boden angehoben. Lehnen Sie sich mit Ihren Hüften nach vorne und strecken Sie Ihre Arme zum Himmel. Dehnen Sie sich nach oben. Halten Sie diese Position für 30 Sekunden und wiederholen Sie dies auf der anderen Seite, jeweils 5 Mal."
+        this.atext = "Machen Sie einen großen Schritt nach vorne mit dem rechten Fuß. Beugen Sie das vordere Knie, halten Sie Ihr Hinterbein gerade und die Ferse vom Boden angehoben. Lehnen Sie sich mit Ihren Hüften nach vorne und ziehen Sie Ihre Arme zum Himmel. Halten Sie diese Position für 30 Sekunden und wiederholen Sie dies auf der anderen Seite, jeweils 5 Mal."
       }
       if(nr==6) {
         this.apic = require('@/assets/entspannungsU/star.jpg')
         this.aname = "Utthita Ashwa Sanchalanasana"
-        this.atext = "Machen Sie einen großen Schritt nach vorne mit dem rechten Fuß. Beugen Sie das vordere Knie, halten Sie Ihr Hinterbein gerade und die Ferse vom Boden angehoben. Lehnen Sie sich mit Ihren Hüften nach vorne und strecken Sie Ihre Arme zum Himmel. Dehnen Sie sich nach oben. Halten Sie diese Position für 30 Sekunden und wiederholen Sie dies auf der anderen Seite, jeweils 5 Mal."
+        this.atext = "Machen Sie einen großen Schritt nach vorne mit dem rechten Fuß. Beugen Sie das vordere Knie, halten Sie Ihr Hinterbein gerade und die Ferse vom Boden angehoben. Lehnen Sie sich mit Ihren Hüften nach vorne und ziehen Sie Ihre Arme zum Himmel. Halten Sie diese Position für 30 Sekunden und wiederholen Sie dies auf der anderen Seite, jeweils 5 Mal."
       }
       if(nr==7) {
         this.apic = require('@/assets/entspannungsU/bs.jpg')

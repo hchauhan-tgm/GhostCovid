@@ -56,49 +56,49 @@ const routes = [
       import("../views/Registrieren.vue"),
   },
   {
-    path: "/podcast",
+    path: "/erfahrungen/podcast",
     name: "Podcast",
     component: () =>
       import("../views/Podcast.vue"),
   },
   {
-    path: "/videos",
+    path: "/erfahrungen/videos",
     name: "Videos",
     component: () =>
       import("../views/Videos.vue"),
   },
   {
-    path: "/forum",
+    path: "/erfahrungen/forum",
     name: "Forum",
     component: () =>
       import("../views/Forum.vue"),
   },
   {
-    path: "/entspannung",
+    path: "/training/entspannung",
     name: "Entspannung",
     component: () =>
       import("../views/Entspannung.vue"),
   },
   {
-    path: "/kreativ",
+    path: "/training/kreativ",
     name: "Kreativ",
     component: () =>
       import("../views/Kreativ.vue"),
   },
   {
-    path: "/motivation",
+    path: "/training/motivation",
     name: "Motivation",
     component: () =>
       import("../views/Motivation.vue"),
   },
   {
-    path: "/spiele",
+    path: "/training/spiele",
     name: "Spiele",
     component: () =>
       import("../views/Spiele.vue"),
   },
   {
-    path: "/schiebepuzzle",
+    path: "/training/spiele/schiebepuzzle",
     name: "Schiebepuzzle",
     component: () =>
       import("../views/Schiebepuzzle.vue"),

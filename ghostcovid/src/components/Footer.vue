@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="foo">
-            © Jasmin Wagner | <router-link to="/impressum">Impressum</router-link>
+            © Ghost Covid | <router-link to="/impressum">Impressum</router-link>
         </div>
         <!--<div class="logosunten">
             <a href="mailto:jwagner@student.tgm.ac.at" target="_blank"><i class="small material-icons emailicon">email</i></a><br>

@@ -6,58 +6,74 @@
       <div class="regbox">
         <div class="row">
           <div class="col s2"></div>
-            <div class="input-field col s4">
-              <input id="vn" type="text" class="validate">
-              <label for="vn">Vorname</label>
+            <div class="col s4" style="background-color:#fff;border-radius:10px;padding-top:10px;margin:5px;width:33%">
+              <div class="input-field">
+                <input id="vn" type="text" class="validate">
+                <label for="vn">Vorname</label>
+              </div>
             </div>
-            <div class="input-field col s4">
-              <input id="nn" type="text" class="validate">
-              <label for="nn">Nachname</label>
-            </div>
-          <div class="col s2"></div>
-        </div>
-
-        <div class="row">
-          <div class="col s2"></div>
-            <div class="input-field col s8">
-              <input id="email" type="email" class="validate">
-              <label for="email">E-Mail Adresse</label>
-              <span class="helper-text" data-error="Keine gültige E-Mail Adresse" data-success="Korrekte E-Mail Adresse"></span>
+            <div class="col s4" style="background-color:#fff;border-radius:10px;padding-top:10px;margin:5px;width:33%">
+              <div class="input-field">
+                <input id="nn" type="text" class="validate">
+                <label for="nn">Nachname</label>
+              </div>
             </div>
           <div class="col s2"></div>
         </div>
 
         <div class="row">
           <div class="col s2"></div>
-            <div class="input-field col s4">
-              <input id="gb" type="date" class="validate">
-              <label for="gb">Geburtsdatum</label>
-            </div>
-            <div class="input-field col s4">
-              <input id="land" type="text" class="validate">
-              <label for="land">Land</label>
+            <div class="col s8" style="background-color:#fff;border-radius:10px;padding-top:10px;margin-left:5px">
+              <div class="input-field">
+                <input id="email" type="email" class="validate">
+                <label for="email">E-Mail Adresse</label>
+                <span class="helper-text" data-error="Keine gültige E-Mail Adresse" data-success="Korrekte E-Mail Adresse"></span>
+              </div>
             </div>
           <div class="col s2"></div>
         </div>
 
         <div class="row">
           <div class="col s2"></div>
-            <div class="input-field col s8">
-              <input id="bn" type="text" class="validate">
-              <label for="bn">Benutzername</label>
+            <div class="col s4" style="background-color:#fff;border-radius:10px;padding-top:10px;margin:5px;width:33%">
+              <div class="input-field">
+                <input id="gb" type="date" class="validate">
+                <label for="gb">Geburtsdatum</label>
+              </div>
+            </div>
+            <div class="col s4" style="background-color:#fff;border-radius:10px;padding-top:10px;margin:5px;width:33%">
+              <div class="input-field">
+                <input id="land" type="text" class="validate">
+                <label for="land">Land</label>
+              </div>
+            </div>
+          <div class="col s2"></div>
+        </div>
+
+        <div class="row">
+          <div class="col s2"></div>
+            <div class="col s8" style="background-color:#fff;border-radius:10px;padding-top:10px;margin-left:5px">
+              <div class="input-field">
+                <input id="bn" type="text" class="validate">
+                <label for="bn">Benutzername</label>
+              </div>
             </div>
             <div class="col s2"></div>
         </div>
 
         <div class="row">
           <div class="col s2"></div>
-            <div class="input-field col s4">
-              <input id="pw" type="password" class="validate">
-              <label for="pw">Passwort</label>
+            <div class="col s4" style="background-color:#fff;border-radius:10px;padding-top:10px;margin:5px;width:33%">
+              <div class="input-field">
+                <input id="pw" type="password" class="validate">
+                <label for="pw">Passwort</label>
+              </div>
             </div>
-            <div class="input-field col s4">
-              <input id="pw2" type="password" class="validate">
-              <label for="pw2">Passwort wiederholen</label>
+            <div class="col s4" style="background-color:#fff;border-radius:10px;padding-top:10px;margin:5px;width:33%">
+              <div class="input-field">
+                <input id="pw2" type="password" class="validate">
+                <label for="pw2">Passwort wiederholen</label>
+              </div>
             </div>
           <div class="col s2"></div>
         </div>
@@ -65,15 +81,15 @@
         <div class="row">
           <div class="col s2"></div>
             <div class="input-field col s4">
-              <router-link to="/login" class="text">
-              <button class="waves-effect waves-light btn buttonreg">zum Login
+              <router-link to="/login">
+              <button class="waves-effect waves-light buttonreg">zum Login
                 <i class="material-icons right">border_color</i>
               </button>
               </router-link>
             </div>
             <div class="input-field col s4">
-              <router-link to="/" class="text">
-              <button class="btn waves-effect waves-light buttonreg" type="submit" name="action">registrieren
+              <router-link to="/">
+              <button class="waves-effect waves-light buttonreg" type="submit" name="action">registrieren
                 <i class="material-icons right">forward</i>
               </button>
               </router-link>

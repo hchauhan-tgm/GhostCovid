@@ -1,9 +1,9 @@
 <template>
     <div id="app">
       <router-view />
-        <!--<fab :position="top-left" :actions="fabActions"  @E-Mail="mailme" @Spotify="gotospotify" @Instagram="gotoinsta"></fab>-->
-
         <fab :position="position" :bg-color='bgColor' :actions="fabActions" @E-Mail="mailme" @Spotify="gotospotify" @Instagram="gotoinsta" :main-icon="maini"></fab>
+
+
         
     </div>
 </template>
@@ -54,9 +54,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-.fab {
-  color: blueviolet;
-}
-</style>
