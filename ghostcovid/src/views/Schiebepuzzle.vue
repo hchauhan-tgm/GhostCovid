@@ -1,10 +1,10 @@
 <template>
-    <div class="schiebepuzzle" v-on:load="start">
+    <div class="schiebepuzzle" >
       <Header />
       <Titel msg="Schiebepuzzle" /><br>
 
-      <router-link to="/schiebepuzzle"><button v-on:click="start" class="button1">zurück</button></router-link><br>
-      <router-link to="/spiele"><button v-on:click="start" class="button4">zurück</button></router-link><br>
+      <router-link to="/training/spiele"><button class="button1">zurück</button></router-link><br>
+      <router-link to="/training/spiele"><button class="button4">zurück</button></router-link><br>
       
       <div class="game">
         <div class="grid">
@@ -84,6 +84,46 @@ class Box {
     return nextdoorBoxes[Math.floor(Math.random() * nextdoorBoxes.length)];
   }
 }
+
+const swapBoxes = (grid, box1, box2) => {
+  const temp = grid[box1.y][box1.x];
+  grid[box1.y][box1.x] = grid[box2.y][box2.x];
+  grid[box2.y][box2.x] = temp;
+};
+
+const isSolved = grid => {
+  return (
+    grid[0][0] === 1 &&
+    grid[0][1] === 2 &&
+    grid[0][2] === 3 &&
+    grid[0][3] === 4 &&
+    grid[1][0] === 5 &&
+    grid[1][1] === 6 &&
+    grid[1][2] === 7 &&
+    grid[1][3] === 8 &&
+    grid[2][0] === 9 &&
+    grid[2][1] === 10 &&
+    grid[2][2] === 11 &&
+    grid[2][3] === 12 &&
+    grid[3][0] === 13 &&
+    grid[3][1] === 14 &&
+    grid[3][2] === 15 &&
+    grid[3][3] === 0
+  );
+};
+
+const getRandomGrid = () => {
+  let grid = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 0]];
+  let blankBox = new Box(3, 3);
+  for (let i = 0; i < 1000; i++) {
+    const randomNextdoorBox = blankBox.getRandomNextdoorBox();
+    swapBoxes(grid, blankBox, randomNextdoorBox);
+    blankBox = randomNextdoorBox;
+  }
+
+  if (isSolved(grid)) return getRandomGrid();
+  return grid;
+};
 
 class State {
   constructor(grid, move, time, status) {
@@ -181,63 +221,22 @@ class Game {
     document.getElementById("time").textContent = `Time: ${time}`;
 
     if (status === "won") {
-      document.querySelector(".game").style.visibility = 'hidden';
-      document.querySelector(".endgame").style.visibility = 'visible';
-    	document.querySelector(".endgame").style.display = "block";
+    document.querySelector(".endgame").style.visibility = 'visible';
+    document.querySelector(".endgame").style.display = "block";
 		document.querySelector(".endgame").style.backgroundColor = "rgba(0,255,5,0.80)";
 		var what2 = "Gratulation du hast es geschafft!";
 		var what = "Gewonnen";
 		document.querySelector(".button3").style.visibility = 'visible';
 		document.querySelector(".button4").style.visibility = 'visible';
-		document.querySelector(".textgew").style.visibility = 'visible';
-		document.querySelector(".textgew").style.zIndex = 9999999999999;
-		document.querySelector(".textgew").innerText = what; //schreibt text GEWONNEN oder VERLOREN in ein Feld
-		document.querySelector(".textgra").style.visibility = 'visible';
-		document.querySelector(".textgra").style.zIndex = 9999999999999;
-		document.querySelector(".textgra").innerText = what2; //schreibt text GEWONNEN oder VERLOREN in ein Feld
+		document.querySelector(".text").style.visibility = 'visible';
+		document.querySelector(".text").style.zIndex = 9999999999999;
+		document.querySelector(".text").innerText = what; //schreibt text GEWONNEN oder VERLOREN in ein Feld
+		document.querySelector(".text2").style.visibility = 'visible';
+		document.querySelector(".text2").style.zIndex = 9999999999999;
+		document.querySelector(".text2").innerText = what2; //schreibt text GEWONNEN oder VERLOREN in ein Feld
     }
   }
 }
-
-const swapBoxes = (grid, box1, box2) => {
-  const temp = grid[box1.y][box1.x];
-  grid[box1.y][box1.x] = grid[box2.y][box2.x];
-  grid[box2.y][box2.x] = temp;
-};
-
-const isSolved = grid => {
-  return (
-    grid[0][0] === 1 &&
-    grid[0][1] === 2 &&
-    grid[0][2] === 3 &&
-    grid[0][3] === 4 &&
-    grid[1][0] === 5 &&
-    grid[1][1] === 6 &&
-    grid[1][2] === 7 &&
-    grid[1][3] === 8 &&
-    grid[2][0] === 9 &&
-    grid[2][1] === 10 &&
-    grid[2][2] === 11 &&
-    grid[2][3] === 12 &&
-    grid[3][0] === 13 &&
-    grid[3][1] === 14 &&
-    grid[3][2] === 15 &&
-    grid[3][3] === 0
-  );
-};
-
-const getRandomGrid = () => {
-  let grid = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 0]];
-  let blankBox = new Box(3, 3);
-  for (let i = 0; i < 1000; i++) {
-    const randomNextdoorBox = blankBox.getRandomNextdoorBox();
-    swapBoxes(grid, blankBox, randomNextdoorBox);
-    blankBox = randomNextdoorBox;
-  }
-
-  if (isSolved(grid)) return getRandomGrid();
-  return grid;
-};
 
 
 export default {
@@ -245,17 +244,18 @@ export default {
   components: {
   },
   mounted:function(){
-    this.start()
-    Game.ready()
+    Game.ready();
+    
   },
   methods: {
     start: function startGame() {
-      document.querySelector(".button1").style.visibility = 'hidden'
-      document.querySelector(".button4").style.visibility = 'hidden'
-      document.querySelector(".textgew").style.visibility = 'hidden'
-      document.querySelector(".textgra").style.visibility = 'hidden'
-      document.querySelector(".endgame").style.visibility = 'hidden'
-      document.querySelector(".endgame").style.display = "none" //Textbox (Endgame) wird ausgeblendet
+      document.getElementById("home").className = "h" //wird ausgeblendet
+      document.querySelector(".button1").style.visibility = 'hidden';
+      document.querySelector(".button4").style.visibility = 'hidden';
+      document.querySelector(".text").style.visibility = 'hidden';
+      document.querySelector(".text2").style.visibility = 'hidden';
+      document.querySelector(".endgame").style.visibility = 'hidden';
+      document.querySelector(".endgame").style.display = "none"; //Textbox (Endgame) wird ausgeblendet
     },
   }
 };

@@ -103,7 +103,6 @@ const routes = [
     component: () =>
       import("../views/Schiebepuzzle.vue"),
   },
-  
 ];
 
 const router = new VueRouter({
