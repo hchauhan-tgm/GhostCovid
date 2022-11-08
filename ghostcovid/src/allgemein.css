@@ -462,7 +462,7 @@ h4 {
     color: #fff;
     background-color: #943e34;
     width: 50%;
-    font-family: 'Helvetica', serif; 
+    font-family: 'Arial', serif; 
     text-transform: small-caps;
     background-image: linear-gradient(to top, #943e34 15%, #a35152 85%);
     box-shadow: 0 4px 5px -2px #000;
@@ -482,7 +482,7 @@ h4 {
     margin-top: -30px;
 }
 .anzeige {
-    font-family: 'Helvetica', serif; 
+    font-family: 'Arial'; 
     text-align: left;
     margin-left: 11%;
 }
@@ -498,14 +498,14 @@ h4 {
     max-height: 500px;
     overflow-y: scroll;
     overflow-x: hidden;
-    background-color: rgb(255, 251, 251);
-    border-top: solid 1px black;
-    box-shadow: 0 4px 4px 4px gray;
+    background-color: #943e34;
+    border: solid 10px #943e34;
+    border-radius: 5px;
     padding: 5px;
 }
 .message {
     border: 1px solid rgb(151, 151, 151);
-    background-color: #d1fff3;
+    background-color: #fff;
     margin-bottom: 1%;
     padding-left: 25px;
     padding-right: 25px;
@@ -515,20 +515,20 @@ h4 {
 .msgusername {
     text-align: left;
     font-size: 150%;
-    font-family: 'Helvetica', serif;
+    font-family: 'Arial';
     margin-bottom: -25px;
 }
 .msgdate {
     margin-left: 20px;
     text-align: right;
     font-size: 90%;
-    font-family: 'Helvetica', serif;
+    font-family: 'Arail';
     margin-bottom: -15px;
 }
 .message-text {
     flex: 1;
     text-align: left;
-    font-family: 'Helvetica', serif;
+    font-family: 'Arial';
     word-wrap: break-word;
 }
 .msginput-container {
@@ -536,6 +536,7 @@ h4 {
 }
 .msginput {
     background-color: #f1f1f1;
+    border: solid 10px #943e34;
     height: 200px;
     max-width: 100%;
     max-height: 200px;
@@ -544,18 +545,17 @@ h4 {
 .sendbutton {
     width: 100%;
     height: 75px;
-    box-sizing: border-box;
+    border: 2px solid #fff;
     color: #fff;
+    font-family: Chalkduster;
+    letter-spacing: 1px;
+    font-size: 150%;
     background-color: #943e34;
-    font-family: 'Helvetica', serif; 
-    font-size: 130%;
-    cursor: pointer;
-    padding: 15px;
-    word-wrap: break-word;
+    vertical-align: middle;
 }
 .sendbutton:hover {
-    box-shadow: 0 0 15px 0 #000;
-    background-color:#943e34;
+    color: #fff;
+    background-color:#000;
 }
 
 
