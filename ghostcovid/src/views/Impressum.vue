@@ -64,7 +64,7 @@
             Position: <i>Projektmitglied</i><br>
             Aufgabenbereich: <i>Content Creator</i><br>
             E-Mail: <i><a href="mailto:sfrick.ghostcovid@gmail.com" style="color:#000">sfrick.ghostcovid@gmail.com</a></i><br>
-            Telefon: <i>+43 1234 9876</i><br><br>
+            Telefon: <i>+43 68181499583</i><br><br>
             <i>"Aufgeschoben ist nicht aufgehoben!"</i>
           </div>
         </div>
