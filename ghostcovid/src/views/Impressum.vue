@@ -26,7 +26,7 @@
             Aufgabenbereich: <i>Web Developer</i><br>
             E-Mail: <i><a href="mailto:jwagner.ghostcovid@gmail.com" style="color:#000">jwagner.ghostcovid@gmail.com</a></i><br>
             Telefon: <i>+43 1234 9876</i><br><br>
-            <i>"Today it's not one day - it's day one!"</i>
+            <i>"Motivation is the key!"</i>
           </div>
         </div>
         <div class="row infos">
