@@ -1,5 +1,6 @@
 <template>
-    <div class="schiebepuzzle" >
+    <div class="schiebepuzzle">
+      
       <Header />
       <Titel msg="Schiebepuzzle" /><br>
 
@@ -249,6 +250,7 @@ export default {
   },
   methods: {
     start: function startGame() {
+      location.reload();
       document.getElementById("home").className = "h" //wird ausgeblendet
       document.querySelector(".button1").style.visibility = 'hidden';
       document.querySelector(".button4").style.visibility = 'hidden';

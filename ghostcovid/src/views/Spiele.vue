@@ -4,7 +4,7 @@
       <section id="begruessung">
         <Titel msg="Spiele" />
         <Zitat msg="... Gedächtnisprobleme stiegen nach sechs bis 18 Monaten nach der akuten Erkrankung an. 
-        Nach einem halben Jahr war das Risiko für Gedächtnisprobleme noch um 11,5 Prozent erhöht, bei Frauen waren es 18,7 Prozent.  ..." msg2="Kurier"/><br>
+        Nach einem halben Jahr war das Risiko für Gedächtnisprobleme noch um 11,5 Prozent erhöht, bei Frauen waren es 18,7 Prozent.  ..." msg2="Kurier"/><br><br>
         <a href="#training/spiele" class="startbutton">Let's <b style="font-family:Chalkduster; letter-spacing:1px;">play</b> together!</a>
       </section>
       <section id="training/spiele" class="contenthome">

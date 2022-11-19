@@ -103,6 +103,12 @@ const routes = [
     component: () =>
       import("../views/Schiebepuzzle.vue"),
   },
+  {
+    path: "/training/atmen",
+    name: "Atmen",
+    component: () =>
+      import("../views/Atmen.vue"),
+  },
 ];
 
 const router = new VueRouter({

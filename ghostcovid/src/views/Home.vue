@@ -27,6 +27,7 @@
           <div class="col s4"></div>
         </div>
         <br><br>
+        <p class="lets">-</p>
         <p class="lets">Registrierung</p>
         <p class="hometext">
           Bei uns kannst du innerhalb von 2 Minuten ein Benutzerprofil erstellen! <br><br>
@@ -51,13 +52,13 @@
         </p><br><br>
         <div class="row welcome">
           <div class="col s4">
-            <img src="../assets/logotgm.png" class="logoshome"/>
+            <a href="https://www.tgm.ac.at/" target="_blank"><img src="../assets/logotgm.png" class="logoshome"/></a>
           </div>
           <div class="col s4">
-            <img src="../assets/logoit.png" class="logoshome"/>
+            <a href="https://www.tgm.ac.at/?page_id=12662" target="_blank"><img src="../assets/logoit.png" class="logoshome"/></a>
           </div>
           <div class="col s4">
-            <img src="../assets/GhostCovidLogo.png" class="logoshome"/>
+            <a href="https://ghostcovid.netlify.app" target="_blank"><img src="../assets/GhostCovidLogo.png" class="logoshome"/></a>
           </div>
         </div>
       </section>

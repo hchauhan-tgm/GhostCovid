@@ -6,9 +6,9 @@
         <Zitat msg="... Mit Ärzten, die sie nicht ernst nehmen, Kollegen und Nachbarn, die Sie belächeln und tuscheln, 
           Arbeitgebern, die Druck machen. Dass eine Corona-Infektion langfristige Folgen haben kann, habe 
           sich offenbar immer noch nicht herumgesprochen..." msg2="Frankfurter Neue Presse"/><br><br>
-        <router-link to="/erfahrungen/podcast" class="trainingbutton">Podcast</router-link>
-        <router-link to="/erfahrungen/videos" class="trainingbutton">Videos</router-link>
-        <router-link to="/erfahrungen/forum" class="trainingbutton">Forum</router-link><br>
+        <router-link to="/erfahrungen/podcast" class="trainingbutton btn">Podcast</router-link>
+        <router-link to="/erfahrungen/videos" class="trainingbutton btn">Videos</router-link>
+        <router-link to="/erfahrungen/forum" class="trainingbutton btn">Forum</router-link><br>
       </section>
       <section id="contenttr">
 

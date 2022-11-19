@@ -1,32 +1,79 @@
 <template>
     <div class="entspannung">
       <Header />
-      <Titel msg="Entspannung" />
-
-      <div class="row entspbox">
-        <div class="col s3 picbox">
-          <p class="anweisungentsp">
-            Wählen Sie eine Entspannungsübung und klicken Sie auf diese für weitere Informationen.
-          </p>
-          <p>
-          <img @click="showPic(1)" src="../assets/entspannungsU/steh.jpg" class="minipic"/>
-          <img @click="showPic(2)" src="../assets/entspannungsU/stehr.jpg" class="minipic"/>
-          <img @click="showPic(3)" src="../assets/entspannungsU/kerze.jpg" class="minipic"/>
-          <img @click="showPic(4)" src="../assets/entspannungsU/kerzer.jpg" class="minipic"/>
-          <img @click="showPic(5)" src="../assets/entspannungsU/statue.jpg" class="minipic"/>
-          <img @click="showPic(6)" src="../assets/entspannungsU/statuer.jpg" class="minipic"/>
-          <img @click="showPic(7)" src="../assets/entspannungsU/strecker.jpg" class="minipic"/>
-          <img @click="showPic(8)" src="../assets/entspannungsU/sitz.jpg" class="minipic"/>
-          </p>
+      
+      <section id="begruessung">
+        <Titel msg="Entspannung" />
+        <Zitat msg="... Nur so wird es gelingen, eigene Grenzen besser zu spüren und gewohnte Routinen so zu verändern, um auch an schlechten Tagen gut über 
+        den Tag zu kommen und sich an guten Tagen nicht völlig zu verausgaben. Und mit der richtigen Balance zwischen Ruhe und Aktivität geht es [...] 
+        den Blick nach vorne zu richten und Körper und Geist ganz achtsam und bewusst zu trainieren.  ..." msg2="Stern"/><br><br>
+        <a href="#training/spiele" class="startbutton">Let's <b style="font-family:Chalkduster; letter-spacing:1px;">relax</b> together!</a>
+      </section>
+      <section id="training/spiele" class="contenthome">
+        <p class="lets">Tadasana</p>
+        <div class="row picbox">
+          <div class="col s1"></div>
+          <div class="col s7"><img class="bigpic" src="../assets/entspannungsU/st.jpg" />
+          <img class="bigpic" src="../assets/entspannungsU/str.jpg" /></div>
+          <div class="col s3">
+            Stellen Sie sich gerade hin und strecken beide Arme in Richtung Himmel, als würden Sie ein 'V' bilden. 
+            Schließen Sie wenn möglich die Augen. Strecken Sie sich so weit es geht und halten in der Position 30 Sekunden inne. 
+            Lockern Sie danach ihre Gliedmaßen. Wiederholen Sie diese Übung 5 mal.
+          </div>
+          <div class="col s1"></div>
         </div>
-        <div class="col s6">
-          <img class="src bigpic" :src="apic"/>
+        <p class="lets">-</p>
+        <p class="lets">Vrksasana</p>
+        <div class="row picbox">
+          <div class="col s1"></div>
+          <div class="col s7"><img class="bigpic" src="../assets/entspannungsU/ke.jpg" />
+          <img class="bigpic" src="../assets/entspannungsU/ker.jpg" /></div>
+          <div class="col s3">
+            Stellen Sie sich gerade hin und führen Sie eine Fußsohle zu ihrem Knie. Je höher Sie Ihre Fußsohle ansetzen, desto besser. 
+            Anschließend führen Sie Ihre Hände zusammen und strecken Ihre Armen in Richtung Himmel. Halten Sie diese Position 30 Sekunden lang. 
+            Lockern Sie Ihre Gliedmaßen und wiederholen Sie die Übung 5 Mal, ehe Sie das Bein wechseln.
+          </div>
+          <div class="col s1"></div>
         </div>
-        <div class="col s3">
-          <h2 class="erklaerungentsp">{{aname}}</h2>
-          <p class="anweisungentsp erklaerungentsp">{{atext}}</p>
+        <p class="lets">-</p>
+        <p class="lets">Utthita Ashwa Sanchalanasana</p>
+        <div class="row picbox">
+          <div class="col s1"></div>
+          <div class="col s7"><img class="bigpic" src="../assets/entspannungsU/sta.jpg" />
+          <img class="bigpic" src="../assets/entspannungsU/star.jpg" /></div>
+          <div class="col s3">
+            Machen Sie einen großen Schritt nach vorne mit dem rechten Fuß. Beugen Sie das vordere Knie, halten Sie Ihr Hinterbein gerade und die Ferse vom Boden angehoben. 
+            Lehnen Sie sich mit Ihren Hüften nach vorne und ziehen Sie Ihre Arme zum Himmel. 
+            Halten Sie diese Position für 30 Sekunden und wiederholen Sie dies auf der anderen Seite, jeweils 5 Mal.
+          </div>
+          <div class="col s1"></div>
         </div>
-      </div>
+        <p class="lets">-</p>
+        <p class="lets">Shavasana</p>
+        <div class="row picbox">
+          <div class="col s4"></div>
+          <div class="col s3"><img class="bigpic1" src="../assets/entspannungsU/bs.jpg" /></div>
+          <div class="col s1"></div>
+          <div class="col s2">
+            Legen Sie sich auf den Boden und strecken die Arme und Beine aus. Achten Sie darauf. dass Ihr Rücken am Boden liegt und kein Hohlkreuz entsteht. 
+            Halten Sie die Position für eine Minute, entspannen Sie Ihre Gliedmaßen und wiederholen Sie die Übung 5 Mal.
+          </div>
+          <div class="col s2"></div>
+        </div>
+        <p class="lets">-</p>
+        <p class="lets">Padmasana</p>
+        <div class="row picbox">
+          <div class="col s4"></div>
+          <div class="col s3"><img class="bigpic1" src="../assets/entspannungsU/si.jpg" /></div>
+          <div class="col s1"></div>
+          <div class="col s2">
+            Setzen sie sich auf ihre Matte oder einen anderen bequemen Untergrund. Legen sie Ihre Hände auf den Oberschenkeln ab und drehen Sie die Handflächen nach oben. 
+            Schließen Sie die Augen und versuchen Sie, sich zu entspannen und auf Ihren Körper zu hören. Bleiben Sie für 5 Minuten in dieser Position.
+          </div>
+          <div class="col s2"></div>
+        </div>
+        
+      </section>
 
       <Footer />
     </div>
@@ -38,56 +85,5 @@ export default {
   name: "Entspannung",
   components: {
   },
-  data(){
-    return{
-      apic: require('@/assets/entspannungsU/si.jpg'),
-      aname: "Padmasana",
-      atext: "Setzen sie sich auf ihre Matte oder einen anderen bequemen Untergrund. Legen sie Ihre Hände auf den Oberschenkeln ab und drehen Sie die Handflächen nach oben. Schließen Sie die Augen und versuchen Sie, sich zu entspannen und auf Ihren Körper zu hören. Bleiben Sie für 5 Minuten in dieser Position."
-    }
-  },
-  methods:{
-    showPic(nr){
-      if(nr==1) {
-        this.apic = require('@/assets/entspannungsU/st.jpg')
-        this.aname = "Tadasana"
-        this.atext = "Stellen Sie sich gerade hin und strecken beide Arme in Richtung Himmel, als würden Sie ein 'V' bilden. Schließen Sie wenn möglich die Augen. Strecken Sie sich so weit es geht und halten in der Position 30 Sekunden inne. Lockern Sie danach ihre Gliedmaßen. Wiederholen Sie diese Übung 5 mal."
-      }
-      if(nr==2) {
-        this.apic = require('@/assets/entspannungsU/str.jpg')
-        this.aname = "Tadasana"
-        this.atext = "Stellen Sie sich gerade hin und strecken beide Arme in Richtung Himmel, als würden Sie ein 'V' bilden. Schließen Sie wenn möglich die Augen. Strecken Sie sich so weit es geht und halten in der Position 30 Sekunden inne. Lockern Sie danach ihre Gliedmaßen. Wiederholen Sie diese Übung 5 mal."
-      }
-      if(nr==3) {
-        this.apic = require('@/assets/entspannungsU/ke.jpg')
-        this.aname = "Vrksasana"
-        this.atext = "Stellen Sie sich gerade hin und führen Sie eine Fußsohle zu ihrem Knie. Je höher Sie Ihre Fußsohle ansetzen, desto besser. Anschließend führen Sie Ihre Hände zusammen und strecken Ihre Armen in Richtung Himmel. Halten Sie diese Position 30 Sekunden lang. Lockern Sie Ihre Gliedmaßen und wiederholen Sie die Übung 5 Mal, ehe Sie das Bein wechseln."
-      }
-      if(nr==4) {
-        this.apic = require('@/assets/entspannungsU/ker.jpg')
-        this.aname = "Vrksasana"
-        this.atext = "Stellen Sie sich gerade hin und führen Sie eine Fußsohle zu ihrem Knie. Je höher Sie Ihre Fußsohle ansetzen, desto besser. Anschließend führen Sie Ihre Hände zusammen und strecken Ihre Armen in Richtung Himmel. Halten Sie diese Position 30 Sekunden lang. Lockern Sie Ihre Gliedmaßen und wiederholen Sie die Übung 5 Mal, ehe Sie das Bein wechseln."
-      }
-      if(nr==5) {
-        this.apic = require('@/assets/entspannungsU/sta.jpg')
-        this.aname = "Utthita Ashwa Sanchalanasana"
-        this.atext = "Machen Sie einen großen Schritt nach vorne mit dem rechten Fuß. Beugen Sie das vordere Knie, halten Sie Ihr Hinterbein gerade und die Ferse vom Boden angehoben. Lehnen Sie sich mit Ihren Hüften nach vorne und ziehen Sie Ihre Arme zum Himmel. Halten Sie diese Position für 30 Sekunden und wiederholen Sie dies auf der anderen Seite, jeweils 5 Mal."
-      }
-      if(nr==6) {
-        this.apic = require('@/assets/entspannungsU/star.jpg')
-        this.aname = "Utthita Ashwa Sanchalanasana"
-        this.atext = "Machen Sie einen großen Schritt nach vorne mit dem rechten Fuß. Beugen Sie das vordere Knie, halten Sie Ihr Hinterbein gerade und die Ferse vom Boden angehoben. Lehnen Sie sich mit Ihren Hüften nach vorne und ziehen Sie Ihre Arme zum Himmel. Halten Sie diese Position für 30 Sekunden und wiederholen Sie dies auf der anderen Seite, jeweils 5 Mal."
-      }
-      if(nr==7) {
-        this.apic = require('@/assets/entspannungsU/bs.jpg')
-        this.aname = "Shavasana"
-        this.atext = "Legen Sie sich auf den Boden und strecken die Arme und Beine aus. Achten Sie darauf. dass Ihr Rücken am Boden liegt und kein Hohlkreuz entsteht. Halten Sie die Position für eine Minute, entspannen Sie Ihre Gliedmaßen und wiederholen Sie die Übung 5 Mal."
-      }
-      if(nr==8) {
-        this.apic = require('@/assets/entspannungsU/si.jpg')
-        this.aname = "Padmasana"
-        this.atext = "Setzen sie sich auf ihre Matte oder einen anderen bequemen Untergrund. Legen sie Ihre Hände auf den Oberschenkeln ab und drehen Sie die Handflächen nach oben. Schließen Sie die Augen und versuchen Sie, sich zu entspannen und auf Ihren Körper zu hören. Bleiben Sie für 5 Minuten in dieser Position."
-      }
-    }
-  }
 };
 </script>
