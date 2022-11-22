@@ -58,12 +58,8 @@
             <img class="infogr" src="../assets/spielew.png" />
           </div>
           <div class="col s6 infotext">
-            ... Geimpfte Menschen berichten, mehr Menschen mit Long-COVID zu kennen als Ungeimpfte. Eine Ursache-Wirkungs-Interpretation 
-            ist hier allerdings nicht möglich. In der Tendenz sind Ungeimpfte, die Menschen mit Long-COVID kennen eher impfbereiter 
-            als Menschen, die niemanden mit Long-COVID kennen (n.s., p = 0.08). Ungeachtet des Impfstatus macht aber eine Bekanntschaft 
-            mit Long-COVID etwas mit der eigenen Wahrnehmung: Befragungsteilnehmende, die jemanden mit Long-COVID kennen, schätzen eine 
-            Infektion als risikoreicher (schwerwiegender) ein, haben mehr Angst vor einer Infektion und haben mehr Sorgen über 
-            Langzeitfolgen. Außerdem sind sie eher für eine Impfpflicht als Menschen, die niemanden mit Long-COVID kennen. ... <br>
+            Das Ziel ist es die Farbe zu finden, bei der die Schrift schwarz ist und die Hintergrundfarbe mit dem Farbnamen übereinstimmt<br><br>
+            Dabei muss die richtige Farbe mittels Klick aus den 16 Optionen ausgewählt werden.<br>
             <router-link to="/training/spiele/farben"><button class="waves-effect waves-light buttoninf">Spiel starten</button></router-link>
           </div>
         </div>
