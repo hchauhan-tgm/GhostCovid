@@ -11,7 +11,7 @@
         <p class="lets">Memory</p>
         <div class="row infos">
           <div class="col s6">
-            <img class="infogr" src="../assets/spielew.png" />
+            <img class="infogr" src="../assets/memory.png" />
           </div>
           <div class="col s6 infotext">
             Das Ziel ist, möglichst schnell alle Paarungen zu finden.<br><br>
@@ -25,7 +25,7 @@
         <p class="lets">Schiebepuzzle</p>
         <div class="row infos">
           <div class="col s6">
-            <img class="infogr" src="../assets/spielew.png" />
+            <img class="infogr" src="../assets/schiebepuzzle.png" />
           </div>
           <div class="col s6 infotext">
             Ziel ist es, die Zahlen möglichst schnell in die richtige Reihenfolge zu bringen. <br><br>
@@ -39,7 +39,7 @@
         <p class="lets">Merk's dir</p>
         <div class="row infos">
           <div class="col s6">
-            <img class="infogr" src="../assets/spielew.png" />
+            <img class="infogr" src="../assets/farbenspiel.png" />
           </div>
           <div class="col s6 infotext">
             ... Geimpfte Menschen berichten, mehr Menschen mit Long-COVID zu kennen als Ungeimpfte. Eine Ursache-Wirkungs-Interpretation 
@@ -55,7 +55,7 @@
         <p class="lets">Farbendurcheinander</p>
         <div class="row infos">
           <div class="col s6">
-            <img class="infogr" src="../assets/spielew.png" />
+            <img class="infogr" src="../assets/farbenspiel.png" />
           </div>
           <div class="col s6 infotext">
             Das Ziel ist es die Farbe zu finden, bei der die Schrift schwarz ist und die Hintergrundfarbe mit dem Farbnamen übereinstimmt<br><br>

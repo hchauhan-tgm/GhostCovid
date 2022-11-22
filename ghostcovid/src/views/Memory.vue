@@ -2,8 +2,13 @@
     <div class="memory" v-on:load="shuffle">
         <Header />
         <Titel msg="Memory" /><br>
+        <router-link to="/training/spiele"><button class="button1">zurück</button></router-link><br>
         <section class="game-board" >
             <div v-on:click="click($event)"  class="first card greyC" ></div>
+            <div v-on:click="click($event)"  class="first card greyC"></div>
+            <div v-on:click="click($event)"  class="first card greyC"></div>
+            <div v-on:click="click($event)"  class="first card greyC"></div>
+            <div v-on:click="click($event)"  class="first card greyC"></div>
             <div v-on:click="click($event)"  class="first card greyC"></div>
             <div v-on:click="click($event)"  class="first card greyC"></div>
             <div v-on:click="click($event)"  class="first card greyC"></div>
@@ -157,7 +162,9 @@ export default ({
                     'pinkC',
                     'orangeC',
                     'tealC',
-                    'cyanC'
+                    'cyanC',
+                    'magentaC',
+                    'midblueC'
             ]
             //const bg = 'grey'
             /*const cards = [...document.querySelectorAll('.card')];

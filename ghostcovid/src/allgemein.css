@@ -675,8 +675,7 @@ span {
 /* MEMORY */
 .card {
     cursor: pointer;
-    border-radius: 5px;
-    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    border-radius: 0px;
 }
 
 .color-hidden {
@@ -685,6 +684,7 @@ span {
 
 .card.done {
     cursor: default;
+    border:none;
 }
 
 .card.done:hover {
@@ -693,16 +693,19 @@ span {
 }
 
 .card:hover {
-    border: 1px solid black;
+    border: 3px solid #000;
 }
 
 .game-board {
-    margin-top: -3%;
+    margin-top: -5%;
+    margin-left: 15%;
+    margin-right: 15%;
     display: grid;
-    grid-template-columns: 100px 100px 100px 100px;
-    grid-template-rows: 100px 100px 100px 100px;
-    grid-column-gap: 25px;
-    grid-row-gap: 25px;
+    height: 500px;
+    grid-template-columns: 15% 15% 15% 15% 15%;
+    grid-template-rows: 25% 25% 25% 25% 25%;
+    grid-column-gap: 5px;
+    grid-row-gap: -70%;
     justify-content: center;
 }
 
@@ -714,6 +717,9 @@ span {
 }
 .blueC {
     background-color: blue ;
+}
+.midblueC {
+    background-color: midnightblue;
 }
 .yellowC {
     background-color: yellow ;
@@ -730,9 +736,12 @@ span {
 .tealC {
     background-color: teal;
 }
+.magentaC {
+    background-color: magenta;
+}
 
 .greyC {
-    background-color: rgb(219, 212, 212);
+    background-color: #943e34;
 }
 
 .score-panel {
@@ -760,50 +769,50 @@ span {
     justify-content: center;
 }
 .colorCard {
-    border: solid #943e34 3px;
+    border: solid #000 3px;
     border-radius: 5px;
 }
 .gruenRichtig {
-    background-color: green;
+    background-color: rgb(79, 255, 79);
 }
 .gelbRichtig {
-    background-color: yellow;
+    background-color: rgb(255, 255, 94);
 }
 .rotRichtig {
-    background-color: red;
+    background-color: rgb(255, 77, 77);
 }
 .blauRichtig {
-    background-color: blue;
+    background-color: rgb(85, 85, 255);
 }
 .tGruen {
     font-size: 400%;
     color: green;
 }
-.tBlau {
+.tblau {
     font-size: 400%;
     color: blue;
 }
-.tGelb {
+.tgelb {
     font-size: 400%;
     color: yellow;
 }
-.tRot {
+.trot {
     font-size: 400%;
     color: red;
 }
 .tGruenHell {
     font-size: 400%;
-    color: lightgreen;
+    color: rgb(116, 184, 116);
 }
-.tBlauHell {
+.tblauHell {
     font-size: 400%;
-    color: lightblue;
+    color: rgb(123, 163, 176);
 }
-.tGelbHell {
+.tgelbHell {
     font-size: 400%;
-    color: lightyellow;
+    color: rgb(252, 252, 178);
 }
-.tRotHell {
+.trotHell {
     font-size: 400%;
     color: #FF7276;
 }
@@ -815,7 +824,7 @@ span {
     cursor: pointer;
 }
 .bgColor:hover {
-    border: solid #943e34 8px;
+    border: solid #000 5px;
 }
 
 /* REST */
