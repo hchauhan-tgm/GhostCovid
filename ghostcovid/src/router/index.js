@@ -109,6 +109,18 @@ const routes = [
     component: () =>
       import("../views/Atmen.vue"),
   },
+  {
+    path: "/training/spiele/farben",
+    name: "Farbenspiel",
+    component: () =>
+      import("../views/Farbenspiel.vue"),
+  },
+  {
+    path: "/training/spiele/memory",
+    name: "Memory",
+    component: () =>
+      import("../views/Memory.vue"),
+  },
 ];
 
 const router = new VueRouter({
