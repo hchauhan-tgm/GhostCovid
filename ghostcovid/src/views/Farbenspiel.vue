@@ -24,8 +24,9 @@
             <div v-on:click="click($event)" class="colorCard bgColor" id="16">16</div>
     </div>
     <div class="row" style="width:50%">
-            <div style="text-align:center"><span id="0">Rounds: 0</span></div>
-    </div>
+        <div class="col s6" style="text-align:right"><span id="move">Rounds: 10</span></div>
+        <div class="col s6" style="text-align:left"><span id="time">Time: 100</span></div>
+      </div>
     <Footer />
 </div>
 </template>
@@ -56,63 +57,63 @@ export default ({
             }
         },
         shuffle: function() {
-            const richtigeKombinationen = [['Grün',' tSchwarz',' gruenRichtig'],['Gelb',' tSchwarz',' gelbRichtig'],['Blau',' tSchwarz',' blauRichtig'],['Rot', ' tSchwarz',' rotRichtig']]
+            const richtigeKombinationen = [['grün',' tSchwarz',' gruenRichtig'],['gelb',' tSchwarz',' gelbRichtig'],['blau',' tSchwarz',' blauRichtig'],['rot', ' tSchwarz',' rotRichtig']]
             const falscheKombinationen = [
-                ['Grün',' tGruen',' gelbRichtig'],
-                ['Grün',' tGruen',' blauRichtig'],
-                ['Grün',' tGruen',' rotRichtig'],
-                ['Grün',' tGelb',' gruenRichtig'],
-                ['Grün',' tRot',' gruenRichtig'],
-                ['Grün',' tBlau',' gruenRichtig'],
-                ['Gelb',' tGruenHell',' gruenRichtig'],
-                ['Rot',' tGruenHell',' gruenRichtig'],
-                ['Blau',' tGruenHell',' gruenRichtig'],
+                ['grün',' tGruen',' gelbRichtig'],
+                ['grün',' tGruen',' blauRichtig'],
+                ['grün',' tGruen',' rotRichtig'],
+                ['grün',' tgelb',' gruenRichtig'],
+                ['grün',' trot',' gruenRichtig'],
+                ['grün',' tblau',' gruenRichtig'],
+                ['gelb',' tGruenHell',' gruenRichtig'],
+                ['rot',' tGruenHell',' gruenRichtig'],
+                ['blau',' tGruenHell',' gruenRichtig'],
 
-                ['Gelb',' tGelb',' gruenRichtig'],
-                ['Gelb',' tGelb',' blauRichtig'],
-                ['Gelb',' tGelb',' rotRichtig'],
-                ['Gelb',' tGruen',' gelbRichtig'],
-                ['Gelb',' tRot',' gelbRichtig'],
-                ['Gelb',' tBlau',' gelbRichtig'],
-                ['Grün',' tGelbHell',' gelbRichtig'],
-                ['Rot',' tGelbHell',' gelbRichtig'],
-                ['Blau',' tGelbHell',' gelbRichtig'],
+                ['gelb',' tgelb',' gruenRichtig'],
+                ['gelb',' tgelb',' blauRichtig'],
+                ['gelb',' tgelb',' rotRichtig'],
+                ['gelb',' tGruen',' gelbRichtig'],
+                ['gelb',' trot',' gelbRichtig'],
+                ['gelb',' tblau',' gelbRichtig'],
+                ['grün',' tgelbHell',' gelbRichtig'],
+                ['rot',' tgelbHell',' gelbRichtig'],
+                ['blau',' tgelbHell',' gelbRichtig'],
 
-                ['Blau',' tBlau',' gelbRichtig'],
-                ['Blau',' tBlau',' gruenRichtig'],
-                ['Blau',' tBlau',' rotRichtig'],
-                ['Blau',' tGelb',' blauRichtig'],
-                ['Blau',' tRot',' blauRichtig'],
-                ['Blau',' tGruen',' blauRichtig'],
-                ['Gelb',' tBlauHell',' blauRichtig'],
-                ['Rot',' tBlauHell',' blauRichtig'],
-                ['Grün',' tBlauHell',' blauRichtig'],
+                ['blau',' tblau',' gelbRichtig'],
+                ['blau',' tblau',' gruenRichtig'],
+                ['blau',' tblau',' rotRichtig'],
+                ['blau',' tgelb',' blauRichtig'],
+                ['blau',' trot',' blauRichtig'],
+                ['blau',' tGruen',' blauRichtig'],
+                ['gelb',' tblauHell',' blauRichtig'],
+                ['rot',' tblauHell',' blauRichtig'],
+                ['grün',' tblauHell',' blauRichtig'],
 
-                ['Rot',' tRot',' gelbRichtig'],
-                ['Rot',' tRot',' blauRichtig'],
-                ['Rot',' tRot',' gruenRichtig'],
-                ['Rot',' tGelb',' rotRichtig'],
-                ['Rot',' tGruen',' rotRichtig'],
-                ['Rot',' tBlau',' rotRichtig'],
-                ['Gelb',' tRotHell',' rotRichtig'],
-                ['Gruen',' tRotHell',' rotRichtig'],
-                ['Blau',' tRotHell',' rotRichtig'],
+                ['rot',' trot',' gelbRichtig'],
+                ['rot',' trot',' blauRichtig'],
+                ['rot',' trot',' gruenRichtig'],
+                ['rot',' tgelb',' rotRichtig'],
+                ['rot',' tGruen',' rotRichtig'],
+                ['rot',' tblau',' rotRichtig'],
+                ['gelb',' trotHell',' rotRichtig'],
+                ['grün',' trotHell',' rotRichtig'],
+                ['blau',' trotHell',' rotRichtig'],
 
-                ['Grün',' tSchwarz',' gelbRichtig'],
-                ['Grün',' tSchwarz',' rotRichtig'],
-                ['Grün',' tSchwarz',' blauRichtig'],
+                ['grün',' tSchwarz',' gelbRichtig'],
+                ['grün',' tSchwarz',' rotRichtig'],
+                ['grün',' tSchwarz',' blauRichtig'],
 
-                ['Gelb',' tSchwarz',' gruenRichtig'],
-                ['Gelb',' tSchwarz',' rotRichtig'],
-                ['Gelb',' tSchwarz',' blauRichtig'],
+                ['gelb',' tSchwarz',' gruenRichtig'],
+                ['gelb',' tSchwarz',' rotRichtig'],
+                ['gelb',' tSchwarz',' blauRichtig'],
 
-                ['Rot',' tSchwarz',' gelbRichtig'],
-                ['Rot',' tSchwarz',' gruenRichtig'],
-                ['Rot',' tSchwarz',' blauRichtig'],
+                ['rot',' tSchwarz',' gelbRichtig'],
+                ['rot',' tSchwarz',' gruenRichtig'],
+                ['rot',' tSchwarz',' blauRichtig'],
 
-                ['Blau',' tSchwarz',' gelbRichtig'],
-                ['Blau',' tSchwarz',' rotRichtig'],
-                ['Blau',' tSchwarz',' gruenRichtig'],
+                ['blau',' tSchwarz',' gelbRichtig'],
+                ['blau',' tSchwarz',' rotRichtig'],
+                ['blau',' tSchwarz',' gruenRichtig'],
             ]
             //console.log(richtigeKombinationen)
             const zuweisen = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
@@ -122,24 +123,24 @@ export default ({
                 aktKarte = zuweisen[Math.floor(Math.random()*zuweisen.length)];
                 if(zKombi === false) {
                     for(let j = 0;j<2;j++) {
-                        if(document.getElementById(aktKarte).classList.contains('tGelb') === true) {
-                            document.getElementById(aktKarte).className = document.getElementById(aktKarte).className.replace('tGelb','').trim();
-                        } else if(document.getElementById(aktKarte).classList.contains('tRot') === true) {
-                            document.getElementById(aktKarte).className = document.getElementById(aktKarte).className.replace('tRot','').trim();
-                        } else if(document.getElementById(aktKarte).classList.contains('tBlau') === true) {
-                            document.getElementById(aktKarte).className = document.getElementById(aktKarte).className.replace('tBlau','').trim();
+                        if(document.getElementById(aktKarte).classList.contains('tgelb') === true) {
+                            document.getElementById(aktKarte).className = document.getElementById(aktKarte).className.replace('tgelb','').trim();
+                        } else if(document.getElementById(aktKarte).classList.contains('trot') === true) {
+                            document.getElementById(aktKarte).className = document.getElementById(aktKarte).className.replace('trot','').trim();
+                        } else if(document.getElementById(aktKarte).classList.contains('tblau') === true) {
+                            document.getElementById(aktKarte).className = document.getElementById(aktKarte).className.replace('tblau','').trim();
                         } else if(document.getElementById(aktKarte).classList.contains('tGruen') === true) {
                             document.getElementById(aktKarte).className = document.getElementById(aktKarte).className.replace('tGruen','').trim();
                         } else if(document.getElementById(aktKarte).classList.contains('tSchwarz') === true) {
                             document.getElementById(aktKarte).className = document.getElementById(aktKarte).className.replace('tSchwarz','').trim();
-                        } else if(document.getElementById(aktKarte).classList.contains('tRotHell') === true) {
-                            document.getElementById(aktKarte).className = document.getElementById(aktKarte).className.replace('tRotHell','').trim();
-                        } else if(document.getElementById(aktKarte).classList.contains('tBlauHell') === true) {
-                            document.getElementById(aktKarte).className = document.getElementById(aktKarte).className.replace('tBlauHell','').trim();
+                        } else if(document.getElementById(aktKarte).classList.contains('trotHell') === true) {
+                            document.getElementById(aktKarte).className = document.getElementById(aktKarte).className.replace('trotHell','').trim();
+                        } else if(document.getElementById(aktKarte).classList.contains('tblauHell') === true) {
+                            document.getElementById(aktKarte).className = document.getElementById(aktKarte).className.replace('tblauHell','').trim();
                         } else if(document.getElementById(aktKarte).classList.contains('tGruenHell') === true) {
                             document.getElementById(aktKarte).className = document.getElementById(aktKarte).className.replace('tGruenHell','').trim();
-                        } else if(document.getElementById(aktKarte).classList.contains('tGelbHell') === true) {
-                            document.getElementById(aktKarte).className = document.getElementById(aktKarte).className.replace('tGelbHell','').trim();
+                        } else if(document.getElementById(aktKarte).classList.contains('tgelbHell') === true) {
+                            document.getElementById(aktKarte).className = document.getElementById(aktKarte).className.replace('tgelbHell','').trim();
                         } else if(document.getElementById(aktKarte).classList.contains('gelbRichtig') === true) {
                             document.getElementById(aktKarte).className = document.getElementById(aktKarte).className.replace('gelbRichtig','').trim();
                         } else if(document.getElementById(aktKarte).classList.contains('rotRichtig') === true) {
@@ -161,22 +162,22 @@ export default ({
                 } else {
                     for(let i = 0;i<15;i++) {
                         for(let j = 0;j<2;j++) {
-                            if(document.getElementById(zuweisen[i]).classList.contains('tGelb') === true) {
-                                document.getElementById(zuweisen[i]).className = document.getElementById(zuweisen[i]).className.replace('tGelb','').trim();
-                            } else if(document.getElementById(zuweisen[i]).classList.contains('tRot') === true) {
-                                document.getElementById(zuweisen[i]).className = document.getElementById(zuweisen[i]).className.replace('tRot','').trim();
-                            } else if(document.getElementById(zuweisen[i]).classList.contains('tBlau') === true) {
-                                document.getElementById(zuweisen[i]).className = document.getElementById(zuweisen[i]).className.replace('tBlau','').trim();
+                            if(document.getElementById(zuweisen[i]).classList.contains('tgelb') === true) {
+                                document.getElementById(zuweisen[i]).className = document.getElementById(zuweisen[i]).className.replace('tgelb','').trim();
+                            } else if(document.getElementById(zuweisen[i]).classList.contains('trot') === true) {
+                                document.getElementById(zuweisen[i]).className = document.getElementById(zuweisen[i]).className.replace('trot','').trim();
+                            } else if(document.getElementById(zuweisen[i]).classList.contains('tblau') === true) {
+                                document.getElementById(zuweisen[i]).className = document.getElementById(zuweisen[i]).className.replace('tblau','').trim();
                             } else if(document.getElementById(zuweisen[i]).classList.contains('tGruen') === true) {
                                 document.getElementById(zuweisen[i]).className = document.getElementById(zuweisen[i]).className.replace('tGruen','').trim();
                             } else if(document.getElementById(zuweisen[i]).classList.contains('tSchwarz') === true) {
                                 document.getElementById(zuweisen[i]).className = document.getElementById(zuweisen[i]).className.replace('tSchwarz','').trim();
-                            } else if(document.getElementById(zuweisen[i]).classList.contains('tGelbHell') === true) {
-                                document.getElementById(zuweisen[i]).className = document.getElementById(zuweisen[i]).className.replace('tGelbHell','').trim();
-                            } else if(document.getElementById(zuweisen[i]).classList.contains('tRotHell') === true) {
-                                document.getElementById(zuweisen[i]).className = document.getElementById(zuweisen[i]).className.replace('tRotHell','').trim();
-                            } else if(document.getElementById(zuweisen[i]).classList.contains('tBlauHell') === true) {
-                                document.getElementById(zuweisen[i]).className = document.getElementById(zuweisen[i]).className.replace('tBlauHell','').trim();
+                            } else if(document.getElementById(zuweisen[i]).classList.contains('tgelbHell') === true) {
+                                document.getElementById(zuweisen[i]).className = document.getElementById(zuweisen[i]).className.replace('tgelbHell','').trim();
+                            } else if(document.getElementById(zuweisen[i]).classList.contains('trotHell') === true) {
+                                document.getElementById(zuweisen[i]).className = document.getElementById(zuweisen[i]).className.replace('trotHell','').trim();
+                            } else if(document.getElementById(zuweisen[i]).classList.contains('tblauHell') === true) {
+                                document.getElementById(zuweisen[i]).className = document.getElementById(zuweisen[i]).className.replace('tblauHell','').trim();
                             } else if(document.getElementById(zuweisen[i]).classList.contains('tGruenHell') === true) {
                                 document.getElementById(zuweisen[i]).className = document.getElementById(zuweisen[i]).className.replace('tGruenHell','').trim();
                             } else if(document.getElementById(zuweisen[i]).classList.contains('gelbRichtig') === true) {
