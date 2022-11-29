@@ -18,7 +18,7 @@
         </p><br><br>
         <div class="row infos">
           <div class="col s6" style="text-align:right">
-            <img src="../assets/jasmin2.jpg" class="kopf"/>
+            <img src="../assets/jasmin2.png" class="kopf"/>
           </div>
           <div class="col s6 infotext">
             <p class="name">Jasmin Wagner</p>
@@ -31,7 +31,7 @@
         </div>
         <div class="row infos">
           <div class="col s6" style="text-align:right">
-            <img src="../assets/nimy2.jpg" class="kopf"/>
+            <img src="../assets/nimy2.png" class="kopf"/>
           </div>
           <div class="col s6 infotext">
             <p class="name">Nimy Abraham</p>
