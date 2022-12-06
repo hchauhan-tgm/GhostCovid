@@ -3,7 +3,9 @@
       
       <Header />
       <Titel msg="Schiebepuzzle" /><br>
-
+      <!--<div class="endscreen" id="-1">
+        <EndScreen/>
+      </div>-->
       <router-link to="/training/spiele"><button class="button1">zurück</button></router-link><br>
       <router-link to="/training/spiele"><button class="button4">zurück</button></router-link><br>
       
@@ -222,6 +224,10 @@ class Game {
     document.getElementById("time").textContent = `Time: ${time}`;
 
     if (status === "won") {
+
+    /*document.querySelector(" .endscreen").style.visibility = 'visible';
+    document.querySelector(" .button1").style.visibility = 'hidden';*/
+    
     document.querySelector(".endgame").style.visibility = 'visible';
     document.querySelector(".endgame").style.display = "block";
 		document.querySelector(".endgame").style.backgroundColor = "rgba(0,255,5,0.80)";
@@ -250,6 +256,9 @@ export default {
   },
   methods: {
     start: function startGame() {
+      /*document.querySelector(" .endscreen").style.visibility = 'hidden';
+      document.querySelector(" .button1").style.visibility = 'visible';*/
+
       location.reload();
       document.getElementById("home").className = "h" //wird ausgeblendet
       document.querySelector(".button1").style.visibility = 'hidden';

@@ -48,7 +48,7 @@
             mit Long-COVID etwas mit der eigenen Wahrnehmung: Befragungsteilnehmende, die jemanden mit Long-COVID kennen, schätzen eine 
             Infektion als risikoreicher (schwerwiegender) ein, haben mehr Angst vor einer Infektion und haben mehr Sorgen über 
             Langzeitfolgen. Außerdem sind sie eher für eine Impfpflicht als Menschen, die niemanden mit Long-COVID kennen. ... <br>
-            <router-link to="/training/spiele/merken"><button class="waves-effect waves-light buttoninf">Spiel starten</button></router-link>
+            <router-link to="/training/spiele/merksdir"><button class="waves-effect waves-light buttoninf">Spiel starten</button></router-link>
           </div>
         </div>
         <p class="lets">-</p>

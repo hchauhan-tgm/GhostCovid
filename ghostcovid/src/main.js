@@ -7,6 +7,7 @@ import header from './components/Header.vue'
 import footer from './components/Footer.vue'
 import titel from './components/Titel.vue'
 import zitat from './components/Zitat.vue'
+import endscreen from './components/EndScreen.vue'
 
 Vue.config.productionTip = false;
 
@@ -15,6 +16,7 @@ Vue.component('Header', header)
 Vue.component('Footer', footer)
 Vue.component('Titel', titel)
 Vue.component('Zitat', zitat)
+Vue.component('EndScreen',endscreen)
 
 Vue.config.productionTip = false;
 

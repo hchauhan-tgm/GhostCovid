@@ -121,6 +121,12 @@ const routes = [
     component: () =>
       import("../views/Memory.vue"),
   },
+  {
+    path: "/training/spiele/merksdir",
+    name: "Merk's Dir",
+    component: () =>
+      import("../views/Merksdir.vue"),
+  },
 ];
 
 const router = new VueRouter({

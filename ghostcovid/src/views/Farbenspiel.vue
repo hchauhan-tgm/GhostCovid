@@ -1,11 +1,13 @@
 <template>
 <div>
     <Header/>
-    <Titel msg="Farbendurcheinander" />
-
+        <Titel msg="Farbendurcheinander" />
+    <div class="endscreen" id="-1">
+        <EndScreen/>
+    </div>
     <router-link to="/training/spiele"><button class="button1">zurück</button></router-link><br>
 
-    <div class="board">
+    <div class="board" style="margin-top: -3%">
             <div v-on:click="click($event)" class="colorCard bgColor" id="1">1</div>
             <div v-on:click="click($event)" class="colorCard bgColor" id="2">2</div>
             <div v-on:click="click($event)" class="colorCard bgColor" id="3">3</div>
@@ -24,7 +26,7 @@
             <div v-on:click="click($event)" class="colorCard bgColor" id="16">16</div>
     </div>
     <div class="row" style="width:50%">
-        <div class="col s6" style="text-align:right"><span id="move">Rounds: 10</span></div>
+        <div class="col s6" style="text-align:right"><span id="0">Rounds: 0</span></div>
         <div class="col s6" style="text-align:left"><span id="time">Time: 100</span></div>
       </div>
     <Footer />
@@ -40,6 +42,7 @@ export default ({
     },
     mounted: function() {
         this.shuffle()
+        counter = 0
     },
     methods: {
         click: function(event) {
@@ -50,13 +53,18 @@ export default ({
                 document.getElementById(0).textContent = 'Rounds: ' + counter;
                 this.shuffle()
             } else {
-                alert('Punktestand: ' + counter)
+                /*alert('Punktestand: ' + counter)
                 counter = 0;
                 document.getElementById(0).textContent = 'Rounds: ' + counter;            
-                this.shuffle()
+                this.shuffle()*/
+                counter = 0;
+                document.querySelector(" .endscreen").style.visibility = 'visible';
+                document.querySelector(" .button1").style.visibility = 'hidden';
             }
         },
         shuffle: function() {
+            document.querySelector(" .endscreen").style.visibility = 'hidden';
+            document.querySelector(" .button1").style.visibility = 'visible';
             const richtigeKombinationen = [['grün',' tSchwarz',' gruenRichtig'],['gelb',' tSchwarz',' gelbRichtig'],['blau',' tSchwarz',' blauRichtig'],['rot', ' tSchwarz',' rotRichtig']]
             const falscheKombinationen = [
                 ['grün',' tGruen',' gelbRichtig'],

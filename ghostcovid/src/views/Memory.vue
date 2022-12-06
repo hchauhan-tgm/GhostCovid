@@ -2,6 +2,9 @@
     <div class="memory" v-on:load="shuffle">
         <Header />
         <Titel msg="Memory" /><br>
+        <div class="endscreen" id="-1">
+            <EndScreen/>
+        </div>
         <router-link to="/training/spiele"><button class="button1">zurück</button></router-link><br>
         <section class="game-board" >
             <div v-on:click="click($event)"  class="first card greyC" ></div>
@@ -135,8 +138,10 @@ export default ({
                    combosFound++;
                    clickedCard = null;
                    console.log(combosFound)
-                   if(combosFound === 8) {
+                   if(combosFound === 10) {
                     //alert("YOU WIN");
+                    document.querySelector(" .endscreen").style.visibility = 'visible';
+                    document.querySelector(" .button1").style.visibility = 'hidden';
                     combosFound = 0
                     status = 'ende'
                     console.log(status)
@@ -145,6 +150,8 @@ export default ({
             }
         },
         shuffle: function() {
+            document.querySelector(" .endscreen").style.visibility = 'hidden';
+            document.querySelector(" .button1").style.visibility = 'visible';
             moves = 0;
             const colors = [
                     'yellowC',
@@ -163,6 +170,8 @@ export default ({
                     'orangeC',
                     'tealC',
                     'cyanC',
+                    'magentaC',
+                    'midblueC',
                     'magentaC',
                     'midblueC'
             ]
