@@ -7,7 +7,7 @@
           Dies ist eine Seite für Long-Covid, Post Covid Syndrom und alle anderen Betroffenen! <br><br>
           Egal ob du an Long-Covid leidest oder jemanden kennst, hier sind alle Willkommen und eingeladen, sich zu Informieren und zu Trainieren.
         </p><br><br>
-        <a href="##" class="startbutton">Let's <b style="font-family:Chalkduster; letter-spacing:1px;">Ghost Covid</b> together!</a>
+        <a href="##" class="startbutton" v-on:click.alt="data">Let's <b style="font-family:Chalkduster; letter-spacing:1px;">Ghost Covid</b> together!</a>
       </section>
       <section id="#" class="contenthome">
         <p class="lets">Gedächtnistraining und Austausch</p>
@@ -52,13 +52,13 @@
         </p><br><br>
         <div class="row welcome">
           <div class="col s4">
-            <a href="https://www.tgm.ac.at/" target="_blank"><img src="../assets/logotgm.png" class="logoshome"/></a>
+            <a href="https://www.tgm.ac.at/" target="_blank"><img src="../assets/logotgm.png" class="logoshome" alt="TGM Logo"/></a>
           </div>
           <div class="col s4">
-            <a href="https://www.tgm.ac.at/?page_id=12662" target="_blank"><img src="../assets/logoit.png" class="logoshome"/></a>
+            <a href="https://www.tgm.ac.at/?page_id=12662" target="_blank"><img src="../assets/logoit.png" class="logoshome" alt="HIT Logo"/></a>
           </div>
           <div class="col s4">
-            <a href="https://ghostcovid.netlify.app" target="_blank"><img src="../assets/GhostCovidLogo.png" class="logoshome"/></a>
+            <a href="https://ghostcovid.netlify.app" target="_blank"><img src="../assets/GhostCovidLogo.png" class="logoshome" alt="['goostcohvit']Logo"/></a>
           </div>
         </div>
       </section>

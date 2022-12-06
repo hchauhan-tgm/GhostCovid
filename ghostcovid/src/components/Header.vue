@@ -1,6 +1,6 @@
 <template>
     <div class="nav">
-        <a href="/"><img class="logo" alt="GhostCovid logo" src="../assets/GhostCovidLogo.png" /></a>
+        <a href="/"><img class="logo" alt="['goostcohvit'] logo" src="../assets/GhostCovidLogo.png" /></a>
         <div class="nav2">
             <a href="/" class="text">Home</a>
             <router-link to="/training" class="text">Training</router-link>
