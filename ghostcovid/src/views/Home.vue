@@ -1,7 +1,7 @@
 <template>
     <div class="home">
       <Header />
-      <section id="begruessung">
+      <section id="begruessung2">
         <Titel msg="Herzlich Willkommen" />
         <p class="hometextoben">
           Dies ist eine Seite für Long-Covid, Post Covid Syndrom und alle anderen Betroffenen! <br><br>

@@ -1,15 +1,27 @@
 <template>
     <div class="schiebepuzzle">
-      
-      <Header />
-      <Titel msg="Schiebepuzzle" /><br>
-      <!--<div class="endscreen" id="-1">
-        <EndScreen/>
-      </div>-->
-      <router-link to="/training/spiele"><button class="button1">zurück</button></router-link><br>
+      <!--<Headerspiele msghs="SCHIEBEPUZZLE" link="/training/spiele/schiebepuzzle"/>-->
+        <template>
+            <div class="nav">
+                <img class="logo" alt="['goostcohvit'] logo" src="../assets/GhostCovidLogo.png" />
+                <div class="nav22">
+                    <b class="text2">SCHIEBEPUZZLE</b>
+                    <b class="text2">||</b>
+                    <i><router-link to="/training/spiele" class="text">Zurück</router-link></i>
+                    <b class="text2">|</b>
+                    <i @click="reloadPage" class="text" style="cursor:pointer">Neustart</i>
+                </div>
+            </div>
+        </template>
+
+      <Titel msg="" /><br>
+      <div class="endscreen" id="-1" style="margin-top:100px">
+            <EndScreen/>
+        </div>
+      <!--<router-link to="/training/spiele"><button class="button1">zurück</button></router-link><br>-->
       <router-link to="/training/spiele"><button class="button4">zurück</button></router-link><br>
       
-      <div class="game">
+      <div class="game" style="margin-top:-100px">
         <div class="grid">
           <button>1</button>
           <button>2</button>
@@ -41,7 +53,7 @@
       <div class="endgame"> 
       </div>
 
-      <Footer />
+      <Footerspiele msgfs="Schiebepuzzle" />
     </div>
   
 </template>
@@ -116,6 +128,7 @@ const isSolved = grid => {
 };
 
 const getRandomGrid = () => {
+  document.querySelector(" .endscreen").style.visibility = 'hidden';
   let grid = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 0]];
   let blankBox = new Box(3, 3);
   for (let i = 0; i < 1000; i++) {
@@ -228,9 +241,7 @@ class Game {
     /*document.querySelector(" .endscreen").style.visibility = 'visible';
     document.querySelector(" .button1").style.visibility = 'hidden';*/
     
-    document.querySelector(".endgame").style.visibility = 'visible';
-    document.querySelector(".endgame").style.display = "block";
-		document.querySelector(".endgame").style.backgroundColor = "rgba(0,255,5,0.80)";
+    document.querySelector(".endscreen").style.visibility = 'visible';
 		var what2 = "Gratulation du hast es geschafft!";
 		var what = "Gewonnen";
 		document.querySelector(".button3").style.visibility = 'visible';
@@ -255,18 +266,20 @@ export default {
     
   },
   methods: {
+    reloadPage() {
+      window.location.reload();
+    },
     start: function startGame() {
-      /*document.querySelector(" .endscreen").style.visibility = 'hidden';
-      document.querySelector(" .button1").style.visibility = 'visible';*/
+      document.querySelector(" .endscreen").style.visibility = 'hidden';
+      //document.querySelector(" .button1").style.visibility = 'visible';
 
       location.reload();
       document.getElementById("home").className = "h" //wird ausgeblendet
-      document.querySelector(".button1").style.visibility = 'hidden';
+      //document.querySelector(".button1").style.visibility = 'hidden';
       document.querySelector(".button4").style.visibility = 'hidden';
       document.querySelector(".text").style.visibility = 'hidden';
       document.querySelector(".text2").style.visibility = 'hidden';
-      document.querySelector(".endgame").style.visibility = 'hidden';
-      document.querySelector(".endgame").style.display = "none"; //Textbox (Endgame) wird ausgeblendet
+      
     },
   }
 };

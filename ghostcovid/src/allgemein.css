@@ -19,6 +19,14 @@ a {
     color:#fff;
     background-color:#000;
 }
+#begruessung {
+    background-color: #fff;
+    width: 100%;
+    height: 400px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    text-align: center;
+}
 
 /* TITEL */
 h1 {
@@ -61,6 +69,13 @@ h4 {
     text-align: right;
     width: 100%;
     background-color: #ffffff;
+}
+.nav22{
+    text-align: right;
+    width: 100%;
+    height: 60px;
+    background-color: #ffffff;
+    padding-top: 15px;
 }
 
 .text{
@@ -109,11 +124,11 @@ h4 {
 }
 
 /* HOME */
-#begruessung {
+#begruessung2 {
     background-color: #fff;
     width: 100%;
     height: 500px;
-    padding-top: 50px;
+    padding-top: 10px;
     padding-bottom: 50px;
     text-align: center;
 }
@@ -842,7 +857,18 @@ span {
     background-color: #943e34;
     /*bottom: 50px;*/
 }
-    
+  
+/* VIDEO */
+.video-block {
+    width: 80%;
+    margin-left: 10%;
+}
+  
+.video-block iframe {
+    width: 975px; 
+    height: 550px;
+}
+
 
 /* REST */
 #app {

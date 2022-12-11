@@ -5,8 +5,7 @@
       <section id="begruessung">
         <Titel msg="Entspannung" />
         <Zitat msg="... Nur so wird es gelingen, eigene Grenzen besser zu spüren und gewohnte Routinen so zu verändern, um auch an schlechten Tagen gut über 
-        den Tag zu kommen und sich an guten Tagen nicht völlig zu verausgaben. Und mit der richtigen Balance zwischen Ruhe und Aktivität geht es [...] 
-        den Blick nach vorne zu richten und Körper und Geist ganz achtsam und bewusst zu trainieren.  ..." msg2="Stern"/><br><br>
+        den Tag zu kommen und sich an guten Tagen nicht völlig zu verausgaben. Und mit der richtigen Balance zwischen Ruhe und Aktivität geht es  ..." msg2="Stern"/><br><br>
         <a href="#training/spiele" class="startbutton">Let's <b style="font-family:Chalkduster; letter-spacing:1px;">relax</b> together!</a>
       </section>
       <section id="training/spiele" class="contenthome">

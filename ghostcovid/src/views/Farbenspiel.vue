@@ -1,11 +1,24 @@
 <template>
 <div>
-    <Header/>
-        <Titel msg="Farbendurcheinander" />
-    <div class="endscreen" id="-1">
-        <EndScreen/>
-    </div>
-    <router-link to="/training/spiele"><button class="button1">zurück</button></router-link><br>
+    <!--<Headerspiele msghs="FARBENDURCHEINANDER" link="/training/spiele/farben"/>-->
+        <template>
+            <div class="nav">
+                <img class="logo" alt="['goostcohvit'] logo" src="../assets/GhostCovidLogo.png" />
+                <div class="nav22">
+                    <b class="text2">FARBENDURCHEINANDER</b>
+                    <b class="text2">||</b>
+                    <i><router-link to="/training/spiele" class="text">Zurück</router-link></i>
+                    <b class="text2">|</b>
+                    <i @click="reloadPage" class="text" style="cursor:pointer">Neustart</i>
+                </div>
+            </div>
+        </template>
+
+      <Titel msg="" /><br>
+      <div class="endscreen" id="-1" style="margin-top:100px">
+            <EndScreen/>
+        </div>
+      <!--<router-link to="/training/spiele"><button class="button1">zurück</button></router-link><br>-->
 
     <div class="board" style="margin-top: -3%">
             <div v-on:click="click($event)" class="colorCard bgColor" id="1">1</div>
@@ -29,7 +42,7 @@
         <div class="col s6" style="text-align:right"><span id="0">Rounds: 0</span></div>
         <div class="col s6" style="text-align:left"><span id="time">Time: 100</span></div>
       </div>
-    <Footer />
+    <Footerspiele msgfs="Farbendurcheinander" />
 </div>
 </template>
 <script>
@@ -37,18 +50,28 @@ let aktKarte = 0;
 let counter = 0;
 //let moves = 0;
 export default ({
+    data () {
+        return {
+        anzR: 0
+        }
+    },
     setup() {
         
     },
     mounted: function() {
         this.shuffle()
         counter = 0
+        this.anzR = 0
     },
     methods: {
+        reloadPage() {
+            window.location.reload();
+        },
         click: function(event) {
             const target = event.currentTarget;
             if(target.classList.contains('right') == true) {
                 counter = counter+1;
+                this.anzR = this.anzR+1;
                 target.className = target.className.replace('right','').trim();
                 document.getElementById(0).textContent = 'Rounds: ' + counter;
                 this.shuffle()
@@ -57,14 +80,25 @@ export default ({
                 counter = 0;
                 document.getElementById(0).textContent = 'Rounds: ' + counter;            
                 this.shuffle()*/
+                if(this.anzR<20) {
+                    counter = counter+1;
+                    document.getElementById(0).textContent = 'Rounds: ' + counter;
+                    this.shuffle()
+                } else {
+                    counter = 0;
+                    document.querySelector(" .endscreen").style.visibility = 'visible';
+                }
+                
+                //document.querySelector(" .button1").style.visibility = 'hidden';
+            }
+            if(this.anzR==20) {
                 counter = 0;
                 document.querySelector(" .endscreen").style.visibility = 'visible';
-                document.querySelector(" .button1").style.visibility = 'hidden';
             }
         },
         shuffle: function() {
             document.querySelector(" .endscreen").style.visibility = 'hidden';
-            document.querySelector(" .button1").style.visibility = 'visible';
+            //document.querySelector(" .button1").style.visibility = 'visible';
             const richtigeKombinationen = [['grün',' tSchwarz',' gruenRichtig'],['gelb',' tSchwarz',' gelbRichtig'],['blau',' tSchwarz',' blauRichtig'],['rot', ' tSchwarz',' rotRichtig']]
             const falscheKombinationen = [
                 ['grün',' tGruen',' gelbRichtig'],
