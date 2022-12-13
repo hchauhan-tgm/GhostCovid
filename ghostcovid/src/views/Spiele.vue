@@ -31,7 +31,7 @@
             Ziel ist es, die Zahlen möglichst schnell in die richtige Reihenfolge zu bringen. <br><br>
             Dabei kann man durch Anklicken eine Zahl verschieben - dies funktioniert jedoch nur, wenn ein Nebenfeld dieser Zahl frei ist.
             Die Zahlen müssen so angeordnet werden, dass in der obersten Reihe die Ziffern 1 bis 4 stehen und in der untersten 13 bis 15.
-            Das Feld rechts unten in der Ecke mus am Ende frei sein, damit man gewonnen hat. <br>
+            Das Feld rechts unten in der Ecke muss am Ende frei sein, damit man gewonnen hat. <br>
             <router-link to="/training/spiele/schiebepuzzle"><button class="waves-effect waves-light buttoninf">Spiel starten</button></router-link>
           </div>
         </div>
@@ -42,12 +42,7 @@
             <img class="infogr" src="../assets/farbenspiel.png" />
           </div>
           <div class="col s6 infotext">
-            ... Geimpfte Menschen berichten, mehr Menschen mit Long-COVID zu kennen als Ungeimpfte. Eine Ursache-Wirkungs-Interpretation 
-            ist hier allerdings nicht möglich. In der Tendenz sind Ungeimpfte, die Menschen mit Long-COVID kennen eher impfbereiter 
-            als Menschen, die niemanden mit Long-COVID kennen (n.s., p = 0.08). Ungeachtet des Impfstatus macht aber eine Bekanntschaft 
-            mit Long-COVID etwas mit der eigenen Wahrnehmung: Befragungsteilnehmende, die jemanden mit Long-COVID kennen, schätzen eine 
-            Infektion als risikoreicher (schwerwiegender) ein, haben mehr Angst vor einer Infektion und haben mehr Sorgen über 
-            Langzeitfolgen. Außerdem sind sie eher für eine Impfpflicht als Menschen, die niemanden mit Long-COVID kennen. ... <br>
+            Erklärung von Sarahhhhhhhhhhhhhh<br>
             <router-link to="/training/spiele/merksdir"><button class="waves-effect waves-light buttoninf">Spiel starten</button></router-link>
           </div>
         </div>
@@ -58,8 +53,9 @@
             <img class="infogr" src="../assets/farbenspiel.png" />
           </div>
           <div class="col s6 infotext">
-            Das Ziel ist es die Farbe zu finden, bei der die Schrift schwarz ist und die Hintergrundfarbe mit dem Farbnamen übereinstimmt<br><br>
+            Das Ziel ist es die Farbe zu finden, bei der die Schrift schwarz ist und die Hintergrundfarbe mit dem Farbnamen übereinstimmt.
             Dabei muss die richtige Farbe mittels Klick aus den 16 Optionen ausgewählt werden.<br>
+            Wenn man 20 richtige Felder gefunden hat, hat man gewonnen. <br>
             <router-link to="/training/spiele/farben"><button class="waves-effect waves-light buttoninf">Spiel starten</button></router-link>
           </div>
         </div>
