@@ -9,11 +9,15 @@
         <a href="#training/spiele" class="startbutton">Let's <b style="font-family:Chalkduster; letter-spacing:1px;">be creative</b> together!</a>
       </section>
       <section id="training/spiele" class="contenthome">
-        <p class="lets">Madalas</p>
+        <p class="lets">Mandalas</p>
         <p class="hometext">
           Malen entspannt und hilft beim Konzentrieren.
         </p>
-        <p class="lets">-</p>
+        <p class="lets">
+          <a href="pdf_server.php?file=pdffilename" download="Mandala1.pdf" style="color: white">
+          HTML Referenz als PDF
+          </a>
+        </p>
         <p class="lets">Kreise</p>
         <p class="hometext">
           Kreise ausmalen hilft dir.

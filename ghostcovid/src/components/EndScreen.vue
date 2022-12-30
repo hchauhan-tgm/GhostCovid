@@ -1,6 +1,6 @@
 <template>
     <div class="containerEnde" style="margin-top: -8%">
-        <h1> Herzlichen Glückwunsch 1</h1>
+        <h1> Herzlichen Glückwunsch </h1>
         <h2 style="margin-top: -2%"> Du hast für "Spielname" "Zeit" gebraucht! </h2>
         <h2>Datum: "Datum" Dein Score: "Score"</h2>
         <router-link to="/training/spiele"><button class="buttonEnd" style="justify-content: center">zurück</button></router-link><br>

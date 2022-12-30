@@ -8,12 +8,17 @@
         Offene und beeindruckende Geschichten hautnah mitbekommen." msg2="GhostCovid Podcast"/><br><br>
         <a href="#erfahrungen/podcast" class="startbutton">Let's <b style="font-family:Chalkduster; letter-spacing:1px;">hear</b> together!</a>
       </section>
-      <section id="erafhrungen/podcast" class="contenthome">
-        <p class="lets">Folge 1</p>
-          <button class="startbutton" @click.prevent="playSound()">Anhören</button>
-        <p class="hometext">
+      <section id="erfahrungen/podcast" class="contenthome">
+        <p class="lets">Folge 1 - Leben mit Long-Covid</p>
+        <p class="hometext"> Die Schülerin Jasmin redet über ihr Leben mit Long-Covid</p>
+          <!--<button class="startbutton" @click.prevent="playSound()">Anhören</button>-->
+          <audio id="audio_with_controls" controls src="../assets/Podcast_Folge1_angepasst.mp3" type="audio/mp3" > </audio>
+          <p class="lets">Folge 2 - Erfahrungen im Lockdown</p>
+          <p class="hometext"> Die Pensionistin Aloisia redet über ihre Erfahrungen im Lockdown</p>
+          <audio id="audio_with_controls" controls src="../assets/Podcast_Folge2.mp3" type="audio/mp3" > </audio>
+        <!--<p class="hometext">
           gscheiter audio player muss eingebaut werden <br>
-          In diesem Video werden fünf Personen zum Thema Long Covid bzw. Corona und dessen Auswirkungen befragt.</p>
+          In diesem Video werden fünf Personen zum Thema Long Covid bzw. Corona und dessen Auswirkungen befragt.</p>-->
       </section>
 
       <Footer />
@@ -30,8 +35,10 @@ export default {
   },
   methods: {
     playSound () {
-      const audio = new Audio(require('../assets/folge1.mp3'));
+      const audio = new Audio(require('../assets/Podcast_Folge1_angepasst.mp3'));
       audio.play();
+      const audio2 = new Audio(require('../assets/Podcast_Folge2.mp3'));
+      audio2.play();
     }
   },
 };
