@@ -1,15 +1,19 @@
 <template>
-    <div class="statistik">
+    <div class="statistik" ref="startinfoo">
       <Header />
-      <section id="begruessung">
+
+      <!-- Titel Abschnitt mit Themensatz und Start Button -->
+      <div id="begruessung">
         <Titel msg="Informationen" />
         <Zitat msg="... Oft finden Betroffene nicht genug oder die richtigen Informationen. 
             Auf stundenlanges Suchen und Durchstöbern des Internets haben diese Personen 
             keine Zeit und Lust, und wenn sie endlich eine Webseite zu dem Thema 
             gefunden haben, kommen sie erst über einen Irrgarten an Links ans Ziel. ..." msg2="Ghost Covid"/><br><br>
-        <a href="#statistik1" class="startbutton">Let's <b style="font-family:Chalkduster; letter-spacing:1px;">get informed</b> together!</a>
-      </section>
-      <section id="statistik1" class="contenthome">
+        <a @click="sc()" class="startbutton">Let's <b style="font-family:Chalkduster; letter-spacing:1px;">get informed</b> together!</a>
+      </div>
+
+      <!-- Inhalt - verschiedene Informationen mit Links -->
+      <div ref="blaa" class="contenthome">
         <p class="lets">Teil der Coronainfizierten entwickelt ME/CFS</p>
         <div class="row infos">
           <div class="col s6">
@@ -67,17 +71,32 @@
             </a>
           </div>
         </div>
-      </section>
+      </div>
 
       <Footer />
     </div>
   
 </template>
 
+<script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
 <script>
+const VueScrollTo = require('vue-scrollto')
+
 export default {
   name: "Statistik",
   components: {
   },
+  mounted:function(){
+    var element = this.$refs['startinfoo'];
+    var top = element.offsetTop;
+    window.scrollTo(0, top-100);
+  },
+  methods: {
+    sc() {
+      var element = this.$refs['blaa'];
+      var top = element.offsetTop;
+      window.scrollTo(0, top);
+    }
+  }
 };
 </script>

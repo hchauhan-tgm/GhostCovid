@@ -1,19 +1,24 @@
 <template>
-    <div class="registrieren">
+    <div class="registrieren" ref="startregg">
       <Header />
-      <Titel msg="Registrieren"/>
+      <!-- Titel Abschnitt mit Anleitung -->
+      <Titel msg="Registrieren" />
+      <Zitat msg="Wenn du noch kein Benutzerkonto erstellt hast, kannst du dich hier ganz einfach registrieren."/><br>
 
-      <div class="regbox">
+      <!-- Input Felder und Buttons -->
+      <div class="obentr">
         <div class="row">
           <div class="col s2"></div>
             <div class="col s4" style="background-color:#fff;border-radius:10px;padding-top:10px;margin:5px;width:33%">
               <div class="input-field">
+                <i class="material-icons prefix">person</i>
                 <input id="vn" type="text" class="validate">
                 <label for="vn">Vorname</label>
               </div>
             </div>
             <div class="col s4" style="background-color:#fff;border-radius:10px;padding-top:10px;margin:5px;width:33%">
               <div class="input-field">
+                <i class="material-icons prefix">person</i>
                 <input id="nn" type="text" class="validate">
                 <label for="nn">Nachname</label>
               </div>
@@ -25,6 +30,7 @@
           <div class="col s2"></div>
             <div class="col s8" style="background-color:#fff;border-radius:10px;padding-top:10px;margin-left:5px">
               <div class="input-field">
+                <i class="material-icons prefix">email</i>
                 <input id="email" type="email" class="validate">
                 <label for="email">E-Mail Adresse</label>
                 <span class="helper-text" data-error="Keine gültige E-Mail Adresse" data-success="Korrekte E-Mail Adresse"></span>
@@ -37,12 +43,14 @@
           <div class="col s2"></div>
             <div class="col s4" style="background-color:#fff;border-radius:10px;padding-top:10px;margin:5px;width:33%">
               <div class="input-field">
+                <i class="material-icons prefix">cake</i>
                 <input id="gb" type="date" class="validate">
                 <label for="gb">Geburtsdatum</label>
               </div>
             </div>
             <div class="col s4" style="background-color:#fff;border-radius:10px;padding-top:10px;margin:5px;width:33%">
               <div class="input-field">
+                <i class="material-icons prefix">location_on</i>
                 <input id="land" type="text" class="validate">
                 <label for="land">Land</label>
               </div>
@@ -54,6 +62,7 @@
           <div class="col s2"></div>
             <div class="col s8" style="background-color:#fff;border-radius:10px;padding-top:10px;margin-left:5px">
               <div class="input-field">
+                <i class="material-icons prefix">account_circle</i>
                 <input id="bn" type="text" class="validate">
                 <label for="bn">Benutzername</label>
               </div>
@@ -65,12 +74,14 @@
           <div class="col s2"></div>
             <div class="col s4" style="background-color:#fff;border-radius:10px;padding-top:10px;margin:5px;width:33%">
               <div class="input-field">
+                <i class="material-icons prefix">https</i>
                 <input id="pw" type="password" class="validate">
                 <label for="pw">Passwort</label>
               </div>
             </div>
             <div class="col s4" style="background-color:#fff;border-radius:10px;padding-top:10px;margin:5px;width:33%">
               <div class="input-field">
+                <i class="material-icons prefix">https</i>
                 <input id="pw2" type="password" class="validate">
                 <label for="pw2">Passwort wiederholen</label>
               </div>
@@ -82,20 +93,19 @@
           <div class="col s2"></div>
             <div class="input-field col s4">
               <router-link to="/login">
-              <button class="waves-effect waves-light buttonreg">zum Login
-                <i class="material-icons right">border_color</i>
-              </button>
+                <a class="waves-effect waves-light buttonlog">zum Login</a>
               </router-link>
             </div>
             <div class="input-field col s4">
               <router-link to="/">
-              <button class="waves-effect waves-light buttonreg" type="submit" name="action">registrieren
-                <i class="material-icons right">forward</i>
-              </button>
+                <a class="waves-effect waves-light buttonlog">registrieren</a>
               </router-link>
             </div>
           <div class="col s2"></div>
         </div>
+      </div>
+
+      <div id="contentreg">
       </div>
 
       <Footer />
@@ -190,6 +200,11 @@
 export default {
   name: "Registrieren",
   components: {
+  },
+  mounted:function(){
+    var element = this.$refs['startregg'];
+    var top = element.offsetTop;
+    window.scrollTo(0, top-100);
   },
 };
 </script>

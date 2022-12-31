@@ -18,7 +18,6 @@
       <div class="endscreen" id="-1"  style="margin-top:100px">
             <EndScreen/>
       </div>
-
         <div class="app">
           <div class="game-box">
             <div class="row">
@@ -29,21 +28,25 @@
             </div>
             <div class="row">
               <div class="box box3" v-on:click="clickedBox(3)" v-bind:class="{ active: isBoxThreeActive}">
+              </div>
+              <div class="box box4" v-on:click="clickedBox(4)" v-bind:class="{ active: isBoxFourActive}">
+              </div>
             </div>
-      <div class="box box4" v-on:click="clickedBox(4)" v-bind:class="{ active: isBoxFourActive}">
-      </div>
-    </div>
 
-    <div class="controls-box">
-      <!--<div class="strict-mode-toggle" v-on:click="changeMode()" v-bind:class="{red: isStrictModeOn}">-->
-        <!--<span v-if="isStrictModeOn">Strict</span><span v-else>Normal</span></div>-->
-      <div class="start-button" v-on:click="changeState()" v-bind:class="{red: isPlaying}">&nbsp;</div>
-      <div class="counter">{{step}}</div>
-      <!--<div class="hi-score">Hi {{hiScore}}</div>-->
-    </div>
+            <div class="controls-box">
+              <!--<div class="strict-mode-toggle" v-on:click="changeMode()" v-bind:class="{red: isStrictModeOn}">-->
+                <!--<span v-if="isStrictModeOn">Strict</span><span v-else>Normal</span></div>-->
+              <div class="start-button" v-on:click="changeState()" v-bind:class="{red: isPlaying}">&nbsp;</div>
+              <div class="counter">{{step}}</div>
+              <!--<div class="hi-score">Hi {{hiScore}}</div>-->
+            </div>
+          </div>
         </div>
+        
+        <div class="row" style="width:50%;z-index:1000;margin-top:375px">
+          <div class="col s6" style="text-align:right"><span id="move">Rounds: 0</span></div>
+          <div class="col s6" style="text-align:left"><span id="time">Time: 100</span></div>
         </div>
-        <div class="col s6" style="text-align:center"><span id="time">Time: 100</span></div>
   <Footerspiele msgfs="Merk's Dir" />
 </div>
 
@@ -78,14 +81,18 @@ export default {
     },
   methods: {
     reloadPage() {
-            window.location.reload();
+      window.location.reload();
     },
     changeState: function() {
       if (this.state === 'Start') {
+        this.time = 0;
+        this.startZeit = new Date();
+        this.aktZeit = 0;
         this.state = 'Stop';
         this.message = null;
         this.isPlaying = true;
         this.step = 0;
+        this.ende = false;
         this.computerTurn();
       } else {
         this.resetGame();
@@ -99,8 +106,15 @@ export default {
       this.showPattern(function(){
         self.userTurn = true;
       });
+      this.aktZeit = new Date();
+      this.time = Math.floor((this.aktZeit.getTime()-this.startZeit.getTime()) / 1000);
+      document.getElementById("move").textContent = `Rounds: ` + this.step;
+      document.getElementById("time").textContent = `Time: ` + this.time;
     },
     clickedBox: function(boxNum) {
+      this.aktZeit = new Date();
+      this.time = Math.floor((this.aktZeit.getTime()-this.startZeit.getTime()) / 1000);
+      document.getElementById("time").textContent = `Time: ` + this.time;
       var self = this;
       if (this.state === 'Start') {
         return;
@@ -110,6 +124,7 @@ export default {
       if (!isCorrect) { // If user clicks wrong box
         if (this.isStrictModeOn) {// User playing in strict mode
           self.processGameOver();
+          this.ende = true;
           document.querySelector(" .endscreen").style.visibility = 'visible';
           return;
         } else {//User playing in regular mode
@@ -156,6 +171,9 @@ export default {
       this.index = 0;
     },
     showPattern: function(callback) {
+      this.aktZeit = new Date();
+        this.time = Math.floor((this.aktZeit.getTime()-this.startZeit.getTime()) / 1000);
+        document.getElementById("time").textContent = `Time: ` + this.time;
       var self = this
       var i=0;
       timer = setInterval(function() {
@@ -181,6 +199,9 @@ export default {
       }
     },
     clickEffect: function(boxNum) {
+      this.aktZeit = new Date();
+        this.time = Math.floor((this.aktZeit.getTime()-this.startZeit.getTime()) / 1000);
+        document.getElementById("time").textContent = `Time: ` + this.time;
       //This method takes in a box number as parameter
       //Then toggles its class as active
       //Then plays the respective audio file
@@ -230,7 +251,7 @@ h1 {
   text-align: center;
   font-size: 64px;
   font-weight: 900;
-  font-family: sans-serif;
+  
   color: #323232;
 }
 
@@ -252,16 +273,16 @@ span {
 
 .game-box {
   position: absolute;
-  top: 200px;
+  top: 12%;
 }
 
 .controls-box {
   position: absolute;
-  top: 70px;
-  left: 55px;
+  top: 30%;
+  left: 30%;
   /*z-index: 500;*/
-  width: 170px;
-  height: 170px;
+  width: 40%;
+  height: 40%;
   border: 10px solid #323232;
   border-radius: 100%;
   background-color: grey;
@@ -271,14 +292,14 @@ span {
 
 .box {
   display: inline-block;
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   font-size: 64px;
   text-align: center;
-  border: 10px solid #323232;
+  border: 12px solid #323232;
   /*box-shadow: 5px 10px 10px #323232;*/
-  margin-left: -10px;
-  margin-bottom: -10px;
+  margin-left: -4px;
+  margin-bottom: -30px;
   cursor: pointer;
 }
 
@@ -308,8 +329,8 @@ span {
 
 .start-button {
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 100%;
   border: 5px solid #323232;
   box-shadow: 5px 5px 5px #323232;
@@ -342,7 +363,7 @@ span {
 .counter {
   display: inline-block;
   width: 50px;
-  height: 40px;
+  height: 50px;
   border: 5px solid #323232;
   border-radius: 10px;
   /*z-index: 800;*/
@@ -350,7 +371,7 @@ span {
   text-align: center;
   font-weight: 900;
   font-family: monospace;
-  font-size: 22px;
+  font-size: 25px;
   color: red;
   background-color: maroon;
 }

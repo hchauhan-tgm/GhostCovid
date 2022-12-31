@@ -1,15 +1,19 @@
 <template>
-    <div class="home">
+    <div class="home" ref="starthomee">
       <Header />
-      <section id="begruessung2">
+
+      <!-- Titel Abschnitt mit Themensatz und Start Button -->
+      <div id="begruessung2">
         <Titel msg="Herzlich Willkommen" />
         <p class="hometextoben">
           Dies ist eine Seite für Long-Covid, Post Covid Syndrom und alle anderen Betroffenen! <br><br>
-          Egal ob du an Long-Covid leidest oder jemanden kennst, hier sind alle Willkommen und eingeladen, sich zu Informieren und zu Trainieren.
+          Egal ob du an Long-Covid leidest oder jemanden kennst, hier sind alle willkommen und eingeladen, sich zu Informieren und zu Trainieren.
         </p><br><br>
-        <a href="##" class="startbutton" v-on:click.alt="data">Let's <b style="font-family:Chalkduster; letter-spacing:1px;">Ghost Covid</b> together!</a>
-      </section>
-      <section id="#" class="contenthome">
+        <a @click="sc()" class="startbutton">Let's <b style="font-family:Chalkduster; letter-spacing:1px;">Ghost Covid</b> together!</a>
+      </div>
+
+      <!-- Inhalt - verschiedene Buttons -->
+      <div ref="inhalthomee" class="contenthome">
         <p class="lets">Gedächtnistraining und Austausch</p>
         <p class="hometext">
           Wir bieten eine Auswahl an verschiedenen Spielen, welche dein Gedächtnis und deine Merkfähigkeit wieder in Schwung bringen.<br>
@@ -31,7 +35,7 @@
         <p class="lets">Registrierung</p>
         <p class="hometext">
           Bei uns kannst du innerhalb von 2 Minuten ein Benutzerprofil erstellen! <br><br>
-          Durch eine Registrierung kannst du Erfahrungen in unserem Forum mit anderen teilen. Außerdem werden dein Bestwerte zu den Gedächtnisspielen gespeichert - 
+          Durch eine Registrierung kannst du Erfahrungen in unserem Forum mit anderen teilen. Außerdem werden dein Bestwerte und Highscores zu den Gedächtnisspielen gespeichert - 
           so siehst du sofort, wie gut du dich verbessert hast und was dein bisheriger Bestwert war.
           <br><br>
           All diese Informationen werden in deinem Profil angezeigt, welches über das runde Icon in der rechten oberen Ecke zugänglich ist.
@@ -43,8 +47,10 @@
           </div>
           <div class="col s4"></div>
         </div>
-      </section>
-      <section id="endehome">
+      </div>
+
+      <!-- Inhalt - Partner -->
+      <div id="endehome">
         <p class="lets" style="color:black">Partner & Unterstützung</p>
         <p class="hometextoben">
           Wir bedanken uns bei unseren Partnern und Unterstützern! <br><br>
@@ -61,7 +67,7 @@
             <a href="https://ghostcovid.netlify.app" target="_blank"><img src="../assets/GhostCovidLogo.png" class="logoshome" alt="['goostcohvit']Logo"/></a>
           </div>
         </div>
-      </section>
+      </div>
 
       <Footer />
     </div>
@@ -73,5 +79,17 @@ export default {
   name: "Home",
   components: {
   },
+  mounted:function(){
+    var element = this.$refs['starthomee'];
+    var top = element.offsetTop;
+    window.scrollTo(0, top-100);
+  },
+  methods: {
+    sc() {
+      var element = this.$refs['inhalthomee'];
+      var top = element.offsetTop;
+      window.scrollTo(0, top);
+    }
+  }
 };
 </script>

@@ -43,8 +43,8 @@
       </div>
       
       <div class="row" style="width:50%">
-        <div class="col s6" style="text-align:right"><span id="move">Move: 100</span></div>
-        <div class="col s6" style="text-align:left"><span id="time">Time: 100</span></div>
+        <div class="col s6" style="text-align:right"><span id="move">Moves: 0</span></div>
+        <div class="col s6" style="text-align:left"><span id="time">Time: 0</span></div>
       </div>
     
       <!--LOGO & ENDE--->
@@ -233,7 +233,7 @@ class Game {
       this.tickId = setInterval(this.tick, 1000);
       this.setState(State.start());
     }
-    document.getElementById("move").textContent = `Move: ${move}`;
+    document.getElementById("move").textContent = `Moves: ${move}`;
     document.getElementById("time").textContent = `Time: ${time}`;
 
     if (status === "won") {

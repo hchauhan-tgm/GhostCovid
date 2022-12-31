@@ -1,12 +1,16 @@
 <template>
     <div class="login">
       <Header />
-      <Titel msg="Login" />
 
-      <div class="logbox">
+      <!-- Titel Abschnitt mit Anleitung -->
+      <Titel msg="Login" />
+      <Zitat msg="Wenn du dich bereits registriert hast, kannst du dich hier einfach anmelden."/><br>
+
+      <!-- Input Felder und Buttons -->
+      <div class="obentr">
         <div class="row">
           <div class="col s4"></div>
-            <div class="col s4" style="background-color:#fff;border-radius:10px;padding-top:10px">
+            <div class="col s4 inpf">
               <div class="input-field">
                 <i class="material-icons prefix">account_circle</i>
                 <input id="icon_prefix1" type="text" class="validate">
@@ -17,7 +21,7 @@
         </div>
         <div class="row">
           <div class="col s4"></div>
-            <div class="col s4" style="background-color:#fff;border-radius:10px;padding-top:10px">
+            <div class="col s4 inpf">
               <div class="input-field">
                 <i class="material-icons prefix">https</i>
                 <input id="icon_prefix2" type="password" class="validate">
@@ -29,21 +33,21 @@
         <div class="row">
           <div class="col s4"></div>
             <div class="input-field col s2">
-              <router-link to="/registrieren" >
-              <button class="waves-effect waves-light buttonlog">registrieren
-                <i class="material-icons right">border_color</i>
-              </button>
+              <router-link to="/registrieren">
+                <a class="waves-effect waves-light buttonlog">registrieren</a>
               </router-link>
             </div>
             <div class="input-field col s2">
               <router-link to="/">
-              <button class="waves-effect waves-light buttonlog" type="submit" name="action">einloggen
-                <i class="material-icons right">forward</i>
-              </button>
+                <a class="waves-effect waves-light buttonlog">einloggen</a>
               </router-link>
             </div>
           <div class="col s4"></div>
         </div>
+      </div>
+
+      <!-- roter Balken unter Buttons -->
+      <div id="contenttr">
       </div>
 
       <Footer />

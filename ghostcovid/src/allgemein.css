@@ -14,6 +14,7 @@ h2 {
 }
 a {
     color: #943e34;
+    cursor: pointer;
 }
 .btn:hover{
     color:#fff;
@@ -329,6 +330,9 @@ h4 {
 }
 
 /* LOGIN & REGISTRIEREN */
+.inpf {
+    padding-top:10px;
+}
 .logbox {
     padding-top: 100px;
     padding-bottom: 75px;
@@ -337,14 +341,15 @@ h4 {
     text-align: center;
 }
 .buttonlog{
-    height: 50px;
-    width: 90%;
+    height: 60px;
+    width: 100%;
+    padding-top: 10px;
     border: 2px solid #fff;
-    color: #000;
+    color: #fff;
     font-family: Chalkduster;
     letter-spacing: 1px;
     font-size: 150%;
-    background-color: #fff;
+    background-color: #943e34;
     vertical-align: middle;
 }
 .buttonlog:hover{
@@ -356,12 +361,14 @@ h4 {
     color: #000;
     font-size: 110%;
 }
-.regbox {
-    padding-top: 50px;
-    padding-bottom: 75px;
-    font-family: 'Arial';
+#contentreg {
+    color: #000;
+    bottom: -20px;
+    width: 100%;
+    position: relative;
+    height: 150px;
+    z-index: 99;
     background-color: #943e34;
-    text-align: center;
 }
 .buttonreg{
     height: 50px;
@@ -436,14 +443,14 @@ h4 {
     color: #fff;
 }
 .profbutton{
-    height: 50px;
+    height: 60px;
     width: 50%;
     border: 2px solid #fff;
-    color: #000;
+    color: #fff;
     font-family: Chalkduster;
     letter-spacing: 1px;
     font-size: 150%;
-    background-color: #fff;
+    background-color: #943e34;
     vertical-align: middle;
 }
 .profbutton:hover{
@@ -567,7 +574,10 @@ h4 {
 }
 
 
-
+/* PODCAST */
+.audiobalken {
+    width:40%;
+}
 
 
 /* SCHIEBEPUZZLE */

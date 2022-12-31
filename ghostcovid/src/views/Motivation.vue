@@ -1,18 +1,20 @@
 <template>
-    <div class="motivation">
+    <div class="motivation" ref="startmotivationn">
       <Header />
       
-      <section id="begruessung">
+      <!-- Titel Abschnitt mit Themensatz und Start Button -->
+      <div id="begruessung">
         <Titel msg="Motivation" />
         <Zitat msg="... Noch lange nach der eigentlichen Erkrankung leiden viele Menschen an den Spätfolgen einer Corona-Erkrankung, sogenanntem Long COVID. Das Krankheitsbild kann auch den Arbeitsalltag einschränken.  ..." msg2="MEDISinn"/><br><br>
-        <a href="#training/spiele" class="startbutton">Let's <b style="font-family:Chalkduster; letter-spacing:1px;">get motivated</b> together!</a>
-      </section>
-      <section id="training/spiele" class="contenthome">
+        <a @click="sc()" class="startbutton">Let's <b style="font-family:Chalkduster; letter-spacing:1px;">get motivated</b> together!</a>
+      </div>
+
+      <!-- Inhalt - verschiedene Übungen als Text -->
+      <div ref="inhaltmotivationn" class="contenthome">
         <p class="lets">Belohne dich für getane Arbeit</p>
         <p class="hometext">
           Belohne dich nachdem du eine anstrengende Arbeit erledigt hast.<br> 
           Auch Teilerfolge sollten belohnt werden, denn dadurch verbindet das Gehirn Arbeit mit etwas Positivem. <br>
-
         </p>
         <p class="lets">-</p>
         <p class="lets">Setze dir realistische und konkrete Ziele</p>
@@ -44,7 +46,7 @@
           Stelle dir vor, dass du deine Aufgabe mit Freude erledigst.<br>
           Stelle dir außerdem das Gefühl vor, wie es sein wird wenn du die Aufgabe abgeschlossen hast.
         </p>
-      </section>
+      </div>
 
       <Footer />
     </div>
@@ -56,5 +58,17 @@ export default {
   name: "Motivation",
   components: {
   },
+  mounted:function(){
+    var element = this.$refs['startmotivationn'];
+    var top = element.offsetTop;
+    window.scrollTo(0, top-100);
+  },
+  methods: {
+    sc() {
+      var element = this.$refs['inhaltmotivationn'];
+      var top = element.offsetTop;
+      window.scrollTo(0, top);
+    }
+  }
 };
 </script>
