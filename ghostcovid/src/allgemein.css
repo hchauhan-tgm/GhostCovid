@@ -723,8 +723,7 @@ span {
 
 .game-board {
     margin-top: -5%;
-    margin-left: 15%;
-    margin-right: 15%;
+    width: 100%;
     display: grid;
     height: 500px;
     grid-template-columns: 15% 15% 15% 15% 15%;

@@ -14,17 +14,35 @@
         <p class="hometext">
           Malen entspannt und hilft beim Konzentrieren.
         </p>
-        <p class="lets">
-
-          <!--<a href="pdf_server.php?file=pdffilename" download="Mandala1.pdf" style="color: white">-->
-            <a href="../assets/Mandala1.pdf" download style="color: white">
-          HTML Referenz als PDF
+        <div class="row">
+          <div class="col s6" style="text-align:right">
+            <img src="../assets/Mandala1.png" class="kreativm"/><br>
+          </div>
+          <div class="col s6" style="text-align:left">
+            <img src="../assets/Mandala2.png" class="kreativm"/><br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s6" style="text-align:right;padding-right:100px">
+            <a href="../Mandala1.pdf" download style="color: white; font-size:1.5em; text-decoration:underline">
+          DOWNLOAD
           </a>
-        </p>
+          </div>
+          <div class="col s6" style="text-align:left;padding-left:100px">
+            <a href="../Mandala2.pdf" download style="color: white; font-size:1.5em; text-decoration:underline">
+          DOWNLOAD
+          </a>
+          </div>
+        </div>
+        <p class="lets">-</p>
         <p class="lets">Kreise</p>
         <p class="hometext">
-          Kreise ausmalen hilft dir.
+          Kreise ausmalen fördert deine Kreativität.
         </p>
+        <img src="../assets/kreise1.png" class="kreativk"/><br>
+        <a href="../Kreise1.pdf" download style="color: white; font-size:1.5em; text-decoration:underline">
+          DOWNLOAD
+          </a>
         <p class="lets">-</p>
         <p class="lets">Weitere</p>
         <p class="hometext">
@@ -53,3 +71,11 @@ export default {
   }
 }
 </script>
+<style scoped>
+.kreativm {
+  width: 300px;
+}
+.kreativk {
+  width: 500px;
+}
+</style>
