@@ -860,11 +860,17 @@ span {
     /*left: 50px;*/
     margin-left: -5%;
     font-size: 200%;
-    color: #fff;
+    color: #000;
     font-family: Chalkduster;
     letter-spacing: 1px;
-    background-color: #943e34;
+    background-color: #fff;
     /*bottom: 50px;*/
+}
+
+.buttonEnd:hover {
+    color:#fff;
+    background-color:#000;
+    border: #000;
 }
   
 /* VIDEO */

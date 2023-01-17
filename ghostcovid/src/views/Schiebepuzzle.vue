@@ -15,8 +15,8 @@
         </template>
 
       <Titel msg="" /><br>
-      <div class="endscreen" id="-1" style="margin-top:100px">
-            <EndScreen key="endKey" :points="scorec" :name="name" :time="zeit"/>
+      <div class="endscreen" id="-1" style="margin-top: 100px">
+            <EndScreen key="endKey" :points="movesc" :name="name" :time="zeitc"/>
         </div>
       <!--<router-link to="/training/spiele"><button class="button1">zurück</button></router-link><br>-->
       <router-link to="/training/spiele"><button class="button4">zurück</button></router-link><br>
@@ -235,20 +235,24 @@ class Game {
       this.tickId = setInterval(this.tick, 1000);
       this.setState(State.start());
     }
-    document.getElementById("move").textContent = `Moves: ${move}`;
-    document.getElementById("time").textContent = `Time: ${time}`;
-    this.movesc = `${move}`;
-    this.zeit = `Time: ${time}`;
+      document.getElementById("move").textContent = `Moves: ${move}`;
+      document.getElementById("time").textContent = `Time: ${time}`;
+      this.movesc = `${move}`;
+      this.zeit = `${time}`;
+      console.log(this.movesc)
+      console.log(this.zeitc)
+    
 
     if (status === "won") {
-
+      document.querySelector(".endscreen").style.visibility = 'visible';
+      //this.movesc = this.move;
+      this.zeit = `Time: ` + this.time;
+      this.zeitc = this.time;
+      endK.value +1;
     /*document.querySelector(" .endscreen").style.visibility = 'visible';
     document.querySelector(" .button1").style.visibility = 'hidden';*/
     
-    document.querySelector(".endscreen").style.visibility = 'visible';
-    //this.movesc = `${move}`;
-    //this.zeit = `Time: ${time}`;
-    endK.value +1;
+    
 		var what2 = "Gratulation du hast es geschafft!";
 		var what = "Gewonnen";
 		document.querySelector(".button3").style.visibility = 'visible';
@@ -273,7 +277,8 @@ export default {
             status: "",
             movesc: 0,
             name: "Schiebepuzzle",
-            zeit: 0
+            zeit: 0,
+            zeitc: 0
         }
   },
   mounted:function(){
@@ -294,8 +299,10 @@ export default {
       document.querySelector(".button4").style.visibility = 'hidden';
       document.querySelector(".text").style.visibility = 'hidden';
       document.querySelector(".text2").style.visibility = 'hidden';
-      
     },
+    endegew: function() {
+      
+    }
   }
 };
 </script>

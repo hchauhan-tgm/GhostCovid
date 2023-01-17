@@ -103,6 +103,9 @@ export default ({
             }
         },
         shuffle: function() {
+            this.startZeit = new Date();
+            this.aktZeit = 0;
+            this.time = 0;
             document.querySelector(" .endscreen").style.visibility = 'hidden';
             //document.querySelector(" .button1").style.visibility = 'visible';
             const richtigeKombinationen = [['grün',' tSchwarz',' gruenRichtig'],['gelb',' tSchwarz',' gelbRichtig'],['blau',' tSchwarz',' blauRichtig'],['rot', ' tSchwarz',' rotRichtig']]

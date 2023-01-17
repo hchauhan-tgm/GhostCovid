@@ -1,8 +1,8 @@
 <template>
-    <div class="containerEnde" style="margin-top: -8%">
-        <h1> Herzlichen Glückwunsch </h1>
+    <div class="containerEnde" style="margin-top: -5%;padding-top: 5%;color:#fff">
+        <h1 style="color:#fff; text-decoration:underline"> Herzlichen Glückwunsch </h1><br>
         <h2 style="margin-top: -2%"> DU HAST FÜR {{name}} {{time}} SEKUNDEN GEBRAUCHT! </h2>
-        <h2>DATUM: {{datum}} DEIN SCORE: {{points}}</h2>
+        <h2>DATUM: {{datum}} DEIN SCORE: {{points}}</h2><br>
         <router-link to="/training/spiele"><button class="buttonEnd" style="justify-content: center">zurück</button></router-link><br>
     </div>
 </template>
