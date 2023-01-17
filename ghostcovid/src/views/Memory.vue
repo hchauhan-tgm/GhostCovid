@@ -10,14 +10,19 @@
                     <i><router-link to="/training/spiele" class="text">Zurück</router-link></i>
                     <b class="text2">|</b>
                     <i @click="reloadPage" class="text" style="cursor:pointer">Neustart</i>
+                    <b class="text2">|</b>
+                    <i @click="anlei" class="text" style="cursor:pointer">Anleitung</i>
                 </div>
             </div>
         </template>
 
-
         <Titel msg="" /><br>
         <div class="endscreen" id="-1" style="margin-top:100px">
             <EndScreen key="endKey" :points="movesc" :name="name" :time="zeit"/>
+        </div>
+        <div class="row">
+          <div class="col s2"></div>
+          <div class="col s8">
         </div>
         <!--<router-link to="/training/spiele"><button class="button1">zurück</button></router-link><br>-->
         <section class="game-board" style="margin-top:15px">
@@ -42,13 +47,19 @@
             <div v-on:click="click($event)"  class="first card greyC"></div>
             <div v-on:click="click($event)"  class="first card greyC"></div>
         </section>
+        </div>
+          <div class="col s2">
+            <div class="anleitung">
+                Hallooo
+            </div>
+          </div>
         <!--<section class="score-panel">
             <div class="timer" id="timer">
             </div>
         </section>-->
         <div class="row" style="width:50%">
             <div class="col s6" style="text-align:right"><span id="0">Moves: 0</span></div>
-            <div class="col s6" style="text-align:left"><span id="timer">Time: 100</span></div>
+            <div class="col s6" style="text-align:left"><span id="timer">Time: 0</span></div>
         </div>
         <Footerspiele msgfs="Memory" />
     </div>  
@@ -244,33 +255,17 @@ export default ({
             timer.innerHTML = "0m 0s";
             clearInterval(interval);*/
         },
-        /*
-        moveCounter: function() {
-            moves++;
-            counter.innerHTML = moves;
-            if(moves == 1){
-                second = 0;
-                minute = 0; 
-                hour = 0;
-                this.startTimer();
-            }
-        },
-        startTimer: function() {
-            interval = setInterval(function(){
-                timer.innerHTML = minute+"m "+second+"s";
-                second++;
-                if(second == 60){
-                    minute++;
-                    second=0;
-                }
-                if(minute == 60){
-                    hour++;
-                    minute = 0;
-                }
-            },1000);
-        }*/
+        anlei() {
+            document.querySelector(".anleitungf").style.visibility = 'visibile';
+        }
     }
 })
 </script>
 <style scoped>
+.anleitungf {
+    margin-top: 700px;
+    width: 500px;
+    height: 300px;
+    background-color: aqua;
+}
 </style>
