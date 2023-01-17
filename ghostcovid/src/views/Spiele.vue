@@ -46,7 +46,11 @@
             <img class="infogr" src="../assets/merksdir.png" />
           </div>
           <div class="col s6 infotext">
-            Erklärung von Sarahhhhhhhhhhhhhh<br>
+            Ziel ist es, die nacheinander leuchtenden Felder in der richtigen Reihenfolge anzuklicken.<br><br>
+            Das Spiel startet indem man den runden grünen Knopf in der Mitte drückt. Anschließend leuchtet eines der vier Felder auf. 
+            Dieses Signal musst man durch Drücken auf das entsprechende Feld wiederholen. Wenn man das Leuchten richtig wiedergegeben hat, 
+            erhöht sich die Anzahl der leuchtenden Felder in der nächsten Runde um eins, ansonsten bekommt man die Reihenfolge nochmal angezeigt.
+            Wenn man 10 Runden geschafft hat, hat man gewonnen. <br>
             <router-link to="/training/spiele/merksdir"><button class="waves-effect waves-light buttoninf">Spiel starten</button></router-link>
           </div>
         </div>

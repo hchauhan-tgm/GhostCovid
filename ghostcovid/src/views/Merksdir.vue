@@ -16,7 +16,7 @@
 
       <Titel msg="" /><br>
       <div class="endscreen" id="-1"  style="margin-top:100px">
-            <EndScreen/>
+            <EndScreen key="endKey" :points="scorec" :name="name" :time="zeit"/>
       </div>
         <div class="app">
           <div class="game-box">
@@ -52,6 +52,8 @@
 
 </template>
 <script>
+import { ref } from 'vue';
+const endK = ref(0);
 var timer;
 export default {
   data: () => ({
@@ -69,7 +71,11 @@ export default {
     showHelpBox: false,
     score: 0,
     hiScore: 0,
-    message: ''
+    message: '',
+    name: "MERK'S DIR",
+    movesc: 0,
+    zeit: 0,
+    scorec: 0,
   }),
   created: function(){
     if(localStorage.getItem('simonHiScore')!== null){
@@ -92,6 +98,7 @@ export default {
         this.message = null;
         this.isPlaying = true;
         this.step = 0;
+        this.scorec = 0;
         this.ende = false;
         this.computerTurn();
       } else {
@@ -102,6 +109,7 @@ export default {
       var self = this;
       this.index = 0;
       this.step++;
+      this.scorec++;
       this.pattern.push(this.getRandomNumberOneToFour());
       this.showPattern(function(){
         self.userTurn = true;
@@ -126,6 +134,8 @@ export default {
           self.processGameOver();
           this.ende = true;
           document.querySelector(" .endscreen").style.visibility = 'visible';
+          this.zeit = this.time;
+          endK.value +1;
           return;
         } else {//User playing in regular mode
           self.showPattern()
@@ -134,7 +144,7 @@ export default {
         if (this.index === this.pattern.length - 1) { // If total items in pattern clicked
           this.score++;
           setTimeout(function() {
-             self.userTurn = false;
+            self.userTurn = false;
             self.computerTurn();
           }, 1000);
         } else { // Pending clicks exist

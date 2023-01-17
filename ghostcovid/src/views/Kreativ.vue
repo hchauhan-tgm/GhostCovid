@@ -15,7 +15,9 @@
           Malen entspannt und hilft beim Konzentrieren.
         </p>
         <p class="lets">
-          <a href="pdf_server.php?file=pdffilename" download="Mandala1.pdf" style="color: white">
+
+          <!--<a href="pdf_server.php?file=pdffilename" download="Mandala1.pdf" style="color: white">-->
+            <a href="../assets/Mandala1.pdf" download style="color: white">
           HTML Referenz als PDF
           </a>
         </p>

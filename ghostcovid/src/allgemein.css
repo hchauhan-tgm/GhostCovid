@@ -732,7 +732,6 @@ span {
     grid-column-gap: 5px;
     grid-row-gap: -70%;
     justify-content: center;
-    z-index: 2;
     position: relative;
 }
 

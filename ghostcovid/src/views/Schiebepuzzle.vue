@@ -16,7 +16,7 @@
 
       <Titel msg="" /><br>
       <div class="endscreen" id="-1" style="margin-top:100px">
-            <EndScreen/>
+            <EndScreen key="endKey" :points="scorec" :name="name" :time="zeit"/>
         </div>
       <!--<router-link to="/training/spiele"><button class="button1">zurück</button></router-link><br>-->
       <router-link to="/training/spiele"><button class="button4">zurück</button></router-link><br>
@@ -58,6 +58,8 @@
   
 </template>
 <script>
+import { ref } from 'vue';
+const endK = ref(0);
 
 class Box {
   constructor(x, y) {
@@ -235,6 +237,8 @@ class Game {
     }
     document.getElementById("move").textContent = `Moves: ${move}`;
     document.getElementById("time").textContent = `Time: ${time}`;
+    this.movesc = `${move}`;
+    this.zeit = `Time: ${time}`;
 
     if (status === "won") {
 
@@ -242,6 +246,9 @@ class Game {
     document.querySelector(" .button1").style.visibility = 'hidden';*/
     
     document.querySelector(".endscreen").style.visibility = 'visible';
+    //this.movesc = `${move}`;
+    //this.zeit = `Time: ${time}`;
+    endK.value +1;
 		var what2 = "Gratulation du hast es geschafft!";
 		var what = "Gewonnen";
 		document.querySelector(".button3").style.visibility = 'visible';
@@ -260,6 +267,14 @@ class Game {
 export default {
   name: "Schiebepuzzle",
   components: {
+  },
+  data() {
+        return {
+            status: "",
+            movesc: 0,
+            name: "Schiebepuzzle",
+            zeit: 0
+        }
   },
   mounted:function(){
     Game.ready();

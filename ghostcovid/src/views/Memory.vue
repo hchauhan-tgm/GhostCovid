@@ -17,7 +17,7 @@
 
         <Titel msg="" /><br>
         <div class="endscreen" id="-1" style="margin-top:100px">
-            <EndScreen/>
+            <EndScreen key="endKey" :points="movesc" :name="name" :time="zeit"/>
         </div>
         <!--<router-link to="/training/spiele"><button class="button1">zurück</button></router-link><br>-->
         <section class="game-board" style="margin-top:15px">
@@ -48,18 +48,20 @@
         </section>-->
         <div class="row" style="width:50%">
             <div class="col s6" style="text-align:right"><span id="0">Moves: 0</span></div>
-            <div class="col s6" style="text-align:left"><span class="timer">Time: 100</span></div>
+            <div class="col s6" style="text-align:left"><span id="timer">Time: 100</span></div>
         </div>
         <Footerspiele msgfs="Memory" />
     </div>  
 </template>
 <script>
+import { ref } from 'vue';
+const endK = ref(0);
 let clickedCard = null;
 let preventClick = false;
 let combosFound = 0;
 let status = "";
 let colorsShuffled = [];
-let moves = 0;
+let moves = 1;
 /*
 let moves = 0;
 let counter = document.querySelector(".moves");
@@ -74,13 +76,19 @@ export default ({
     },
     data() {
         return {
-            status: ""
+            status: "",
+            movesc: 0,
+            name: "MEMORY",
+            zeit: 0
         }
     },
     mounted: function() {
         this.shuffle()
     },
     methods: {
+        getMoves() {
+            return moves
+        },
         reloadPage() {
             window.location.reload();
         },
@@ -112,6 +120,9 @@ export default ({
                 cardB.setAttribute('data-color', color)
             }*/
             const target = event.currentTarget;
+            this.aktZeit = new Date();
+            this.time = Math.floor((this.aktZeit.getTime()-this.startZeit.getTime()) / 1000);
+            document.getElementById("timer").textContent = `Time: ` + this.time;
             if(preventClick || target === clickedCard || target.className.includes('done')) {
                 return;
             }
@@ -152,7 +163,11 @@ export default ({
                    console.log(combosFound)
                    if(combosFound === 10) {
                     //alert("YOU WIN");
+                    console.log("Moves: " + moves)
                     document.querySelector(" .endscreen").style.visibility = 'visible';
+                    this.movesc = moves;
+                    this.zeit = this.time;
+                    endK.value +1;
                     //document.querySelector(" .button1").style.visibility = 'hidden';
                     combosFound = 0
                     status = 'ende'
@@ -163,6 +178,9 @@ export default ({
         },
         shuffle: function() {
             document.querySelector(" .endscreen").style.visibility = 'hidden';
+            this.startZeit = new Date();
+            this.aktZeit = 0;
+            this.time = 0;
             //document.querySelector(" .button1").style.visibility = 'visible';
             moves = 0;
             const colors = [

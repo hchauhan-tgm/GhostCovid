@@ -16,7 +16,7 @@
 
       <Titel msg="" /><br>
       <div class="endscreen" id="-1" style="margin-top:100px">
-            <EndScreen/>
+            <EndScreen key="endKey" :points="rounds" :name="name" :time="zeit"/>
         </div>
       <!--<router-link to="/training/spiele"><button class="button1">zurück</button></router-link><br>-->
 
@@ -46,13 +46,17 @@
 </div>
 </template>
 <script>
+import { ref } from 'vue';
+const endK = ref(0);
 let aktKarte = 0;
 let counter = 0;
 //let moves = 0;
 export default ({
     data () {
         return {
-        anzR: 0
+        anzR: 0,
+        name: "Farbendurcheinander",
+        rounds: 0
         }
     },
     setup() {
@@ -94,6 +98,8 @@ export default ({
             if(this.anzR==20) {
                 counter = 0;
                 document.querySelector(" .endscreen").style.visibility = 'visible';
+                this.rounds = counter;
+                endK.value +1;
             }
         },
         shuffle: function() {
