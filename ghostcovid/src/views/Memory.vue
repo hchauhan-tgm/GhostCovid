@@ -17,12 +17,8 @@
         </template>
 
         <Titel msg="" /><br>
-        <div class="endscreen" id="-1" style="margin-top:100px">
-            <EndScreen key="endKey" :points="movesc" :name="name" :time="zeit"/>
-        </div>
-        <div class="row">
-          <div class="col s2"></div>
-          <div class="col s8">
+        <div class="endscreen" id="-1" style="margin-top:0px">
+            <EndScreen key="endKeym" :points="movesc" :name="name" :time="zeit"/>
         </div>
         <!--<router-link to="/training/spiele"><button class="button1">zurück</button></router-link><br>-->
         <section class="game-board" style="margin-top:15px">
@@ -47,12 +43,10 @@
             <div v-on:click="click($event)"  class="first card greyC"></div>
             <div v-on:click="click($event)"  class="first card greyC"></div>
         </section>
-        </div>
-          <div class="col s2">
+        
             <div class="anleitung">
                 Hallooo
             </div>
-          </div>
         <!--<section class="score-panel">
             <div class="timer" id="timer">
             </div>
@@ -66,7 +60,7 @@
 </template>
 <script>
 import { ref } from 'vue';
-const endK = ref(0);
+const endKm = ref(0);
 let clickedCard = null;
 let preventClick = false;
 let combosFound = 0;
@@ -104,32 +98,6 @@ export default ({
             window.location.reload();
         },
         click: function(event) {
-            /*const colors = [
-                'yellow',
-                'red',
-                'blue',
-                'green',
-                'pink',
-                'orange',
-                'teal',
-                'cyan'
-            ]
-            const cards = [...document.querySelectorAll(' .card')];
-            console.log(cards)
-            for(let color of colors) {
-                const cardAIndex = parseInt(Math.random() * cards.length);
-                const cardA = cards[cardAIndex];
-                cards.splice(cardAIndex,1);
-                cardA.className += ' color-hidden'
-                cardA.className += ` ${color}`
-                cardA.setAttribute('data-color', color)
-                const cardBIndex = parseInt(Math.random() * cards.length);
-                const cardB = cards[cardBIndex];
-                cards.splice(cardBIndex,1);
-                cardB.className += ' color-hidden'
-                cardB.className += ` ${color}`
-                cardB.setAttribute('data-color', color)
-            }*/
             const target = event.currentTarget;
             this.aktZeit = new Date();
             this.time = Math.floor((this.aktZeit.getTime()-this.startZeit.getTime()) / 1000);
@@ -138,7 +106,6 @@ export default ({
                 return;
             }
             target.className = target.className.replace('card greyC','').trim();
-            //console.log(target.className)
             if(target.classList.contains('first') == true) {
                 target.className += 'card ' + colorsShuffled[0]
                 let c = colorsShuffled[0]
@@ -146,11 +113,6 @@ export default ({
                 colorsShuffled.splice(0,1);
                 target.className = target.className.replace('first',' ').trim();
             }
-            //target.setAttribute('current-color',c);
-            //target.className += ' farbe';
-            //target.setAttribute('farbe',c)
-            //target.className = target.className.replace(' greyC ',c).trim();
-            //target.className += ' farbe'      
             target.className = target.className.replace(' greyC','').trim();
             target.className += ' done';
             if(!clickedCard) {
@@ -173,13 +135,12 @@ export default ({
                    clickedCard = null;
                    console.log(combosFound)
                    if(combosFound === 10) {
-                    //alert("YOU WIN");
                     console.log("Moves: " + moves)
                     document.querySelector(" .endscreen").style.visibility = 'visible';
                     this.movesc = moves;
                     this.zeit = this.time;
-                    endK.value +1;
-                    //document.querySelector(" .button1").style.visibility = 'hidden';
+                    endKm.value +1;
+
                     combosFound = 0
                     status = 'ende'
                     console.log(status)
@@ -192,7 +153,6 @@ export default ({
             this.startZeit = new Date();
             this.aktZeit = 0;
             this.time = 0;
-            //document.querySelector(" .button1").style.visibility = 'visible';
             moves = 0;
             const colors = [
                     'yellowC',
@@ -216,24 +176,6 @@ export default ({
                     'magentaC',
                     'midblueC'
             ]
-            //const bg = 'grey'
-            /*const cards = [...document.querySelectorAll('.card')];
-            for(let color of colors) {
-                const cardAIndex = parseInt(Math.random() * cards.length);
-                const cardA = cards[cardAIndex];
-                cards.splice(cardAIndex,1);
-                //cardA.className += ' color-hidden'
-                cardA.className = cardA.className.replace('grey',` ${color}`).trim();
-                //cardA.className += ` ${color}`
-                cardA.setAttribute('data-color', color)
-                const cardBIndex = parseInt(Math.random() * cards.length);
-                const cardB = cards[cardBIndex];
-                cards.splice(cardBIndex,1);
-                //cardB.className += ' color-hidden'
-                cardB.className = cardB.className.replace('grey',` ${color}`).trim();
-                //cardB.className += ` ${color}`
-                cardB.setAttribute('data-color', color)
-            }*/
             var j, x, i;
             for (i = colors.length - 1; i > 0; i--) {
                 j = Math.floor(Math.random() * (i + 1));
@@ -243,17 +185,6 @@ export default ({
             }
             colorsShuffled = colors
             console.log(colorsShuffled)
-            /*moves = 0;
-            counter.innerHTML = moves;
-            //eslint-disable-next-line
-            second = 0;
-            //eslint-disable-next-line
-            minute = 0;
-            //eslint-disable-next-line
-            hour = 0;
-            var timer = document.querySelector(".timer");
-            timer.innerHTML = "0m 0s";
-            clearInterval(interval);*/
         },
         anlei() {
             document.querySelector(".anleitungf").style.visibility = 'visibile';

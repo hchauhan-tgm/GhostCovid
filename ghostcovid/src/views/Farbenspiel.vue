@@ -10,17 +10,19 @@
                     <i><router-link to="/training/spiele" class="text">Zurück</router-link></i>
                     <b class="text2">|</b>
                     <i @click="reloadPage" class="text" style="cursor:pointer">Neustart</i>
+                    <b class="text2">|</b>
+                    <i @click="anlei" class="text" style="cursor:pointer">Anleitung</i>
                 </div>
             </div>
         </template>
 
       <Titel msg="" /><br>
-      <div class="endscreen" id="-1" style="margin-top:100px">
-            <EndScreen key="endKey" :points="rounds" :name="name" :time="zeit"/>
+        <div class="endscreen" id="-1" style="margin-top:0px">
+            <EndScreen  key="endKeyf" :points="movesc" :name="name" :time="zeit"/>
         </div>
-      <!--<router-link to="/training/spiele"><button class="button1">zurück</button></router-link><br>-->
+      <!--v-if="show" <router-link to="/training/spiele"><button class="button1">zurück</button></router-link><br>-->
 
-    <div class="board" style="margin-top: -3%">
+    <div class="board" style="margin-top: 15px">
             <div v-on:click="click($event)" class="colorCard bgColor" id="1">1</div>
             <div v-on:click="click($event)" class="colorCard bgColor" id="2">2</div>
             <div v-on:click="click($event)" class="colorCard bgColor" id="3">3</div>
@@ -38,7 +40,7 @@
             <div v-on:click="click($event)" class="colorCard bgColor" id="15">15</div>
             <div v-on:click="click($event)" class="colorCard bgColor" id="16">16</div>
     </div>
-    <div class="row" style="width:50%">
+    <div class="row" style="margin-top: 25px">
         <div class="col s6" style="text-align:right"><span id="0">Rounds: 0</span></div>
         <div class="col s6" style="text-align:left"><span id="time">Time: 100</span></div>
       </div>
@@ -47,16 +49,16 @@
 </template>
 <script>
 import { ref } from 'vue';
-const endK = ref(0);
+const endKf = ref("W");
 let aktKarte = 0;
 let counter = 0;
-//let moves = 0;
 export default ({
     data () {
         return {
         anzR: 0,
         name: "Farbendurcheinander",
-        rounds: 0
+        movesc: 0,
+        zeit: 0,
         }
     },
     setup() {
@@ -84,22 +86,20 @@ export default ({
                 counter = 0;
                 document.getElementById(0).textContent = 'Rounds: ' + counter;            
                 this.shuffle()*/
-                if(this.anzR<20) {
+                if(this.anzR<2) {
                     counter = counter+1;
                     document.getElementById(0).textContent = 'Rounds: ' + counter;
                     this.shuffle()
                 } else {
-                    counter = 0;
-                    document.querySelector(" .endscreen").style.visibility = 'visible';
+                    console.log("Deadend")
                 }
-                
-                //document.querySelector(" .button1").style.visibility = 'hidden';
             }
-            if(this.anzR==20) {
-                counter = 0;
+            if(this.anzR==2) {
                 document.querySelector(" .endscreen").style.visibility = 'visible';
-                this.rounds = counter;
-                endK.value +1;
+                this.movesc = counter;
+                alert(this.movesc);
+                this.zeit = this.time;
+                endKf.value += "BB";
             }
         },
         shuffle: function() {

@@ -10,18 +10,20 @@
                     <i><router-link to="/training/spiele" class="text">Zurück</router-link></i>
                     <b class="text2">|</b>
                     <i @click="reloadPage" class="text" style="cursor:pointer">Neustart</i>
+                    <b class="text2">|</b>
+                    <i @click="anlei" class="text" style="cursor:pointer">Anleitung</i>
                 </div>
             </div>
         </template>
 
       <Titel msg="" /><br>
-      <div class="endscreen" id="-1" style="margin-top: 100px">
-            <EndScreen key="endKey" :points="movesc" :name="name" :time="zeitc"/>
+      <div class="endscreen" id="-1" style="margin-top:0px">
+            <EndScreen key="endKeys" :points="movesc" :name="name" :time="zeit"/>
         </div>
       <!--<router-link to="/training/spiele"><button class="button1">zurück</button></router-link><br>-->
       <router-link to="/training/spiele"><button class="button4">zurück</button></router-link><br>
       
-      <div class="game" style="margin-top:-100px">
+      <div class="game" style="margin-top:15px">
         <div class="grid">
           <button>1</button>
           <button>2</button>
@@ -59,7 +61,7 @@
 </template>
 <script>
 import { ref } from 'vue';
-const endK = ref(0);
+const endKs = ref(0);
 
 class Box {
   constructor(x, y) {
@@ -235,34 +237,16 @@ class Game {
       this.tickId = setInterval(this.tick, 1000);
       this.setState(State.start());
     }
-      document.getElementById("move").textContent = `Moves: ${move}`;
-      document.getElementById("time").textContent = `Time: ${time}`;
-      this.movesc = `${move}`;
-      this.zeit = `${time}`;
-      console.log(this.movesc)
-      console.log(this.zeitc)
+      document.getElementById("move").textContent = `Moves: ` + move;
+      document.getElementById("time").textContent = `Time: ` + time;
     
 
     if (status === "won") {
       document.querySelector(".endscreen").style.visibility = 'visible';
-      //this.movesc = this.move;
-      this.zeit = `Time: ` + this.time;
-      this.zeitc = this.time;
-      endK.value +1;
-    /*document.querySelector(" .endscreen").style.visibility = 'visible';
-    document.querySelector(" .button1").style.visibility = 'hidden';*/
-    
-    
-		var what2 = "Gratulation du hast es geschafft!";
-		var what = "Gewonnen";
-		document.querySelector(".button3").style.visibility = 'visible';
-		document.querySelector(".button4").style.visibility = 'visible';
-		document.querySelector(".text").style.visibility = 'visible';
-		document.querySelector(".text").style.zIndex = 9999999999999;
-		document.querySelector(".text").innerText = what; //schreibt text GEWONNEN oder VERLOREN in ein Feld
-		document.querySelector(".text2").style.visibility = 'visible';
-		document.querySelector(".text2").style.zIndex = 9999999999999;
-		document.querySelector(".text2").innerText = what2; //schreibt text GEWONNEN oder VERLOREN in ein Feld
+      this.movesc = move;
+      alert(this.movesc);
+      this.zeit = time;
+      endKs.value +1;
     }
   }
 }
@@ -278,7 +262,6 @@ export default {
             movesc: 0,
             name: "Schiebepuzzle",
             zeit: 0,
-            zeitc: 0
         }
   },
   mounted:function(){
@@ -291,14 +274,7 @@ export default {
     },
     start: function startGame() {
       document.querySelector(" .endscreen").style.visibility = 'hidden';
-      //document.querySelector(" .button1").style.visibility = 'visible';
-
       location.reload();
-      document.getElementById("home").className = "h" //wird ausgeblendet
-      //document.querySelector(".button1").style.visibility = 'hidden';
-      document.querySelector(".button4").style.visibility = 'hidden';
-      document.querySelector(".text").style.visibility = 'hidden';
-      document.querySelector(".text2").style.visibility = 'hidden';
     },
     endegew: function() {
       
