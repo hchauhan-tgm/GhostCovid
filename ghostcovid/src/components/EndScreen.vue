@@ -11,7 +11,7 @@
 export default {
     name:'EndScreen',
     props: {
-        points: String,
+        points: Number,
         name: String,
         time: Number,
     },

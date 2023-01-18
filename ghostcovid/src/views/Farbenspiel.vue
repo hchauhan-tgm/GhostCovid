@@ -1,5 +1,5 @@
 <template>
-<div>
+    <div class="farbenspiel" v-on:load="shuffle">
     <!--<Headerspiele msghs="FARBENDURCHEINANDER" link="/training/spiele/farben"/>-->
         <template>
             <div class="nav">
@@ -11,14 +11,14 @@
                     <b class="text2">|</b>
                     <i @click="reloadPage" class="text" style="cursor:pointer">Neustart</i>
                     <b class="text2">|</b>
-                    <i @click="anlei" class="text" style="cursor:pointer">Anleitung</i>
+                    <i @click="reloadPage" class="text" style="cursor:pointer">Anleitung</i>
                 </div>
             </div>
         </template>
 
       <Titel msg="" /><br>
         <div class="endscreen" id="-1" style="margin-top:0px">
-            <EndScreen  key="endKeyf" :points="movesc" :name="name" :time="zeit"/>
+            <EndScreen  :key="endKeyf" :points="movesc" :name="name" :time="zeit"/>
         </div>
       <!--v-if="show" <router-link to="/training/spiele"><button class="button1">zurück</button></router-link><br>-->
 
@@ -40,7 +40,7 @@
             <div v-on:click="click($event)" class="colorCard bgColor" id="15">15</div>
             <div v-on:click="click($event)" class="colorCard bgColor" id="16">16</div>
     </div>
-    <div class="row" style="margin-top: 25px">
+      <div class="row" style="margin-top: 25px">
         <div class="col s6" style="text-align:right"><span id="0">Rounds: 0</span></div>
         <div class="col s6" style="text-align:left"><span id="time">Time: 100</span></div>
       </div>
@@ -48,8 +48,6 @@
 </div>
 </template>
 <script>
-import { ref } from 'vue';
-const endKf = ref("W");
 let aktKarte = 0;
 let counter = 0;
 export default ({
@@ -59,6 +57,7 @@ export default ({
         name: "Farbendurcheinander",
         movesc: 0,
         zeit: 0,
+        endKeyf: 0,
         }
     },
     setup() {
@@ -86,7 +85,7 @@ export default ({
                 counter = 0;
                 document.getElementById(0).textContent = 'Rounds: ' + counter;            
                 this.shuffle()*/
-                if(this.anzR<2) {
+                if(this.anzR<20) {
                     counter = counter+1;
                     document.getElementById(0).textContent = 'Rounds: ' + counter;
                     this.shuffle()
@@ -94,12 +93,12 @@ export default ({
                     console.log("Deadend")
                 }
             }
-            if(this.anzR==2) {
+            if(this.anzR==20) {
                 document.querySelector(" .endscreen").style.visibility = 'visible';
                 this.movesc = counter;
                 alert(this.movesc);
                 this.zeit = this.time;
-                endKf.value += "BB";
+                this.endKeyf += 1;
             }
         },
         shuffle: function() {

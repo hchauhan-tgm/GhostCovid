@@ -18,7 +18,7 @@
 
         <Titel msg="" /><br>
         <div class="endscreen" id="-1" style="margin-top:0px">
-            <EndScreen key="endKeym" :points="movesc" :name="name" :time="zeit"/>
+            <EndScreen :key="endKeym" :points="movesc" :name="name" :time="zeit"/>
         </div>
         <!--<router-link to="/training/spiele"><button class="button1">zurück</button></router-link><br>-->
         <section class="game-board" style="margin-top:15px">
@@ -153,7 +153,6 @@ export default ({
             this.startZeit = new Date();
             this.aktZeit = 0;
             this.time = 0;
-            moves = 0;
             const colors = [
                     'yellowC',
                     'redC',

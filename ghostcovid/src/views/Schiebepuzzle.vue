@@ -11,14 +11,14 @@
                     <b class="text2">|</b>
                     <i @click="reloadPage" class="text" style="cursor:pointer">Neustart</i>
                     <b class="text2">|</b>
-                    <i @click="anlei" class="text" style="cursor:pointer">Anleitung</i>
+                    <i @click="reloadPage" class="text" style="cursor:pointer">Anleitung</i>
                 </div>
             </div>
         </template>
 
       <Titel msg="" /><br>
       <div class="endscreen" id="-1" style="margin-top:0px">
-            <EndScreen key="endKeys" :points="movesc" :name="name" :time="zeit"/>
+            <EndScreen :key="endKeys" :points="movesc" :name="name" :time="zeit"/>
         </div>
       <!--<router-link to="/training/spiele"><button class="button1">zurück</button></router-link><br>-->
       <router-link to="/training/spiele"><button class="button4">zurück</button></router-link><br>
@@ -60,9 +60,6 @@
   
 </template>
 <script>
-import { ref } from 'vue';
-const endKs = ref(0);
-
 class Box {
   constructor(x, y) {
     this.x = x;
@@ -246,7 +243,9 @@ class Game {
       this.movesc = move;
       alert(this.movesc);
       this.zeit = time;
-      endKs.value +1;
+      this.endKeys += 1;
+    
+      
     }
   }
 }
@@ -262,6 +261,7 @@ export default {
             movesc: 0,
             name: "Schiebepuzzle",
             zeit: 0,
+            endKeys: 0
         }
   },
   mounted:function(){
@@ -276,9 +276,6 @@ export default {
       document.querySelector(" .endscreen").style.visibility = 'hidden';
       location.reload();
     },
-    endegew: function() {
-      
-    }
   }
 };
 </script>
