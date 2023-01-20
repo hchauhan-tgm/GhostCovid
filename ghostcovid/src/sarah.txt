@@ -6,7 +6,7 @@ x bilder hab ich gemacht
 x zeit und rounds bei merksdir hab ich eingeblendet
 x längere erklärung bei podcasts
 x Merksdir css ins allgemeine css
-- info button n den spielen wo dann die erklärung aufpoppt (USABILITY TEST KRITIK)
+x info button n den spielen wo dann die erklärung aufpoppt (USABILITY TEST KRITIK)
 - Video + Beschreibung hochladen
 - Forum CORS anschaun
 - die Spiele Views + Forum View kommentieren also Kommentare im Code

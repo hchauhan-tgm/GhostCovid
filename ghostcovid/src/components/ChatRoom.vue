@@ -2,9 +2,12 @@
 	<div class="chat-window">
 		<div class="row" style="width:100%;">
 			<div class="col s4">
+				<h2 style="color:red; font-style:bold">Erweiterung notwendig</h2>
+				<a href="https://addons.mozilla.org/de/firefox/addon/moesif-origin-cors-changer1/" target="_blank"><button class="erweiterungbutton">FireFox</button></a>
+				<a href="https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc" target="_blank"><button class="erweiterungbutton">Chrome</button></a>
 				<form class="msginput-container" v-on:submit="sendMessage">
 					<textarea  id="icon_prefix2" type="text" class="validate msginput" v-model="msg"></textarea>
-					<button class="sendbutton" v-on:click="sendMessage" v-bind:disabled="!msg">Veröffentlichen</button>
+					<button class="sendbutton" v-on:click="infotext" v-bind:disabled="!msg">Veröffentlichen</button>
 				</form>
 			</div>
 			<div class="col s8">
@@ -26,7 +29,7 @@ export default {
 	props: ['messages'],
 	data: function () {
 		return {
-			msg: ""
+			msg: "",
 		}
 	},
 	methods: {

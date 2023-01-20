@@ -583,7 +583,22 @@ h4 {
     color: #fff;
     background-color:#000;
 }
-
+.erweiterungbutton {
+    width: 50%;
+    height: 75px;
+    border: 2px solid #fff;
+    color: #000;
+    font-family: Chalkduster;
+    letter-spacing: 1px;
+    font-style: bold;
+    font-size: 150%;
+    background-color: red;
+    vertical-align: middle;
+}
+.erweiterungbutton:hover {
+    color: #fff;
+    background-color:#000;
+}
 
 /* PODCAST */
 .audiobalken {
