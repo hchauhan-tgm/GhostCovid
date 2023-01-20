@@ -12,6 +12,17 @@ h2 {
     font-family: 'Arial', serif;
     font-variant: small-caps;
 }
+h5 {
+    margin-top: 10px;
+    font-size: 200%;
+    font-family: 'Arial', serif;
+}
+h6 {
+    margin-top: 10px;
+    font-size: 250%;
+    font-style: bold;
+    font-family: 'Arial', serif;
+}
 a {
     color: #943e34;
     cursor: pointer;
@@ -723,13 +734,14 @@ span {
 
 .game-board {
     margin-top: -400px;
-    width: 100%;
+    margin-left: 10%;
+    width: 80%;
     display: grid;
     height: 500px;
     grid-template-columns: 15% 15% 15% 15% 15%;
     grid-template-rows: 25% 25% 25% 25% 25%;
     grid-column-gap: 5px;
-    grid-row-gap: -70%;
+    grid-row-gap: -50%;
     justify-content: center;
     position: relative;
 }
@@ -778,6 +790,103 @@ span {
     text-align: center;
 	margin-top: -50px;
 }
+
+/* MERKS DIR */
+.game-boxmd {
+    position: absolute;
+    top: 15%;
+}
+.appmd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.start-buttonmd {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 5px solid #323232;
+    box-shadow: 5px 5px 5px #323232;
+    background-color: #07D807;
+    text-align: center;
+    font-weight: 900;
+    font-size: 22px;
+    margin-top: 35%;
+    cursor: pointer;
+    justify-content: center;
+}
+.countermd {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 5px solid #323232;
+    border-radius: 10px;
+    /*z-index: 800;*/
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 25px;
+    color: white;
+    background-color: maroon;
+}
+.timemd {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    border: 5px solid #323232;
+    border-radius: 10px;
+    /*z-index: 800;*/
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 25px;
+    background-color: maroon;
+}
+.controls-boxmd {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    width: 40%;
+    height: 40%;
+    border: 10px solid #323232;
+    border-radius: 100%;
+    background-color: grey;
+    padding: 0 auto;
+    text-align: center;
+}
+.boxmd {
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    font-size: 64px;
+    text-align: center;
+    border: 12px solid #323232;
+    /*box-shadow: 5px 10px 10px #323232;*/
+    margin-left: -4px;
+    margin-bottom: -30px;
+    cursor: pointer;
+  }
+  
+  .boxmd1 {
+    background-color: red;
+    border-radius: 100% 0 0 0;
+  }
+  
+  .boxmd2 {
+    background-color: blue;
+    border-radius: 0 100% 0 0;
+  }
+  
+  .boxmd3 {
+    background-color: green;
+    border-radius: 0 0 0 100%;
+  }
+  
+  .boxmd4 {
+    background-color: yellow;
+    border-radius: 0 0 100% 0;
+  }
 
 /*FARBENSPIEL*/
 
@@ -850,6 +959,21 @@ span {
 }
 .bgColor:hover {
     border: solid #000 5px;
+}
+
+/* ANLEITUNG */
+.containerEnde2 {
+    width: 70%;
+    height: 70%;
+    margin-left: 15%;
+    background-color: rgba(148,62,52,0.95);
+    vertical-align: middle;
+    text-align: center;
+    position: absolute;
+    font-weight: 1200;
+    z-index: 1;
+    border: 5px solid black;
+    border-radius: 20px;
 }
 
 /* ENDSCREEN */

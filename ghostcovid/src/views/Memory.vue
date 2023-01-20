@@ -16,11 +16,15 @@
             </div>
         </template>
 
+        <div class="anleitung" id="-1" style="margin-top:0px">
+            <Anleitung :anl="anltext"/>
+        </div>
+
         <Titel msg="" /><br>
         <div class="endscreen" id="-1" style="margin-top:0px">
             <EndScreen :key="endKeym" :points="movesc" :name="name" :time="zeit"/>
         </div>
-        <!--<router-link to="/training/spiele"><button class="button1">zurück</button></router-link><br>-->
+
         <section class="game-board" style="margin-top:15px">
             <div v-on:click="click($event)"  class="first card greyC" ></div>
             <div v-on:click="click($event)"  class="first card greyC"></div>
@@ -43,14 +47,7 @@
             <div v-on:click="click($event)"  class="first card greyC"></div>
             <div v-on:click="click($event)"  class="first card greyC"></div>
         </section>
-        
-            <div class="anleitung">
-                Hallooo
-            </div>
-        <!--<section class="score-panel">
-            <div class="timer" id="timer">
-            </div>
-        </section>-->
+
         <div class="row" style="width:50%">
             <div class="col s6" style="text-align:right"><span id="0">Moves: 0</span></div>
             <div class="col s6" style="text-align:left"><span id="timer">Time: 0</span></div>
@@ -58,6 +55,7 @@
         <Footerspiele msgfs="Memory" />
     </div>  
 </template>
+
 <script>
 import { ref } from 'vue';
 const endKm = ref(0);
@@ -67,14 +65,7 @@ let combosFound = 0;
 let status = "";
 let colorsShuffled = [];
 let moves = 1;
-/*
-let moves = 0;
-let counter = document.querySelector(".moves");
-var second = 0, minute = 0;
-var timer = document.getElementById("timer");
-//eslint-disable-next-line
-var interval = 0, hour = 0;
-*/
+let anl = 0;
 export default ({
     name: 'App',
     components: {
@@ -84,11 +75,14 @@ export default ({
             status: "",
             movesc: 0,
             name: "MEMORY",
-            zeit: 0
+            zeit: 0,
+            anltext: "Ziel ist es, möglichst schnell alle Paarungen zu finden. Dabei müssen nacheinander immer zwei Karten umgedreht werden - durch einen einfachen Klick auf die Rückseite der Karte, die man ansehen möchte. Haben die zwei gewählten Karten die selbe Farbe, bleiben sie aufgedeckt und man hat ein Paar gefunden. Haben die zwei gewählten Karten nicht die selbe Farbe, werden sie wieder verdeckt - man muss sich also merken unter welcher Karte sich welche Farbe versteckt.",
         }
     },
     mounted: function() {
-        this.shuffle()
+        this.shuffle();
+        document.querySelector(".endscreen").style.visibility = 'hidden';
+        document.querySelector(".anleitung").style.visibility = 'hidden';
     },
     methods: {
         getMoves() {
@@ -96,6 +90,15 @@ export default ({
         },
         reloadPage() {
             window.location.reload();
+        },
+        anlei() {
+            if(anl==0) {
+                document.querySelector(".anleitung").style.visibility = 'visible';
+                anl = anl + 1;
+            } else {
+                document.querySelector(".anleitung").style.visibility = 'hidden';
+                anl = anl - 1;
+            }            
         },
         click: function(event) {
             const target = event.currentTarget;
@@ -137,10 +140,9 @@ export default ({
                    if(combosFound === 10) {
                     console.log("Moves: " + moves)
                     document.querySelector(" .endscreen").style.visibility = 'visible';
-                    this.movesc = moves;
+                    this.movesc = 1000-moves;
                     this.zeit = this.time;
                     endKm.value +1;
-
                     combosFound = 0
                     status = 'ende'
                     console.log(status)
@@ -185,17 +187,6 @@ export default ({
             colorsShuffled = colors
             console.log(colorsShuffled)
         },
-        anlei() {
-            document.querySelector(".anleitungf").style.visibility = 'visibile';
-        }
     }
 })
 </script>
-<style scoped>
-.anleitungf {
-    margin-top: 700px;
-    width: 500px;
-    height: 300px;
-    background-color: aqua;
-}
-</style>

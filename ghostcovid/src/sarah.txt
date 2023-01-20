@@ -1,11 +1,11 @@
-- Spielerklärung
-- Spielzeit in die Spiele machen (bei Time soll ne Zeit rennen und ned 100 stehen)
-- am Endscreen Zeit und Runden/Moves anzeigen
-- MerksDir soll nach x Runden enden 
-- bilder hab ich gemacht
-- zeit und rounds bei merksdir hab ich eingeblendet
-- längere erklärung bei podcasts
-- Merksdir css ins allgemeine css
+x Spielerklärung
+x Spielzeit in die Spiele machen (bei Time soll ne Zeit rennen und ned 100 stehen)
+x am Endscreen Zeit und Runden/Moves anzeigen
+x MerksDir soll nach x Runden enden 
+x bilder hab ich gemacht
+x zeit und rounds bei merksdir hab ich eingeblendet
+x längere erklärung bei podcasts
+x Merksdir css ins allgemeine css
 - info button n den spielen wo dann die erklärung aufpoppt (USABILITY TEST KRITIK)
 - Video + Beschreibung hochladen
 - Forum CORS anschaun

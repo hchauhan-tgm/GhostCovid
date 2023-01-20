@@ -10,6 +10,7 @@ import footerspiele from './components/Footerspiele.vue'
 import titel from './components/Titel.vue'
 import zitat from './components/Zitat.vue'
 import endscreen from './components/EndScreen.vue'
+import anleitung from './components/Anleitung.vue'
 
 
 Vue.config.productionTip = false;
@@ -22,6 +23,7 @@ Vue.component('Footerspiele', footerspiele)
 Vue.component('Titel', titel)
 Vue.component('Zitat', zitat)
 Vue.component('EndScreen',endscreen)
+Vue.component('Anleitung',anleitung)
 
 Vue.config.productionTip = false;
 

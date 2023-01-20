@@ -11,10 +11,14 @@
                     <b class="text2">|</b>
                     <i @click="reloadPage" class="text" style="cursor:pointer">Neustart</i>
                     <b class="text2">|</b>
-                    <i @click="reloadPage" class="text" style="cursor:pointer">Anleitung</i>
+                    <i @click="anlei" class="text" style="cursor:pointer">Anleitung</i>
                 </div>
             </div>
         </template>
+
+        <div class="anleitung" id="-1" style="margin-top:0px">
+            <Anleitung :anl="anltext"/>
+        </div>
 
       <Titel msg="" /><br>
         <div class="endscreen" id="-1" style="margin-top:0px">
@@ -42,7 +46,7 @@
     </div>
       <div class="row" style="margin-top: 25px">
         <div class="col s6" style="text-align:right"><span id="0">Rounds: 0</span></div>
-        <div class="col s6" style="text-align:left"><span id="time">Time: 100</span></div>
+        <div class="col s6" style="text-align:left"><span id="time">Time: 0</span></div>
       </div>
     <Footerspiele msgfs="Farbendurcheinander" />
 </div>
@@ -50,6 +54,7 @@
 <script>
 let aktKarte = 0;
 let counter = 0;
+let anl = 0;
 export default ({
     data () {
         return {
@@ -58,21 +63,39 @@ export default ({
         movesc: 0,
         zeit: 0,
         endKeyf: 0,
+        anltext: "Ziel ist es, das richtige Feld anzuklicken. Dabei muss man die Farbe zu finden, bei der die Schrift schwarz ist und die Hintergrundfarbe mit dem Farbnamen übereinstimmt. Dabei muss die richtige Farbe mittels Klick aus den 16 Optionen ausgewählt werden. Wenn man 20 richtige Felder gefunden hat, hat man gewonnen."
         }
     },
     setup() {
         
     },
     mounted: function() {
+        document.querySelector(".endscreen").style.visibility = 'hidden';
+        document.querySelector(".anleitung").style.visibility = 'hidden';
         this.shuffle()
         counter = 0
         this.anzR = 0
+        this.startZeit = new Date();
+        this.aktZeit = 0;
+        this.time = 0;
     },
     methods: {
         reloadPage() {
             window.location.reload();
         },
+        anlei() {
+            if(anl==0) {
+                document.querySelector(".anleitung").style.visibility = 'visible';
+                anl = anl + 1;
+            } else {
+                document.querySelector(".anleitung").style.visibility = 'hidden';
+                anl = anl - 1;
+            }            
+        },
         click: function(event) {
+            this.aktZeit = new Date();
+            this.time = Math.floor((this.aktZeit.getTime()-this.startZeit.getTime()) / 1000);
+            document.getElementById("time").textContent = `Time: ` + this.time;
             const target = event.currentTarget;
             if(target.classList.contains('right') == true) {
                 counter = counter+1;
@@ -81,10 +104,6 @@ export default ({
                 document.getElementById(0).textContent = 'Rounds: ' + counter;
                 this.shuffle()
             } else {
-                /*alert('Punktestand: ' + counter)
-                counter = 0;
-                document.getElementById(0).textContent = 'Rounds: ' + counter;            
-                this.shuffle()*/
                 if(this.anzR<20) {
                     counter = counter+1;
                     document.getElementById(0).textContent = 'Rounds: ' + counter;
@@ -95,18 +114,13 @@ export default ({
             }
             if(this.anzR==20) {
                 document.querySelector(" .endscreen").style.visibility = 'visible';
-                this.movesc = counter;
-                alert(this.movesc);
+                this.movesc = 1000-counter;
                 this.zeit = this.time;
                 this.endKeyf += 1;
             }
         },
         shuffle: function() {
-            this.startZeit = new Date();
-            this.aktZeit = 0;
-            this.time = 0;
             document.querySelector(" .endscreen").style.visibility = 'hidden';
-            //document.querySelector(" .button1").style.visibility = 'visible';
             const richtigeKombinationen = [['grün',' tSchwarz',' gruenRichtig'],['gelb',' tSchwarz',' gelbRichtig'],['blau',' tSchwarz',' blauRichtig'],['rot', ' tSchwarz',' rotRichtig']]
             const falscheKombinationen = [
                 ['grün',' tGruen',' gelbRichtig'],
@@ -165,7 +179,6 @@ export default ({
                 ['blau',' tSchwarz',' rotRichtig'],
                 ['blau',' tSchwarz',' gruenRichtig'],
             ]
-            //console.log(richtigeKombinationen)
             const zuweisen = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
             let zufallKombinationR = richtigeKombinationen[Math.floor(Math.random()*richtigeKombinationen.length)];
             let zKombi = false;
@@ -244,8 +257,6 @@ export default ({
                         document.getElementById(zuweisen[i]).textContent = zufallKombinationF[0];
                         document.getElementById(zuweisen[i]).className += zufallKombinationF[1];
                         document.getElementById(zuweisen[i]).className += zufallKombinationF[2];
-                        //console.log(aktKarte)
-                        //zuweisen.splice(aktKarte-1,1)
                         console.log(zuweisen)
                     }
                 }

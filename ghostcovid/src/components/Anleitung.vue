@@ -1,7 +1,7 @@
 <template>
-    <div class="containerEnde" style="margin-top: -8%">
-        <h1> {{anl}}</h1>
-        <router-link to="/training/spiele"><button class="buttonEnd" style="justify-content: center">zurück</button></router-link><br>
+    <div class="containerEnde2" style="margin-top: 1%;padding: 5%;color:#fff">
+        <h5> {{anl}}</h5><br>
+        <h6> Auf "Anleitung" klicken zum Schließen! </h6>
     </div>
 </template>
 
@@ -13,17 +13,3 @@ export default {
   },
 }
 </script>
-<style scoped>
-    .containerEnde {
-        width: 90%;
-        height: 80%;
-        margin-left: 5%;
-        background-color: rgba(148,62,52,0.95);
-        vertical-align: middle;
-        text-align: center;
-        position: absolute;
-        margin-top: -5%;
-        font-weight: 1200;
-        z-index: 999;
-    }
-</style>

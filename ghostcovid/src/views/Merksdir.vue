@@ -16,39 +16,37 @@
             </div>
         </template>
 
+      <div class="anleitung" id="-1"  style="margin-top:0px">
+          <Anleitung :anl="anltext"/>
+      </div>
+
       <Titel msg="" /><br>
       <div class="endscreen" id="-1"  style="margin-top:0px">
             <EndScreen key="endKeyd" :points="scorec" :name="name" :time="zeit"/>
       </div>
-        <div class="app">
-          <div class="game-box" style="margin-top:15px">
+
+        <div class="appmd">
+          <div class="game-boxmd" style="margin-top:15px">
             <div class="row">
-              <div class="box box1" v-on:click="clickedBox(1)" v-bind:class="{ active: isBoxOneActive}">
+              <div class="boxmd boxmd1" v-on:click="clickedBox(1)" v-bind:class="{ active: isBoxOneActive}">
               </div>
-              <div class="box box2" v-on:click="clickedBox(2)" v-bind:class="{ active: isBoxTwoActive}">
+              <div class="boxmd boxmd2" v-on:click="clickedBox(2)" v-bind:class="{ active: isBoxTwoActive}">
               </div>
             </div>
             <div class="row">
-              <div class="box box3" v-on:click="clickedBox(3)" v-bind:class="{ active: isBoxThreeActive}">
+              <div class="boxmd boxmd3" v-on:click="clickedBox(3)" v-bind:class="{ active: isBoxThreeActive}">
               </div>
-              <div class="box box4" v-on:click="clickedBox(4)" v-bind:class="{ active: isBoxFourActive}">
+              <div class="boxmd boxmd4" v-on:click="clickedBox(4)" v-bind:class="{ active: isBoxFourActive}">
               </div>
             </div>
 
-            <div class="controls-box">
-              <!--<div class="strict-mode-toggle" v-on:click="changeMode()" v-bind:class="{red: isStrictModeOn}">-->
-                <!--<span v-if="isStrictModeOn">Strict</span><span v-else>Normal</span></div>-->
-              <div class="start-button" v-on:click="changeState()" v-bind:class="{red: isPlaying}">&nbsp;</div>
-              <div class="counter">{{step}}</div>
-              <!--<div class="hi-score">Hi {{hiScore}}</div>-->
+            <div class="controls-boxmd">
+              <div class="countermd">{{step}}</div><br>
+              <div class="timemd"><span id="time" style="color:white">0 sek</span></div>
             </div>
           </div>
         </div>
         
-        <div class="row" style="margin-top:525px">
-          <div class="col s6" style="text-align:right"><span id="move">Rounds: 0</span></div>
-          <div class="col s6" style="text-align:left"><span id="time">Time: 100</span></div>
-        </div>
   <Footerspiele msgfs="Merk's Dir" />
 </div>
 
@@ -57,6 +55,7 @@
 import { ref } from 'vue';
 const endKd = ref(0);
 var timer;
+let anl = 0;
 export default {
   data: () => ({
     isStrictModeOn: true,
@@ -70,7 +69,6 @@ export default {
     isBoxTwoActive: false,
     isBoxThreeActive: false,
     isBoxFourActive: false,
-    showHelpBox: false,
     score: 0,
     hiScore: 0,
     message: '',
@@ -78,6 +76,7 @@ export default {
     movesc: 0,
     zeit: 0,
     scorec: 0,
+    anltext: "Ziel ist es, die nacheinander leuchtenden Felder in der richtigen Reihenfolge anzuklicken.Das Spiel startet indem man den runden grünen Knopf in der Mitte drückt. Anschließend leuchtet eines der vier Felder auf. Dieses Signal musst man durch Drücken auf das entsprechende Feld wiederholen. Wenn man das Leuchten richtig wiedergegeben hat, erhöht sich die Anzahl der leuchtenden Felder in der nächsten Runde um eins, ansonsten bekommt man die Reihenfolge nochmal angezeigt. Wenn man 10 Runden geschafft hat, hat man gewonnen."
   }),
   created: function(){
     if(localStorage.getItem('simonHiScore')!== null){
@@ -85,11 +84,22 @@ export default {
     }
   },
   mounted: function() {
-    document.querySelector(" .endscreen").style.visibility = 'hidden';
+    document.querySelector(".endscreen").style.visibility = 'hidden';
+    document.querySelector(".anleitung").style.visibility = 'hidden';
+    this.changeState();
     },
   methods: {
     reloadPage() {
       window.location.reload();
+    },
+    anlei() {
+      if(anl==0) {
+          document.querySelector(".anleitung").style.visibility = 'visible';
+          anl = anl + 1;
+      } else {
+          document.querySelector(".anleitung").style.visibility = 'hidden';
+          anl = anl - 1;
+      }            
     },
     changeState: function() {
       if (this.state === 'Start') {
@@ -119,12 +129,12 @@ export default {
       this.aktZeit = new Date();
       this.time = Math.floor((this.aktZeit.getTime()-this.startZeit.getTime()) / 1000);
       document.getElementById("move").textContent = `Rounds: ` + this.step;
-      document.getElementById("time").textContent = `Time: ` + this.time;
+      document.getElementById("time").textContent = this.time + ` sec`;
     },
     clickedBox: function(boxNum) {
       this.aktZeit = new Date();
       this.time = Math.floor((this.aktZeit.getTime()-this.startZeit.getTime()) / 1000);
-      document.getElementById("time").textContent = `Time: ` + this.time;
+      document.getElementById("time").textContent = this.time  + ` sec`;
       var self = this;
       if (this.state === 'Start') {
         return;
@@ -137,6 +147,7 @@ export default {
           this.ende = true;
           document.querySelector(" .endscreen").style.visibility = 'visible';
           this.zeit = this.time;
+          this.scorec = 0+this.scorec;
           endKd.value +1;
           return;
         } else {//User playing in regular mode
@@ -166,10 +177,7 @@ export default {
       console.log('Score: '+this.score);
           this.resetGame();
     },
-    getRandomNumberOneToFour: function() {
-      //Utility method to get a random number from 1 to 4
-      return Math.floor(Math.random() * 4 + 1);
-    },
+    getRandomNumberOneToFour: function() {return Math.floor(Math.random() * 4 + 1);},
     checkPattern: function(boxNum) {
       return (this.pattern[this.index] === boxNum);
     },
@@ -185,7 +193,7 @@ export default {
     showPattern: function(callback) {
       this.aktZeit = new Date();
         this.time = Math.floor((this.aktZeit.getTime()-this.startZeit.getTime()) / 1000);
-        document.getElementById("time").textContent = `Time: ` + this.time;
+        document.getElementById("time").textContent = this.time  + ` sek`;
       var self = this
       var i=0;
       timer = setInterval(function() {
@@ -213,11 +221,7 @@ export default {
     clickEffect: function(boxNum) {
       this.aktZeit = new Date();
         this.time = Math.floor((this.aktZeit.getTime()-this.startZeit.getTime()) / 1000);
-        document.getElementById("time").textContent = `Time: ` + this.time;
-      //This method takes in a box number as parameter
-      //Then toggles its class as active
-      //Then plays the respective audio file
-      //Then reverts the class back to original
+        document.getElementById("time").textContent = this.time  + ` sek`;
       var self = this
       switch (boxNum) {
         case 1:
@@ -252,243 +256,11 @@ export default {
 </script>
 
 <style>
-html {
-  margin: 0px;
-  padding: 0px;
-  /*background-color: #FDE9C9;*/
-}
-
-h1 {
-  text-align: center;
-  font-size: 64px;
-  font-weight: 900;
-  
-  color: #323232;
-}
-
-a {
-  text-decoration: none;
-  color: #3F72AF;
-}
-
-span {
-  font-size: 20px;
-  text-align: center;
-}
-
-.app {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.game-box {
-  position: absolute;
-  top: 12%;
-}
-
-.controls-box {
-  position: absolute;
-  top: 30%;
-  left: 30%;
-  /*z-index: 500;*/
-  width: 40%;
-  height: 40%;
-  border: 10px solid #323232;
-  border-radius: 100%;
-  background-color: grey;
-  padding: 0 auto;
-  text-align: center;
-}
-
-.box {
-  display: inline-block;
-  width: 250px;
-  height: 250px;
-  font-size: 64px;
-  text-align: center;
-  border: 12px solid #323232;
-  /*box-shadow: 5px 10px 10px #323232;*/
-  margin-left: -4px;
-  margin-bottom: -30px;
-  cursor: pointer;
-}
-
-.box1 {
-  background-color: red;
-  border-radius: 100% 0 0 0;
-}
-
-.box2 {
-  background-color: blue;
-  border-radius: 0 100% 0 0;
-}
-
-.box3 {
-  background-color: green;
-  border-radius: 0 0 0 100%;
-}
-
-.box4 {
-  background-color: yellow;
-  border-radius: 0 0 100% 0;
-}
-
 .active {
-  background-color: hsl(50, 50%, 10%);
+  background-color: black;
+  z-index: 300;
 }
-
-.start-button {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  border: 5px solid #323232;
-  box-shadow: 5px 5px 5px #323232;
-  /*z-index: 800;*/
-  background-color: #07D807;
-  text-align: center;
-  font-weight: 900;
-  font-size: 22px;
-  margin-top: 35%;
-  /*margin-left: 5px;*/
-  cursor: pointer;
-  justify-content: center;
-}
-.strict-mode-toggle{
-  display: block;
-  width: 50px;
-  height: 20px;
-  border-radius: 5px;
-  border: 3px solid #323232;
-  box-shadow: 2px 2px 2px #323232;
-  z-index: 800;
-  background-color: orange;
-  text-align: center;
-  font-weight: 500;
-  margin-top: 10%;
-  margin-left: 50px;
-  padding: 2px 5px;
-  cursor: pointer;
-}
-.counter {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  border: 5px solid #323232;
-  border-radius: 10px;
-  /*z-index: 800;*/
-  margin-left: 10px;
-  text-align: center;
-  font-weight: 900;
-  font-size: 25px;
-  color: red;
-  background-color: maroon;
-}
-.hi-score{
-  font-weight: 800;
-  color: darkgray;
-  margin-top: 15px;
-  font-size: 22px;
-}
-
-.footer {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  padding: 5px 10px;
-  color: #323232;
-  font-size: 14px;
-}
-
-.hint {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  padding: 5px;
-  color: #323232;
-  font-size: 14px;
-  z-index: 800;
-  background-color: #FDE9C9;
-}
-
-.help {
-  cursor: pointer;
-}
-
-.help-box {
-  position: absolute;
-  margin-top: 100px;
-  width: 500px;
-  height: 300px;
-  border: 5px solid darkgray;
-  border-radius: 10px;
-  background-color: white;
-  box-shadow: 30px 30px 30px black;
-  z-index: 900;
-  color: brown;
-  font-size: 16px;
-}
-.info-box{
-  margin-top: 30px;
-  text-align: center;
-  color: grey;
-  font-weight: 900;
-  font-size: 20px;
-}
-.red{
+.red {
   background-color: red;
-}
-/*
-For mobile responsiveness, simply scale the dimesions
-of the boxes
-*/
-
-@media only screen and (max-width: 670px) {
-  h1 {
-    font-size: 36px;
-  }
-  .game-box {
-    top: 100px;
-  }
-  .box {
-    width: 120px;
-    height: 120px;
-  }
-  .controls-box {
-    width: 110px;
-    height: 110px;
-  }
-  .counter, .start-button {
-    width: 30px;
-    height: 30px;
-    margin-top: 10%;
-    margin-left: 8px;
-    font-size: 18px;
-  }
-  .strict-mode-toggle{
-    display: block;
-    width: 45px;
-    height: 15px;
-    border-radius: 5px;
-    border: 2px solid #323232;
-    box-shadow: 2px 2px 2px #323232;
-    z-index: 800;
-    background-color: orange;
-    text-align: center;
-    font-weight: 500;
-    margin-top: 5%;
-    margin-left: 30px;
-    padding: 1px 3px;
-    cursor: pointer;
-}
-  .hi-score{
-    font-size: 16px;
-    margin-top: 10px;
-  }
-  .help-box {
-    width: 300px;
-    top: 10px;
-  }
 }
 </style>
