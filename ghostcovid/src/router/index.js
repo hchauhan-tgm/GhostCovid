@@ -9,15 +9,15 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
-    meta: { 
-      title: 'Home' 
-    } 
+    meta: {
+      title: "Home",
+    },
   },
   {
     path: "/training",
     name: "Training",
-    meta: { 
-      title: 'Training' 
+    meta: {
+      title: "Training",
     },
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
@@ -28,164 +28,146 @@ const routes = [
   {
     path: "/erfahrungen",
     name: "Erfahrungen",
-    meta: { 
-      title: 'Erfahrungen' 
+    meta: {
+      title: "Erfahrungen",
     },
-    component: () =>
-      import("../views/Erfahrungen.vue"),
+    component: () => import("../views/Erfahrungen.vue"),
   },
   {
     path: "/statistik",
     name: "Statistik",
-    meta: { 
-      title: 'Statistik' 
+    meta: {
+      title: "Statistik",
     },
-    component: () =>
-      import("../views/Statistik.vue"),
+    component: () => import("../views/Statistik.vue"),
   },
   {
     path: "/impressum",
     name: "Impressum",
-    meta: { 
-      title: 'Impressum' 
+    meta: {
+      title: "Impressum",
     },
-    component: () =>
-      import("../views/Impressum.vue"),
+    component: () => import("../views/Impressum.vue"),
   },
   {
     path: "/profil",
     name: "Profil",
-    meta: { 
-      title: 'Profil' 
+    meta: {
+      title: "Profil",
     },
-    component: () =>
-      import("../views/Profil.vue"),
+    component: () => import("../views/Profil.vue"),
   },
   {
     path: "/login",
     name: "Login",
-    meta: { 
-      title: 'Login' 
+    meta: {
+      title: "Login",
     },
-    component: () =>
-      import("../views/Login.vue"),
+    component: () => import("../views/Login.vue"),
   },
   {
     path: "/registrieren",
     name: "Registrieren",
-    meta: { 
-      title: 'Registrieren' 
+    meta: {
+      title: "Registrieren",
     },
-    component: () =>
-      import("../views/Registrieren.vue"),
+    component: () => import("../views/Registrieren.vue"),
   },
   {
     path: "/erfahrungen/podcast",
     name: "Podcast",
-    meta: { 
-      title: 'Podcast' 
+    meta: {
+      title: "Podcast",
     },
-    component: () =>
-      import("../views/Podcast.vue"),
+    component: () => import("../views/Podcast.vue"),
   },
   {
     path: "/erfahrungen/videos",
     name: "Videos",
-    meta: { 
-      title: 'Videos' 
+    meta: {
+      title: "Videos",
     },
-    component: () =>
-      import("../views/Videos.vue"),
+    component: () => import("../views/Videos.vue"),
   },
   {
     path: "/erfahrungen/forum",
     name: "Forum",
-    meta: { 
-      title: 'Forum' 
+    meta: {
+      title: "Forum",
     },
-    component: () =>
-      import("../views/Forum.vue"),
+    component: () => import("../views/Forum.vue"),
   },
   {
     path: "/training/entspannung",
     name: "Entspannung",
-    meta: { 
-      title: 'Entspannung' 
+    meta: {
+      title: "Entspannung",
     },
-    component: () =>
-      import("../views/Entspannung.vue"),
+    component: () => import("../views/Entspannung.vue"),
   },
   {
     path: "/training/kreativ",
     name: "Kreativ",
-    meta: { 
-      title: 'Kreativ' 
+    meta: {
+      title: "Kreativ",
     },
-    component: () =>
-      import("../views/Kreativ.vue"),
+    component: () => import("../views/Kreativ.vue"),
   },
   {
     path: "/training/motivation",
     name: "Motivation",
-    meta: { 
-      title: 'Motivation' 
+    meta: {
+      title: "Motivation",
     },
-    component: () =>
-      import("../views/Motivation.vue"),
+    component: () => import("../views/Motivation.vue"),
   },
   {
     path: "/training/spiele",
     name: "Spiele",
-    meta: { 
-      title: 'Spiele' 
+    meta: {
+      title: "Spiele",
     },
-    component: () =>
-      import("../views/Spiele.vue"),
+    component: () => import("../views/Spiele.vue"),
   },
   {
     path: "/training/spiele/schiebepuzzle",
     name: "Schiebepuzzle",
-    meta: { 
-      title: 'Schiebepuzzle' 
+    meta: {
+      title: "Schiebepuzzle",
     },
-    component: () =>
-      import("../views/Schiebepuzzle.vue"),
+    component: () => import("../views/Schiebepuzzle.vue"),
   },
   {
     path: "/training/atmen",
     name: "Atmen",
-    meta: { 
-      title: 'Atemtraining' 
+    meta: {
+      title: "Atemtraining",
     },
-    component: () =>
-      import("../views/Atmen.vue"),
+    component: () => import("../views/Atmen.vue"),
   },
   {
     path: "/training/spiele/farben",
     name: "Farbenspiel",
-    meta: { 
-      title: 'Farbenspiel' 
+    meta: {
+      title: "Farbenspiel",
     },
-    component: () =>
-      import("../views/Farbenspiel.vue"),
+    component: () => import("../views/Farbenspiel.vue"),
   },
   {
     path: "/training/spiele/memory",
     name: "Memory",
-    meta: { 
-      title: 'Memory' 
+    meta: {
+      title: "Memory",
     },
-    component: () =>
-      import("../views/Memory.vue"),
+    component: () => import("../views/Memory.vue"),
   },
   {
     path: "/training/spiele/merksdir",
     name: "Merk's Dir",
-    meta: { 
-      title: 'Merks Dir' 
+    meta: {
+      title: "Merks Dir",
     },
-    component: () =>
-      import("../views/Merksdir.vue"),
+    component: () => import("../views/Merksdir.vue"),
   },
 ];
 

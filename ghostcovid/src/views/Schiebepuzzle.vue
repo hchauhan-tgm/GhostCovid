@@ -1,62 +1,75 @@
 <template>
-    <div class="schiebepuzzle">
-      <!--<Headerspiele msghs="SCHIEBEPUZZLE" link="/training/spiele/schiebepuzzle"/>-->
-        <template>
-            <div class="nav">
-                <img class="logo" alt="['goostcohvit'] logo" src="../assets/GhostCovidLogo.png" />
-                <div class="nav22">
-                    <b class="text2">SCHIEBEPUZZLE</b>
-                    <b class="text2">||</b>
-                    <i><router-link to="/training/spiele" class="text">Zurück</router-link></i>
-                    <b class="text2">|</b>
-                    <i @click="reloadPage" class="text" style="cursor:pointer">Neustart</i>
-                    <b class="text2">|</b>
-                    <i @click="anlei" class="text" style="cursor:pointer">Anleitung</i>
-                </div>
-            </div>
-        </template>
-
-      <div class="anleitung" id="-1" style="margin-top:0px">
-        <Anleitung :anl="anltext"/>
-      </div>
-
-      <Titel msg="" /><br>
-      <div class="endscreen" id="-1" style="margin-top:0px">
-        <EndScreen :key="endKeys" :points="movesc" :name="name" :time="zeit"/>
-      </div>
-      
-      <div class="game" style="margin-top:15px">
-        <div class="grid">
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-          <button>4</button>
-          <button>5</button>
-          <button>6</button>
-          <button>7</button>
-          <button>8</button>
-          <button>9</button>
-          <button>10</button>
-          <button>11</button>
-          <button>12</button>
-          <button>13</button>
-          <button>14</button>
-          <button>15</button>
-          <button></button>
+  <div class="schiebepuzzle">
+    <!--<Headerspiele msghs="SCHIEBEPUZZLE" link="/training/spiele/schiebepuzzle"/>-->
+    <template>
+      <div class="nav">
+        <img
+          class="logo"
+          alt="['goostcohvit'] logo"
+          src="../assets/GhostCovidLogo.png"
+        />
+        <div class="nav22">
+          <b class="text2">SCHIEBEPUZZLE</b>
+          <b class="text2">||</b>
+          <i
+            ><router-link to="/training/spiele" class="text"
+              >Zurück</router-link
+            ></i
+          >
+          <b class="text2">|</b>
+          <i @click="reloadPage" class="text" style="cursor: pointer"
+            >Neustart</i
+          >
+          <b class="text2">|</b>
+          <i @click="anlei" class="text" style="cursor: pointer">Anleitung</i>
         </div>
       </div>
-      
-      <div class="row" style="width:50%">
-        <div class="col s6" style="text-align:right"><span id="move">Moves: 0</span></div>
-        <div class="col s6" style="text-align:left"><span id="time">Time: 0</span></div>
-      </div>
-    
-      <Footerspiele msgfs="Schiebepuzzle" />
+    </template>
+
+    <div class="anleitung" id="-1" style="margin-top: 0px">
+      <Anleitung :anl="anltext" />
     </div>
+
+    <Titel msg="" /><br />
+    <div class="endscreen" id="-1" style="margin-top: 0px">
+      <EndScreen :key="endKeys" :points="movesc" :name="name" :time="zeit" />
+    </div>
+
+    <div class="game" style="margin-top: 15px">
+      <div class="grid">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>10</button>
+        <button>11</button>
+        <button>12</button>
+        <button>13</button>
+        <button>14</button>
+        <button>15</button>
+        <button></button>
+      </div>
+    </div>
+
+    <div class="row" style="width: 50%">
+      <div class="col s6" style="text-align: right">
+        <span id="move">Moves: 0</span>
+      </div>
+      <div class="col s6" style="text-align: left">
+        <span id="time">Time: 0</span>
+      </div>
+    </div>
+
+    <Footerspiele msgfs="Schiebepuzzle" />
+  </div>
 </template>
 
 <script>
-
 class Box {
   constructor(x, y) {
     this.x = x;
@@ -83,8 +96,8 @@ class Box {
       this.getTopBox(),
       this.getRightBox(),
       this.getBottomBox(),
-      this.getLeftBox()
-    ].filter(box => box !== null);
+      this.getLeftBox(),
+    ].filter((box) => box !== null);
   }
   getRandomNextdoorBox() {
     const nextdoorBoxes = this.getNextdoorBoxes();
@@ -97,7 +110,7 @@ const swapBoxes = (grid, box1, box2) => {
   grid[box1.y][box1.x] = grid[box2.y][box2.x];
   grid[box2.y][box2.x] = temp;
 };
-const isSolved = grid => {
+const isSolved = (grid) => {
   return (
     grid[0][0] === 1 &&
     grid[0][1] === 2 &&
@@ -118,8 +131,13 @@ const isSolved = grid => {
   );
 };
 const getRandomGrid = () => {
-  document.querySelector(" .endscreen").style.visibility = 'hidden';
-  let grid = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 0]];
+  document.querySelector(" .endscreen").style.visibility = "hidden";
+  let grid = [
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12],
+    [13, 14, 15, 0],
+  ];
   let blankBox = new Box(3, 3);
   for (let i = 0; i < 1000; i++) {
     const randomNextdoorBox = blankBox.getRandomNextdoorBox();
@@ -139,7 +157,12 @@ class State {
   }
   static ready() {
     return new State(
-      [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]],
+      [
+        [0, 0, 0, 0],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0],
+      ],
       0,
       0,
       "ready"
@@ -169,10 +192,10 @@ class Game {
     this.render();
   }
   handleClickBox(box) {
-    return function() {
+    return function () {
       const nextdoorBoxes = box.getNextdoorBoxes();
       const blankBox = nextdoorBoxes.find(
-        nextdoorBox => this.state.grid[nextdoorBox.y][nextdoorBox.x] === 0
+        (nextdoorBox) => this.state.grid[nextdoorBox.y][nextdoorBox.x] === 0
       );
       if (blankBox) {
         const newGrid = [...this.state.grid];
@@ -182,12 +205,12 @@ class Game {
           this.setState({
             status: "won",
             grid: newGrid,
-            move: this.state.move + 1 
+            move: this.state.move + 1,
           });
         } else {
           this.setState({
             grid: newGrid,
-            move: this.state.move + 1 
+            move: this.state.move + 1,
           });
         }
       }
@@ -210,18 +233,17 @@ class Game {
       }
     }
     document.querySelector(".grid").replaceWith(newGrid);
-    if (status === "ready")  {
+    if (status === "ready") {
       clearInterval(this.tickId);
       this.tickId = setInterval(this.tick, 1000);
       this.setState(State.start());
     }
-      document.getElementById("move").textContent = `Moves: ` + move;
-      document.getElementById("time").textContent = `Time: ` + time;
-    
+    document.getElementById("move").textContent = `Moves: ` + move;
+    document.getElementById("time").textContent = `Time: ` + time;
 
     if (status === "won") {
-      document.querySelector(".endscreen").style.visibility = 'visible';
-      this.movesc = 1000-move;
+      document.querySelector(".endscreen").style.visibility = "visible";
+      this.movesc = 1000 - move;
       alert(this.movesc);
       this.zeit = time;
       this.abc;
@@ -233,21 +255,21 @@ class Game {
 let anl = 0;
 export default {
   name: "Schiebepuzzle",
-  components: {
-  },
+  components: {},
   data() {
-        return {
-            status: "",
-            movesc: 830,
-            name: "Schiebepuzzle",
-            zeit: 276,
-            endKeys: 0,
-            anltext: "Ziel ist es, die Zahlen möglichst schnell in die richtige Reihenfolge zu bringen. Dabei kann man durch Anklicken eine Zahl verschieben - dies funktioniert jedoch nur, wenn ein Nebenfeld dieser Zahl frei ist. Die Zahlen müssen so angeordnet werden, dass in der obersten Reihe die Ziffern 1 bis 4 stehen und in der untersten 13 bis 15. Das Feld rechts unten in der Ecke muss am Ende frei sein, damit man gewonnen hat."
-        }
+    return {
+      status: "",
+      movesc: 830,
+      name: "Schiebepuzzle",
+      zeit: 276,
+      endKeys: 0,
+      anltext:
+        "Ziel ist es, die Zahlen möglichst schnell in die richtige Reihenfolge zu bringen. Dabei kann man durch Anklicken eine Zahl verschieben - dies funktioniert jedoch nur, wenn ein Nebenfeld dieser Zahl frei ist. Die Zahlen müssen so angeordnet werden, dass in der obersten Reihe die Ziffern 1 bis 4 stehen und in der untersten 13 bis 15. Das Feld rechts unten in der Ecke muss am Ende frei sein, damit man gewonnen hat.",
+    };
   },
-  mounted:function(){
-    document.querySelector(".endscreen").style.visibility = 'hidden';
-    document.querySelector(".anleitung").style.visibility = 'hidden';
+  mounted: function () {
+    document.querySelector(".endscreen").style.visibility = "hidden";
+    document.querySelector(".anleitung").style.visibility = "hidden";
     Game.ready();
   },
   methods: {
@@ -255,21 +277,21 @@ export default {
       window.location.reload();
     },
     anlei() {
-      if(anl==0) {
-          document.querySelector(".anleitung").style.visibility = 'visible';
-          anl = anl + 1;
+      if (anl == 0) {
+        document.querySelector(".anleitung").style.visibility = "visible";
+        anl = anl + 1;
       } else {
-          document.querySelector(".anleitung").style.visibility = 'hidden';
-          anl = anl - 1;
-      }            
+        document.querySelector(".anleitung").style.visibility = "hidden";
+        anl = anl - 1;
+      }
     },
     start: function startGame() {
-      document.querySelector(" .endscreen").style.visibility = 'hidden';
+      document.querySelector(" .endscreen").style.visibility = "hidden";
       location.reload();
     },
     abcd() {
       alert("DD");
-    }
-  }
+    },
+  },
 };
 </script>

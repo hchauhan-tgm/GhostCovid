@@ -1,15 +1,20 @@
 <template>
-    <div id="app">
-      <router-view />
-        <fab :position="position" :bg-color='bgColor' :actions="fabActions" @E-Mail="mailme" @Spotify="gotospotify" @Instagram="gotoinsta" :main-icon="maini"></fab>
-
-
-        
-    </div>
+  <div id="app">
+    <router-view />
+    <fab
+      :position="position"
+      :bg-color="bgColor"
+      :actions="fabActions"
+      @E-Mail="mailme"
+      @Spotify="gotospotify"
+      @Instagram="gotoinsta"
+      :main-icon="maini"
+    ></fab>
+  </div>
 </template>
 
 <style>
-  @import '../src/allgemein.css';
+@import "../src/allgemein.css";
 </style>
 
 <script>
@@ -18,7 +23,7 @@ import fab from "vue-fab";
 export default {
   name: "App",
   components: {
-    fab
+    fab,
   },
   data() {
     return {
@@ -28,17 +33,17 @@ export default {
       fabActions: [
         {
           name: "E-Mail",
-          icon: "email"
+          icon: "email",
         },
         {
           name: "Spotify",
-          icon: "library_music"
+          icon: "library_music",
         },
         {
           name: "Instagram",
-          icon: "camera_alt"
-        }
-      ]
+          icon: "camera_alt",
+        },
+      ],
     };
   },
   methods: {
@@ -51,6 +56,6 @@ export default {
     gotoinsta() {
       window.location.href = "https://www.instagram.com";
     },
-  }
+  },
 };
 </script>
