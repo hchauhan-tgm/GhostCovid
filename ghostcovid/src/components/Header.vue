@@ -7,7 +7,7 @@
         src="../assets/GhostCovidLogo.png"
     /></a>
     <div class="nav2">
-      <a href="/" class="text">Home</a>
+      <router-link to="/" class="text">Home</router-link>
       <router-link to="/training" class="text">Training</router-link>
       <router-link to="/erfahrungen" class="text">Erfahrungen</router-link>
       <router-link to="/statistik" class="text">Informationen</router-link>
