@@ -128,7 +128,7 @@
           Telefon:
           <b
             ><a href="tel:+4312349876" style="color: pink"
-              >+43 68181499583</a
+              >+43 1234 9876</a
             ></b
           ><br /><br />
           <i>"Aufgeschoben ist nicht aufgehoben!"</i>
