@@ -59,7 +59,7 @@
       <p class="lets">-</p>
       <p class="lets">Flankenatmung</p>
       <p class="hometext">
-        Setze dich aufrecht hin und lege eine Handflächen an deine Flanken also
+        Setze dich aufrecht hin und lege deine Handflächen an deine Flanken also
         seitlich am Körper auf Brusthöhe.<br />
         Schließe deine Augen und versuche, gezielt in die Flanken zu atmen, also
         nur in die seitlichen Bereiche deiner Lunge.<br />

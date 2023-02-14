@@ -34,7 +34,6 @@
     <div class="endscreen" id="-1" style="margin-top: 0px">
       <EndScreen :key="endKeyf" :points="movesc" :name="name" :time="zeit" />
     </div>
-    <!--v-if="show" <router-link to="/training/spiele"><button class="button1">zurück</button></router-link><br>-->
 
     <div class="board" style="margin-top: 15px">
       <div v-on:click="click($event)" class="colorCard bgColor" id="1">1</div>

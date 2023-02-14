@@ -47,7 +47,7 @@
         <div class="col s3">
           Stelle dich gerade hin und führe deine Fußsohle zu deinem Knie. Je
           höher du deine Fußsohle ansetzt, desto besser. Anschließend führe
-          deine Hände zusammen und strecke die Armen in Richtung Himmel. Halte
+          deine Hände zusammen und strecke die Arme in Richtung Himmel. Halte
           diese Position.<br /><br />
           30 Sekunden Übung <br />
           10 Sekunden Pause<br />

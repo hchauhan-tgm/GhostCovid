@@ -100,12 +100,12 @@
       <div class="row picbox">
         <div class="col s4"></div>
         <div class="col s4" style="margin-left: 3%">
-          1. Nimm die 2 Fäden und mache einen Knoten<br /><br />
-          2. Mache mit dem einen Faden eine Schlaufe um deinen Finger<br /><br />
+          1. Nimm die 2 Fäden und mache einen Knoten.<br /><br />
+          2. Mache mit dem einen Faden eine Schlaufe um deinen Finger.<br /><br />
           3. Fahre mit dem zweiten Finger von innen in die Schlaufe und nehme
-          den anderen Faden auf deine Fingerkuppe<br /><br />
+          den anderen Faden auf deine Fingerkuppe.<br /><br />
           4. Zieh den Faden auf deiner Fingerkuppe durch die Schlaufe, sodass
-          sich eine neue Schlaufe bildet<br /><br />
+          sich eine neue Schlaufe bildet.<br /><br />
           5. Ziehe noch den alten Faden fest und wiederhole das Ganze solange
           bis dir die Länge des Bandes passt<br /><br />
         </div>
@@ -171,93 +171,20 @@
             1. Nimm die 9 Fäden, mache einen Knoten und befestige die Fäden
             mithilfe von Klebeband am Tisch<br /><br />
             2. Ordne die Fäden nun in der Reihenfolge an, in der du sie haben
-            möchtest<br /><br />
+            möchtest.<br /><br />
             3. Nimm den äußersten Faden von links in die rechte Hand und den
-            Faden daneben in die linke Hand<br /><br />
+            Faden daneben in die linke Hand.<br /><br />
             4. Fädle nun den Faden in der rechten Hand durch die entstandene
-            Schlaufe, sodass ein Knoten entsteht und ziehe diesen fest<br /><br />
-            5. Wiederhole das Ganze mit den selben Fäden<br /><br />
+            Schlaufe, sodass ein Knoten entsteht und ziehe diesen fest.<br /><br />
+            5. Wiederhole das Ganze mit den selben Fäden.<br /><br />
             6. Nimm nun den nächsten Faden in die linke Hand und wiederhole das
             Ganze bis du am Ende der Reihe bist.<br /><br />
             7. Starte nun wieder am Anfang der Reihe und führe das Ganze solange
-            durch bis dir die Länge des Bandes passt<br /><br />
-            8. Mache nun wieder einen Knoten in das Band und du bist fertig<br /><br />
+            durch bis dir die Länge des Bandes passt.<br /><br />
+            8. Mache nun wieder einen Knoten in das Band und du bist fertig.<br /><br />
           </div>
           <div class="col s4"></div>
         </div>
-
-        <!--<div class="row picbox">
-            <div class="col s2"></div>
-            <div class="col s3">
-              <img class="bild" src="../assets/entspannungsU/str.jpg" />
-            </div>
-            <div class="col s5">
-              <br><br><br> 1) Nimm die 9 Fäden und mache einen Knoten<br><br>
-            </div>
-          </div>
-          <div class="row picbox">
-            <div class="col s2"></div>
-            <div class="col s3">
-              <img class="bild" src="../assets/entspannungsU/str.jpg" />
-            </div>
-            <div class="col s5">
-              <br><br><br> 2) Ordne die Fäden nun in der Reihenfolge an, in der du sie haben möchtest<br><br>
-            </div>
-          </div>
-          <div class="row picbox">
-            <div class="col s2"></div>
-            <div class="col s3">
-              <img class="bild" src="../assets/entspannungsU/str.jpg" />
-            </div>
-            <div class="col s5">
-              <br><br><br> 3) Nimm den äußersten Faden von links in die rechte Hand und den Faden daneben in die linke Hand<br><br>
-            </div>
-          </div>
-          <div class="row picbox">
-            <div class="col s2"></div>
-            <div class="col s3">
-              <img class="bild" src="../assets/entspannungsU/str.jpg" />
-            </div>
-            <div class="col s5">
-              <br><br><br> 4) Fädle nun den Faden in der rechten Hand durch die entstandene Schlaufe, sodass ein Knoten entsteht und ziehe diesen fest<br><br>
-          </div>
-          </div>
-          <div class="row picbox">
-            <div class="col s2"></div>
-            <div class="col s3">
-              <img class="bild" src="../assets/entspannungsU/str.jpg" />
-            </div>
-            <div class="col s5">
-              <br><br><br> 5) Wiederhole das Ganze mit den selben Fäden<br><br>
-            </div>
-          </div>
-          <div class="row picbox">
-            <div class="col s2"></div>
-            <div class="col s3">
-              <img class="bild" src="../assets/entspannungsU/str.jpg" />
-            </div>
-            <div class="col s5">
-              <br><br><br> 6) Nimm nun den nächsten Faden in die linke Hand und wiederhole das Ganze bis du am Ende der Reihe bist.<br><br>
-            </div>
-          </div>
-          <div class="row picbox">
-            <div class="col s2"></div>
-            <div class="col s3">
-              <img class="bild" src="../assets/entspannungsU/str.jpg" />
-            </div>
-            <div class="col s5">
-              <br><br><br> 7) Starte nun wieder am Anfang der Reihe und führe das Ganze solange durch bis dir die Länge des Bandes passt<br><br>
-            </div>
-          </div>
-          <div class="row picbox">
-            <div class="col s2"></div>
-            <div class="col s3">
-              <img class="bild" src="../assets/entspannungsU/str.jpg" />
-            </div>
-            <div class="col s5">
-              <br><br><br> 8) Mache nun wieder einen Knoten in das Band und du bist fertig<br><br>
-            </div>
-          </div>-->
       </div>
     </div>
     <Footer />
@@ -281,31 +208,3 @@ export default {
   },
 };
 </script>
-<style scoped>
-.kreativm {
-  width: 300px;
-}
-.kreativk {
-  width: 500px;
-}
-.bild {
-  width: 80%;
-  /*text-align: right;*/
-  /*margin-left: 45%*/
-}
-.bild1 {
-  width: 20%;
-}
-.bild2 {
-  width: 20%;
-  margin-left: 5%;
-}
-.schrift {
-  margin-left: 10%;
-  margin-right: 10%;
-  font-size: 180%;
-  font-family: "Arial", serif;
-  text-align: center;
-  color: #fff;
-}
-</style>

@@ -71,13 +71,10 @@
         <div class="col s6 infotext">
           Ziel ist es, die nacheinander leuchtenden Felder in der richtigen
           Reihenfolge anzuklicken.<br /><br />
-          Das Spiel startet indem man den runden grünen Knopf in der Mitte
-          drückt. Anschließend leuchtet eines der vier Felder auf. Dieses Signal
-          musst man durch Drücken auf das entsprechende Feld wiederholen. Wenn
+          Das Spiel startet mit dem aufleuchten eines der vier Felder. Dieses Signal
+          muss man durch Drücken auf das entsprechende Feld wiederholen. Wenn
           man das Leuchten richtig wiedergegeben hat, erhöht sich die Anzahl der
-          leuchtenden Felder in der nächsten Runde um eins, ansonsten bekommt
-          man die Reihenfolge nochmal angezeigt. Wenn man 10 Runden geschafft
-          hat, hat man gewonnen. <br />
+          leuchtenden Felder in der nächsten Runde um eins.<br />
           <router-link to="/training/spiele/merksdir"
             ><button class="waves-effect waves-light buttoninf">
               Spiel starten

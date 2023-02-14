@@ -275,7 +275,6 @@ h4 {
     font-family: 'Helvetica', serif; 
     text-transform: capitalize;
     font-variant: small-caps;
-    background-image: url("assets/spielew.png");
     background-size: 100%;
     
 }
@@ -294,7 +293,6 @@ h4 {
     font-family: 'Helvetica', serif; 
     text-transform: capitalize;
     font-variant: small-caps; 
-    background-image: url("assets/erfahrungenw.png");
     background-size: 100%;
 }
 .buttonerf:hover{
@@ -443,6 +441,32 @@ h4 {
 .weiterlinks:hover {
     color:yellowgreen;
 }
+
+/* KREATIV */
+.kreativm {
+    width: 300px;
+  }
+  .kreativk {
+    width: 500px;
+  }
+  .bild {
+    width: 80%;
+  }
+  .bild1 {
+    width: 20%;
+  }
+  .bild2 {
+    width: 20%;
+    margin-left: 5%;
+  }
+  .schrift {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 180%;
+    font-family: "Arial", serif;
+    text-align: center;
+    color: #fff;
+  }
 
 /* PROFIL */
 .profbox {
