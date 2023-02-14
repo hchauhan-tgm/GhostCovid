@@ -18,7 +18,7 @@
       <p class="hometext">
         Wir sind ein Team bestehend aus vier SchülerInnen aus der Abteilung für
         Informationstechnologie vom Technologischen Gewerbemuseum (TGM). <br />
-        Dieses Projekt wurde als Dilomprojekt im Jahr 2022/23 gemeinsam
+        Dieses Projekt wurde als Diplomprojekt im Jahr 2022/23 gemeinsam
         erstellt.<br />
         Alle Rechte liegen bei uns.
       </p>
@@ -30,7 +30,7 @@
       </p>
       <div class="row infos">
         <div class="col s6" style="text-align: right">
-          <img src="../assets/jasmin2.png" class="kopf" />
+          <img src="../assets/jasmin2.jpg" class="kopf" />
         </div>
         <div class="col s6 infotext">
           <p class="name">Wagner Jasmin</p>
@@ -61,7 +61,7 @@
       </p>
       <div class="row infos">
         <div class="col s6" style="text-align: right">
-          <img src="../assets/nimy2.png" class="kopf" />
+          <img src="../assets/nimy2.jpg" class="kopf" />
         </div>
         <div class="col s6 infotext">
           <p class="name">Abraham Nimy</p>
