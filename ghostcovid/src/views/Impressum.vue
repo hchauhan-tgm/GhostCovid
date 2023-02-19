@@ -138,7 +138,7 @@
       <p class="lets">Projektbetreuer</p>
       <p class="hometext">
         Prof. Christoph Roschger<br />
-        Prof. Eugen Robert Jirsch
+        Prof. Eugen Robert Jiresch
       </p>
       <p class="lets">-</p>
       <p class="lets">Weiterführende Links</p>
