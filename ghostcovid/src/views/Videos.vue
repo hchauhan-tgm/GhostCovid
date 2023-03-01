@@ -22,89 +22,88 @@
       <p class="lets">Was weißt du über Long Covid?</p>
       <!--<video ref="videoRef" src="" id="video-container" width="80%" controls></video>-->
       <div class="video-block">
-        <iframe
-          max-width="100%"
-          height="auto"
-          src="https://www.youtube.com/embed/bp0w2KrlE7c?ecver=1"
-          frameborder="0"
-          allow="encrypted-media"
-          allowfullscreen
-        >
+        <iframe 
+          width="560" 
+          height="315" 
+          src="https://www.youtube.com/embed/_AIRFHxIUzg" 
+          title="YouTube video player" frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
         </iframe>
       </div>
       <p class="hometext">
-        In diesem Video werden fünf Personen über ihr Wissen zum Thema Long Covid befragt.
+        In diesem Video werden vier Personen über ihr Wissen zum Thema Long Covid befragt.
       </p>
       <br>
       <p class="lets">Wie lief deine Corona Erkrankung ab?</p>
       <!--<video ref="videoRef" src="" id="video-container" width="80%" controls></video>-->
       <div class="video-block">
-        <iframe
-          max-width="100%"
-          height="auto"
-          src="https://www.youtube.com/embed/bp0w2KrlE7c?ecver=1"
-          frameborder="0"
-          allow="encrypted-media"
-          allowfullscreen
-        >
+        <iframe 
+          width="560" 
+          height="315" 
+          src="https://www.youtube.com/embed/hGer6LYzf7o" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
         </iframe>
       </div>
       <p class="hometext">
-        In diesem Video werden fünf Personen über ihre Corona Erkrankung befragt. Im Vorfeld wurde bereits festgestellt, 
+        In diesem Video werden vier Personen über ihre Corona Erkrankung befragt. Im Vorfeld wurde bereits festgestellt, 
         <br>dass alle Befragten in dem Video bereits eine Corona Erkrankung hinter sich haben.
       </p>
       <br>
-      <p class="lets">Warum hattest du Sorgen/keine Sorgen nach deiner Corona Erkrankung an Long Covid zu erkranken?</p>
+      <p class="lets">Hattest du Sorgen nach deiner Corona Erkrankung an Long Covid zu erkranken?</p>
       <!--<video ref="videoRef" src="" id="video-container" width="80%" controls></video>-->
       <div class="video-block">
-        <iframe
-          max-width="100%"
-          height="auto"
-          src="https://www.youtube.com/embed/bp0w2KrlE7c?ecver=1"
-          frameborder="0"
-          allow="encrypted-media"
-          allowfullscreen
-        >
+        <iframe 
+          width="560" 
+          height="315" 
+          src="https://www.youtube.com/embed/JhKGF0JgSGE" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
         </iframe>
       </div>
       <p class="hometext">
-        In diesem Video werden fünf Personen über ihre Sorgen in Bezug auf eine Long Covid Erkrankung nach Corona befragt. 
+        In diesem Video werden vier Personen über ihre Sorgen in Bezug auf eine Long Covid Erkrankung nach Corona befragt. 
         <br>Im Vorfeld wurde bereits festgestellt, dass alle Befragten in dem Video bereits eine Corona Erkrankung hinter sich haben.
       </p>
       <br>
       <p class="lets">Was hattest du für Symptome und wie lange hat es gedauert bis alle deine Symptome wieder abgeklungen sind?</p>
       <!--<video ref="videoRef" src="" id="video-container" width="80%" controls></video>-->
       <div class="video-block">
-        <iframe
-          max-width="100%"
-          height="auto"
-          src="https://www.youtube.com/embed/bp0w2KrlE7c?ecver=1"
-          frameborder="0"
-          allow="encrypted-media"
-          allowfullscreen
-        >
+        <iframe 
+          width="560" 
+          height="315" 
+          src="https://www.youtube.com/embed/Dqb0IKPyMqY" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
         </iframe>
       </div>
       <p class="hometext">
-        In diesem Video werden fünf Personen über ihre Symptome bei ihrer Corona Erkrankung befragt.
+        In diesem Video werden vier Personen über ihre Symptome bei ihrer Corona Erkrankung befragt.
         <br>Im Vorfeld wurde bereits festgestellt, dass alle Befragten in dem Video bereits eine Corona Erkrankung hinter sich haben.
       </p>
       <br>
       <p class="lets">Gibt es etwas, was du dir in Bezug auf Corona und Long Covid wünschst?</p>
       <!--<video ref="videoRef" src="" id="video-container" width="80%" controls></video>-->
       <div class="video-block">
-        <iframe
-          max-width="100%"
-          height="auto"
-          src="https://www.youtube.com/embed/bp0w2KrlE7c?ecver=1"
-          frameborder="0"
-          allow="encrypted-media"
-          allowfullscreen
-        >
+        <iframe 
+          width="560" 
+          height="315" 
+          src="https://www.youtube.com/embed/8T4pGTmr7n0" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
         </iframe>
       </div>
       <p class="hometext">
-        In diesem Video werden fünf Personen über ihre Wünsche zum Thema Corona oder Long Covid befragt.
+        In diesem Video werden vier Personen über ihre Wünsche zum Thema Corona oder Long Covid befragt.
       </p>
     </div>
 
