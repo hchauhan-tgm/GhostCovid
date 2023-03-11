@@ -29,7 +29,7 @@
         <br />
         Atme durch die Nase ein und durch den Mund langsam aus, so als würdest
         du viele Kerzen ausblasen müssen.<br /><br />
-        5 Widerholungen - kurze Pause - 5 Wiederholungen<br />
+        5 Wiederholungen - kurze Pause - 5 Wiederholungen<br />
       </p>
       <p class="lets">-</p>
       <p class="lets">Bauchatmung</p>
@@ -41,7 +41,7 @@
         <br />
         Atme durch die Nase ein und durch den Mund langsam aus, so als würdest
         du viele Kerzen ausblasen müssen.<br /><br />
-        5 Widerholungen - kurze Pause - 5 Wiederholungen<br />
+        5 Wiederholungen - kurze Pause - 5 Wiederholungen<br />
       </p>
       <p class="lets">-</p>
       <p class="lets">Rückenatmung</p>
@@ -54,7 +54,7 @@
         beim Ausatmen nach Innen durchstrecken. <br />
         Atme durch die Nase ein und durch den Mund langsam aus, so als würdest
         du viele Kerzen ausblasen müssen.<br /><br />
-        5 Widerholungen - kurze Pause - 5 Wiederholungen<br />
+        5 Wiederholungen - kurze Pause - 5 Wiederholungen<br />
       </p>
       <p class="lets">-</p>
       <p class="lets">Flankenatmung</p>
@@ -67,7 +67,7 @@
         zusammenziehen. <br />
         Atme durch die Nase ein und durch den Mund langsam aus, so als würdest
         du viele Kerzen ausblasen müssen.<br /><br />
-        5 Widerholungen - kurze Pause - 5 Wiederholungen<br />
+        5 Wiederholungen - kurze Pause - 5 Wiederholungen<br />
       </p>
       <p class="lets">-</p>
       <p class="lets">Zwerchfellübung Buchstaben</p>
@@ -77,7 +77,7 @@
         Schließe deine Augen und atme durch die Nase tief ein.<br />
         Beim Ausatmen sprich schnell die Buchstaben "p", "t" und "k" mit ihrem
         Wortlaut aus (nicht "pe", "te" und "ka").<br /><br />
-        10 Widerholungen - kurze Pause - 10 Wiederholungen<br />
+        10 Wiederholungen - kurze Pause - 10 Wiederholungen<br />
       </p>
       <p class="lets">-</p>
       <p class="lets">Zwerchfellübung Nase</p>
@@ -88,7 +88,7 @@
         ein, so als würdest du kein Taschentuch dabei haben.<br />
         Atme anschließend langsam durch den Mund aus, so als würdest du viele
         Kerzen ausblasen müssen.<br /><br />
-        10 Widerholungen - kurze Pause - 10 Wiederholungen<br />
+        10 Wiederholungen - kurze Pause - 10 Wiederholungen<br />
       </p>
     </div>
 

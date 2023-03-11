@@ -69,7 +69,7 @@
         Bei uns kannst du innerhalb von 2 Minuten ein Benutzerprofil erstellen!
         <br /><br />
         Durch eine Registrierung kannst du Erfahrungen in unserem Forum mit
-        anderen teilen. Außerdem werden dein Bestwerte und Highscores zu den
+        anderen teilen. Außerdem werden deine Bestwerte und Highscores zu den
         Gedächtnisspielen gespeichert - so siehst du sofort, wie gut du dich
         verbessert hast und was dein bisheriger Bestwert war.
         <br /><br />

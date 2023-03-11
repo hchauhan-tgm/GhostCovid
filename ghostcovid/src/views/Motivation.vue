@@ -31,13 +31,13 @@
       <p class="hometext">
         Je konkreter du deine Ziele formulierst, desto weniger Selbstmotivation
         ist nötig, um bis zum Ende des Zieles dranzubleiben.<br />
-        Es hilft besonders die Ziele mithilfe der SMART Kriterien messbar zu
+        Es hilft besonders, die Ziele mithilfe der SMART Kriterien messbar zu
         machen.
       </p>
       <p class="lets">-</p>
       <p class="lets">Überliste dein Gehirn</p>
       <p class="hometext">
-        Nimm dir vor dich für 5 Minuten einer Aufgabe zu widmen und danach zu
+        Nimm dir vor, dich für 5 Minuten einer Aufgabe zu widmen und danach zu
         überlegen, ob du weitermachst.<br />
         Dadurch ist die Chance dass du an der Aufgabe dranbleibst ziemlich hoch.
       </p>
@@ -55,13 +55,13 @@
         Jeder Mensch ist anders und lässt sich durch andere Sachen
         motivieren.<br />
         Deswegen ist es besonders wichtig herauszufinden, wie du dich am besten
-        selbst motivieren kannst um deine Ziele zu erreichen.
+        selbst motivieren kannst, um deine Ziele zu erreichen.
       </p>
       <p class="lets">-</p>
       <p class="lets">Visualisiere deine Aufgabe</p>
       <p class="hometext">
         Stelle dir vor, dass du deine Aufgabe mit Freude erledigst.<br />
-        Stelle dir außerdem das Gefühl vor, wie es sein wird wenn du die Aufgabe
+        Stelle dir außerdem das Gefühl vor, wie es sein wird, wenn du die Aufgabe
         abgeschlossen hast.
       </p>
     </div>
