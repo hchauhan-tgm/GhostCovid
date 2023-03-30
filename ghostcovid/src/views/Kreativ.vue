@@ -102,7 +102,7 @@
         <div class="col s4" style="margin-left: 3%">
           1. Nimm die 2 Fäden und mache einen Knoten.<br /><br />
           2. Mache mit dem einen Faden eine Schlaufe um deinen Finger.<br /><br />
-          3. Fahre mit dem zweiten Finger von innen in die Schlaufe und nehme
+          3. Fahre mit dem zweiten Finger von innen in die Schlaufe und nimm
           den anderen Faden auf deine Fingerkuppe.<br /><br />
           4. Zieh den Faden auf deiner Fingerkuppe durch die Schlaufe, sodass
           sich eine neue Schlaufe bildet.<br /><br />
@@ -180,8 +180,8 @@
             6. Nimm nun den nächsten Faden in die linke Hand und wiederhole das
             Ganze bis du am Ende der Reihe bist.<br /><br />
             7. Starte nun wieder am Anfang der Reihe und führe das Ganze solange
-            durch bis dir die Länge des Bandes passt.<br /><br />
-            8. Mache nun wieder einen Knoten in das Band und du bist fertig.<br /><br />
+            durch, bis dir die Länge des Bandes passt.<br /><br />
+            8. Mache nun wieder einen Knoten in das Band und du bist fertig. <br /><br />
           </div>
           <div class="col s4"></div>
         </div>

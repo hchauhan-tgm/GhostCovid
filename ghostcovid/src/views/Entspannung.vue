@@ -65,10 +65,10 @@
           <img class="bigpic" src="../assets/entspannungsU/star.jpg" />
         </div>
         <div class="col s3">
-          Mache einen großen Schritt nach vorne mit einem Fuß. Beuge das vordere
+          Mache mit einem Fuß einen großen Schritt nach vorne. Beuge das vordere
           Knie, halte dein Hinterbein gerade und die Ferse am Boden. Lehne dich
-          mit deiner Hüfte nach vorne und ziehe deine Arme zum Himmel. Halten
-          Sie diese Position. <br /><br />
+          mit deiner Hüfte nach vorne und ziehe deine Arme zum Himmel. Halte
+          diese Position. <br /><br />
           30 Sekunden Übung <br />
           10 Sekunden Pause<br />
           5 Wiederholungen links <br />

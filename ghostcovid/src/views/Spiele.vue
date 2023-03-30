@@ -71,7 +71,7 @@
         <div class="col s6 infotext">
           Ziel ist es, die nacheinander leuchtenden Felder in der richtigen
           Reihenfolge anzuklicken.<br /><br />
-          Das Spiel startet mit dem aufleuchten eines der vier Felder. Dieses Signal
+          Das Spiel startet mit dem Aufleuchten eines der vier Felder. Dieses Signal
           muss man durch Drücken auf das entsprechende Feld wiederholen. Wenn
           man das Leuchten richtig wiedergegeben hat, erhöht sich die Anzahl der
           leuchtenden Felder in der nächsten Runde um eins.<br />
@@ -90,7 +90,7 @@
         </div>
         <div class="col s6 infotext">
           Ziel ist es, das richtige Feld anzuklicken. <br /><br />
-          Dabei muss man die Farbe zu finden, bei der die Schrift schwarz ist
+          Dabei muss man die Farbe finden, bei der die Schrift schwarz ist
           und die Hintergrundfarbe mit dem Farbnamen übereinstimmt. Dabei muss
           die richtige Farbe mittels Klick aus den 16 Optionen ausgewählt
           werden.<br />

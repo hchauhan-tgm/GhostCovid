@@ -77,7 +77,7 @@ export default {
       zeit: 0,
       endKeyf: 0,
       anltext:
-        "Ziel ist es, das richtige Feld anzuklicken. Dabei muss man die Farbe zu finden, bei der die Schrift schwarz ist und die Hintergrundfarbe mit dem Farbnamen übereinstimmt. Dabei muss die richtige Farbe mittels Klick aus den 16 Optionen ausgewählt werden. Wenn man 20 richtige Felder gefunden hat, hat man gewonnen.",
+        "Ziel ist es, das richtige Feld anzuklicken. Dabei muss man die Farbe finden, bei der die Schrift schwarz ist und die Hintergrundfarbe mit dem Farbnamen übereinstimmt. Dabei muss die richtige Farbe mittels Klick aus den 16 Optionen ausgewählt werden. Wenn man 20 richtige Felder gefunden hat, hat man gewonnen.",
     };
   },
   setup() {},
@@ -327,7 +327,6 @@ export default {
           document.getElementById(aktKarte).className += zufallKombinationR[1];
           document.getElementById(aktKarte).className += zufallKombinationR[2];
           zKombi = true;
-          console.log(aktKarte);
           zuweisen.splice(aktKarte - 1, 1);
           document.getElementById(aktKarte).className += " right";
           console.log(zuweisen);
