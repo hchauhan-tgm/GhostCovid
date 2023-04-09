@@ -34,7 +34,7 @@
     <div class="endscreen" id="-1" style="margin-top: 0px">
       <EndScreen :key="endKeyf" :points="movesc" :name="name" :time="zeit" />
     </div>
-
+    <!-- Hier wird das Raster definiert -->
     <div class="board" style="margin-top: 15px">
       <div v-on:click="click($event)" class="colorCard bgColor" id="1">1</div>
       <div v-on:click="click($event)" class="colorCard bgColor" id="2">2</div>
@@ -104,6 +104,9 @@ export default {
         anl = anl - 1;
       }
     },
+    /**
+     * Diese Methode reagiert auf den Klick des Benutzers, was mithilfe der event Variable gemacht wird.
+     */
     click: function (event) {
       this.aktZeit = new Date();
       this.time = Math.floor(
@@ -133,6 +136,9 @@ export default {
         this.endKeyf += 1;
       }
     },
+    /**
+     * In dieser Methode wird den Vierecken eine zufällige Kombination zugewiesen, wobei immer nur eine richtige Kombination zugewiesen wird.
+     */
     shuffle: function () {
       document.querySelector(" .endscreen").style.visibility = "hidden";
       const richtigeKombinationen = [

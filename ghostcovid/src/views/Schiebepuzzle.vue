@@ -70,6 +70,9 @@
 </template>
 
 <script>
+/**
+ * In dieser Klasse geht es um die Boxen des Rasters
+ */
 class Box {
   constructor(x, y) {
     this.x = x;
@@ -148,6 +151,9 @@ const getRandomGrid = () => {
   return grid;
 };
 
+/**
+ * In dieser Klasse geht es um den aktuellen Zusrand des Spiels
+ */
 class State {
   constructor(grid, move, time, status) {
     this.grid = grid;
@@ -173,6 +179,9 @@ class State {
   }
 }
 
+/**
+ * In dieser Klasse wird das Spiel an sich behandelt
+ */
 class Game {
   constructor(state) {
     this.state = state;

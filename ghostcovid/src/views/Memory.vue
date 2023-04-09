@@ -114,6 +114,9 @@ export default {
         anl = anl - 1;
       }
     },
+    /**
+     * Diese Methode reagiert auf den Klick des Benutzers
+     */
     click: function (event) {
       const target = event.currentTarget;
       this.aktZeit = new Date();
@@ -175,6 +178,9 @@ export default {
         }
       }
     },
+    /**
+     * In dieser Methode werden die Farben den Karten zugewiesen
+     */
     shuffle: function () {
       document.querySelector(" .endscreen").style.visibility = "hidden";
       this.startZeit = new Date();

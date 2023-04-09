@@ -126,6 +126,9 @@ export default {
         anl = anl - 1;
       }
     },
+    /**
+     * Mithilfe dieser Methode wird das Spiel gestartet
+     */
     changeState: function () {
       if (this.state === "Start") {
         this.time = 0;
@@ -142,6 +145,9 @@ export default {
         this.resetGame();
       }
     },
+    /**
+     * In dieser Methode wird ein Feld zufällig ausgewählt und gedrückt.
+     */
     computerTurn: function () {
       var self = this;
       this.index = 0;
@@ -158,6 +164,9 @@ export default {
       document.getElementById("move").textContent = `Rounds: ` + this.step;
       document.getElementById("time").textContent = this.time + ` sec`;
     },
+    /**
+     * Hier wird überprüft, ob der Benutzer das richtige Feld gedrückt hat
+     */
     clickedBox: function (boxNum) {
       this.aktZeit = new Date();
       this.time = Math.floor(
@@ -173,8 +182,6 @@ export default {
       if (!isCorrect) {
         // If user clicks wrong box
         if (this.isStrictModeOn) {
-          // User playing in strict mode
-          self.processGameOver();
           this.ende = true;
           document.querySelector(" .endscreen").style.visibility = "visible";
           this.zeit = this.time;
@@ -182,7 +189,6 @@ export default {
           endKd.value + 1;
           return;
         } else {
-          //User playing in regular mode
           self.showPattern();
         }
       } else {
@@ -200,18 +206,6 @@ export default {
         }
       }
     },
-    processGameOver: function () {
-      //If score is greater than hiScore, update localStorage
-      if (this.score > this.hiScore) {
-        this.hiScore = this.score;
-        this.message = "Congo! New High Score";
-        localStorage.setItem("simonHiScore", this.hiScore);
-      } else {
-        this.message = "Game Over.";
-      }
-      console.log("Score: " + this.score);
-      this.resetGame();
-    },
     getRandomNumberOneToFour: function () {
       return Math.floor(Math.random() * 4 + 1);
     },
@@ -227,6 +221,9 @@ export default {
       this.pattern = [];
       this.index = 0;
     },
+    /**
+     * Diese Methode zeigt die zufällig ausgewählten Felder in der richtigen Reihenfolge
+     */
     showPattern: function (callback) {
       this.aktZeit = new Date();
       this.time = Math.floor(
@@ -257,6 +254,9 @@ export default {
         this.isStrictModeOn = true;
       }
     },
+    /**
+     * Diese Methode generiert den Effekt des Klickens
+     */
     clickEffect: function (boxNum) {
       this.aktZeit = new Date();
       this.time = Math.floor(
